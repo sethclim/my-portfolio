@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 class FrontPage extends React.Component {
   render() {
     return (
-      <div className="front-page">
+      <div id="frontpage" className="front-page">
         <div className="title-block">
           <div className="opening">
             <h4>Hi, my name is</h4>
@@ -34,6 +34,8 @@ class FrontPage extends React.Component {
             </Link>
           </div>
         </div>
+
+        {/* <img className="main-img" src={typing_desk} alt="img" /> */}
 
         <p>{this.title}</p>
       </div>

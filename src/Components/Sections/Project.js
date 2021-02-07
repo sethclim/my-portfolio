@@ -5,6 +5,8 @@ import chessIMG from "../../imgs/10-a-game-designer.jpg";
 import PhotoFolio from "../../imgs/Photofolio.png";
 import SmartScales from "../../imgs/SmartScales.png";
 import Spotify from "../../imgs/Spotify.png";
+import ScalesApp2 from "../../imgs/IPhone_X_vector_scalesapp.svg";
+import ScalesApp22 from "../../imgs/IPhone_X_vector_scalesapp2.svg";
 
 class Project extends React.Component {
   render() {
@@ -29,9 +31,9 @@ class Project extends React.Component {
           />
           <ProjectL
             title="Scales App"
-            img={SmartScales}
+            img={ScalesApp22}
             desc="The goal of the app is to help a musician with their practice routine by providing selected exercises in a randomized order. Created a multi-page app that passes data between activities, saved data in user preferences, and using libraries to hold business logic.  Includes the ability to generate custom practice routines based on user inputs."
-            tech={["Android", "Java"]}
+            tech={["Android", "Kotlin"]}
             gitLink="https://bitbucket.org/sethclim/scales_app_android/src/master/"
             link={false}
             projectLink="www.dfgio0erg.com"

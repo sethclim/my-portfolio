@@ -9,6 +9,7 @@
   font-family: IBMPlexSans-Light;
   overflow: hidden;
 }
+
 .section {
   width: 100%;
   height: fit-content;
@@ -16,7 +17,7 @@
 }
 
 .front-page {
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -33,6 +34,12 @@ img {
   height: auto;
 }
 
+.shadow {
+  -webkit-box-shadow: 3px 3px 5px 6px rgba(167, 165, 165, 0.406); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: 3px 3px 5px 6px rgba(167, 166, 166, 0.2); /* Firefox 3.5 - 3.6 */
+  box-shadow: 3px 3px 5px 6px rgba(154, 153, 153, 0.214); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
 /**
  * Limit the container in
  * width for big screens
@@ -40,12 +47,10 @@ img {
 .container {
   width: 2000px;
   max-width: 100%;
-  padding: 20px;
   margin: 0 auto;
 }
 
 /* Front Page */
-
 .title-block {
   height: 100%;
   width: fit-content;
@@ -118,7 +123,7 @@ img {
 }
 .project-container {
   height: fit-content;
-  width: 60vw;
+  width: 63vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -180,7 +185,6 @@ img {
 }
 
 /* About Page */
-
 .about {
   height: fit-content;
   width: 100%;
@@ -198,47 +202,42 @@ img {
   margin-top: 5%;
 }
 .content-container {
-  width: 120%;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   margin-left: 3vw;
   margin-top: 1.5%;
   font-size: 2em;
+  justify-content: center;
 }
 .about-me {
-  float: left;
-  width: 50%;
   text-align: left;
+  width: 90%;
 }
 
 .about-me-para {
-  margin-top: 10%;
+  margin-top: 2%;
 }
 
 .skills-title {
-  float: left;
-  width: 50%;
   margin-left: 5vw;
   display: flex;
   align-items: flex-start;
   margin-left: 9vw;
 }
 .skills {
-  float: left;
-  width: 50%;
   height: fit-content;
   display: flex;
   text-align: left;
+  justify-content: center;
+  margin-top: 2em;
 }
 
 .skills-list {
-  float: left;
   width: 80%;
   display: grid;
-
-  grid-template-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   text-align: left;
-  margin: 3vh 0 0 10vw;
   font-family: JetBrainsMono-Regular;
 }
 
@@ -247,7 +246,6 @@ img {
 }
 .skill-listThree {
   width: fit-content;
-  padding: 1rem 0 0 0;
 }
 /* Contact Page */
 
@@ -261,7 +259,7 @@ img {
 
 .contact-container {
   height: fit-content;
-  width: 60vw;
+  width: 40vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -297,7 +295,7 @@ hr.new4 {
   width: 100%;
   position: relative;
 
-  background-color: #000000;
+  background-color: #ffffff00;
 }
 
 .proj-img {
@@ -311,8 +309,9 @@ hr.new4 {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: #6c81fb4b;
+  background-color: #6c81fb00;
   transition: 0.3s;
+  border-radius: 20%;
 }
 
 .rect:hover {
@@ -330,24 +329,34 @@ hr.new4 {
   justify-content: center;
   align-items: center;
   margin: 5%;
+  overflow: hidden;
 }
 
 .proj-title {
   font-family: IBMPlexSans-Bold;
   font-size: 2em;
+  color: #ccd7f5;
+  text-align: left;
 }
 .proj-desc-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  width: 100%;
 }
 .proj-desc {
   margin: 0.5rem 0;
-  width: 20vw;
+  width: 100%;
   text-align: left;
   color: #ccd7f5;
   font-size: 1rem;
+}
+
+.proj-tech {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .proj-tech ul {
@@ -355,10 +364,16 @@ hr.new4 {
   margin: 1rem 0;
   font-family: JetBrainsMono-Regular;
   font-size: 2em;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
 }
 .proj-tech li {
   display: inline-block;
-  padding-right: 10px;
+}
+
+.proj-tech li ~ li {
+  margin-left: 5%;
 }
 
 /**
@@ -379,19 +394,21 @@ hr.new4 {
   flex-wrap: wrap;
 }
 
-.main-header {
-  /* background-color: rgb(57, 55, 55); */
-  /* color: white; */
+.nav-wrapper {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
 }
 
 .main-nav {
-  width: 50%;
   display: flex;
   justify-content: flex-end;
 }
 
-.main-nav-list {
+.logocontainer {
+  justify-content: flex-start;
 }
+
 .logo {
   stroke: #6c82fb;
   stroke-width: 0.25mm;
@@ -501,9 +518,8 @@ hr.new4 {
   animation: "1s appear forwards";
   /* animationdelay: 0.5; */
 }
-.email-button-container {
+.contact-container {
   width: 40vw;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -515,23 +531,17 @@ hr.new4 {
   justify-content: center;
   align-items: center;
   font-size: 1em;
-
-  border: solid thin #6c82fb;
   font-family: JetBrainsMono-Regular;
-  margin-left: 1em;
   width: fit-content;
   height: 5em;
-  padding: 2em;
-}
-.email-button:hover {
-  background-color: #8893af37;
+  padding: 5em;
 }
 
 .email-button a {
   color: #ccd7f5;
-  font-size: 3em;
+  font-size: 6em;
   text-decoration: none;
-  width: 100%;
+  width: fit-content;
 }
 
 .email-button a:hover {
@@ -564,6 +574,39 @@ hr.new4 {
   margin: 0 auto;
   animation: 0.5s shrink forwards;
   animation-delay: 1.5s;
+}
+
+/* Floating Links */
+.link-wrapper {
+  position: fixed;
+  top: 80vh;
+  display: flex;
+  flex-direction: column;
+  margin: 2vw;
+}
+.floating-links {
+  color: #8893af;
+}
+
+.floating-item {
+  margin: 0.4em;
+}
+
+.floating-item:hover {
+  color: #6c82fb;
+}
+
+.uparrow {
+  position: fixed;
+  top: 85vh;
+  right: 2vw;
+  margin: 2vw;
+  z-index: 20;
+}
+
+.uparrow:hover {
+  color: #6c82fb;
+  cursor: pointer;
 }
 
 @keyframes appear {
@@ -633,7 +676,6 @@ hr.new4 {
 
 @media (max-width: 1280px) {
   .main-nav {
-    width: 80%;
     display: flex;
     justify-content: flex-end;
     margin-right: 10vw;
@@ -675,12 +717,13 @@ hr.new4 {
 
   .proj-desc {
     margin: 0.5rem 0;
-    width: 40vw;
+    width: 100%;
     font-size: 1rem;
   }
 
   .proj-title {
-    font-size: 1.8em;
+    font-size: 1.3em;
+    color: #ccd7f5;
   }
 
   .about-me {
@@ -726,25 +769,75 @@ hr.new4 {
   }
 }
 @media (max-width: 668px) {
+  .title-block {
+    margin-left: 3vh;
+  }
+  .front-page {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bb-name {
+    font-size: 2em;
+  }
+  .sm-subtitle {
+    font-size: 2em;
+    padding: 3em 0 3em 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .proj-desc {
+    margin: 2em 0 2em 0;
+    width: 40vw;
+    font-size: 1rem;
+  }
+
+  .proj-tech {
+    list-style-type: none;
+    width: 100%;
+    margin-left: 4em;
+    font-size: 0.7em;
+  }
+  .proj-tech li {
+    list-style-type: none;
+    margin-left: 0em;
+    font-family: JetBrainsMono-Regular;
+  }
+
+  .proj-tech li ~ li {
+    margin-left: 0.1em;
+  }
+
+  .proj-desc {
+    width: 50vw;
+    text-align: left;
+    color: #ccd7f5;
+  }
+  .content-container {
+    width: 120%;
+    display: inline-block;
+    margin-left: 3vw;
+    margin-top: 1.5%;
+  }
   .about-me {
     float: none;
     width: 80vw;
   }
 
   .skills {
-    float: none;
     display: inline;
     text-align: left;
-    margin: 3em 0 0 0;
-  }
-  .content-container {
-    display: inline-block;
+    margin: 1em 0;
   }
   .skills-title {
     width: 100%;
     display: flex;
     align-items: flex-start;
-    margin: 3vw 0 0 0vw;
+    margin-left: 0vw;
   }
 
   .skills-list {
@@ -753,10 +846,57 @@ hr.new4 {
     grid-template-columns: 100%;
     margin-left: 3vw;
   }
-  .email-button a {
+
+  .projR-wrap {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+  }
+
+  .proj-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+  }
+  .proj-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+  }
+  .proj-desc-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .proj-desc {
+    width: 100%;
+    text-align: left;
     color: #ccd7f5;
-    font-size: 2em;
-    text-decoration: none;
+  }
+  .proj-tech ul {
+    list-style-type: none;
+    width: 100%;
+    margin-left: -2.5em;
+    font-family: JetBrainsMono-Regular;
+    display: flex;
+  }
+
+  .proj-tech li {
+    display: inline-block;
+    padding-right: 5%;
+    width: 100%;
+  }
+
+  .email-button a {
+    font-size: 3.5em;
+    width: 70vw;
   }
 }
 
@@ -880,11 +1020,17 @@ hr.new4 {
     padding-right: 5%;
     width: 100%;
   }
+
+  .email-button a {
+    font-size: 3.5em;
+    width: 70vw;
+  }
 }
 @media (max-width: 414px) {
   .title-block {
     margin-left: 3vh;
-    margin-top: 0vh;
+    margin-top: -10vh;
+    height: auto;
   }
   .front-page {
     height: 90vh;
@@ -922,8 +1068,9 @@ hr.new4 {
   }
   .proj-tech li {
     list-style-type: none;
-    margin-left: 0em;
+    margin-left: 1em;
     font-family: JetBrainsMono-Regular;
+    font-size: 1em;
   }
   .proj-desc {
     width: 50vw;
@@ -941,9 +1088,19 @@ hr.new4 {
     width: 80vw;
   }
 
+  .about-me-para {
+    font-size: 0.8em;
+    width: 90%;
+  }
+
   .skills {
     display: inline;
     text-align: left;
+  }
+
+  .skills-list {
+    margin: 5%;
+    width: 70%;
   }
 
   .projR-wrap {
@@ -955,18 +1112,18 @@ hr.new4 {
   }
 
   .proj-right {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2%;
+    margin: 5%;
   }
   .proj-left {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2%;
+    margin: 5%;
   }
   .proj-desc-container {
     display: flex;
@@ -994,9 +1151,7 @@ hr.new4 {
   }
 
   .email-button a {
-    color: #ccd7f5;
-    font-size: 2em;
-    text-decoration: none;
+    font-size: 3em;
   }
 }
 

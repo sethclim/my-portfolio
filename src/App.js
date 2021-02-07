@@ -15,12 +15,16 @@ import FrontPage from "./Components/Sections/FrontPage";
 import About from "./Components/Sections/About";
 import Projects from "./Components/Sections/Project";
 import Contact from "./Components/Sections/Contact";
+import FloatingLinks from "./Components/FloatingLinks";
+import UpArrow from "./Components/SVG/uparrow";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Header />
+        <FloatingLinks></FloatingLinks>
+        <UpArrow className="uparrow"></UpArrow>
         <Section
           title="Projects"
           subtitle={"Hi there"}

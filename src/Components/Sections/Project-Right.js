@@ -1,6 +1,6 @@
 import React from "react";
-import Bitbucket from "../bitbucket";
-import External from "../external";
+import Bitbucket from "../SVG/bitbucket";
+import External from "../SVG/external";
 function ProjectR(props) {
   return (
     <div className="projR-wrap">

@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-scroll";
-import Logo from "./logo";
+import Logo from "./SVG/logo";
 import MenuButton from "./Menu/MenuButton";
 import MenuItem from "./Menu/MenuItem";
 import Menu from "./Menu/Menu";
 import Resume from "../imgs/Resume.pdf";
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -36,7 +37,7 @@ class Header extends React.Component {
     });
     return (
       <div className="main-header">
-        <div className="container">
+        <div className="nav-wrapper container">
           <div className="logocontainer">
             <Logo
               fill={"#6c82fb"}
