@@ -8,7 +8,6 @@ class BitBucket extends PureComponent {
         focusable="false"
         data-prefix="fab"
         data-icon="bitbucket"
-        class="svg-inline--fa fa-bitbucket fa-w-16"
         role="img"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 496 512"

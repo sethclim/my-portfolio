@@ -69,7 +69,6 @@ class Menu extends React.Component {
                 <a
                   className="resume-link-menu"
                   href={Resume}
-                  without
                   rel="noopener noreferrer"
                   target="_blank"
                   trailingIcon="picture_as_pdf"

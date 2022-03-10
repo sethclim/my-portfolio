@@ -17,7 +17,7 @@ class Project extends React.Component {
             <div className="proj-pg-title">
               <h2>Projects</h2>
             </div>
-            <hr class="new4"></hr>
+            <hr className="new4"></hr>
           </div>
 
           <ProjectR

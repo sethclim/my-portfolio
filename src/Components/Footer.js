@@ -8,21 +8,19 @@ function Footer() {
         <nav className="main-links">
           <ul className="main-links-list">
             <li>
-              <a href="www.home.com">
-                {" "}
-                <i className="icon" class="fa fa-facebook-square"></i>
+              <a href="#">
+                {/* <i className="icon" className="fa fa-facebook-square"></i> */}
               </a>
             </li>
             <li>
-              <a href="www.home.com">
-                {" "}
-                <i className="icon" class="fa fa-instagram"></i>
+              <a href="#">
+                {/* <i className="icon" className="fa fa-instagram"></i> */}
               </a>
             </li>
 
             <li>
-              <a href="www.home.com">
-                <i className="icon" class="fa fa-envelope"></i>
+              <a href="#">
+                {/* <i className="icon" className="fa fa-envelope"></i> */}
               </a>
             </li>
           </ul>

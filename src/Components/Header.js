@@ -89,10 +89,8 @@ class Header extends React.Component {
                 <a
                   className="resume-button"
                   href={Resume}
-                  without
                   rel="noopener noreferrer"
                   target="_blank"
-                  trailingIcon="picture_as_pdf"
                 >
                   <p>Resume</p>
                 </a>
