@@ -8,6 +8,7 @@ import Spotify from "../../imgs/Spotify.png";
 import ScalesApp2 from "../../imgs/IPhone_X_vector_scalesapp.svg";
 import ScalesApp22 from "../../imgs/IPhone_X_vector_scalesapp2.svg";
 
+
 class Project extends React.Component {
   render() {
     return (

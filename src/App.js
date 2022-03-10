@@ -18,44 +18,58 @@ import Contact from "./Components/Sections/Contact";
 import FloatingLinks from "./Components/FloatingLinks";
 import UpArrow from "./Components/SVG/uparrow";
 
+import {extendTheme, ChakraProvider } from '@chakra-ui/react'
+
+const colors = {
+  brand: {
+    900: '#1a365d',
+    800: '#153e75',
+    700: '#2a69ac',
+  },
+}
+
+const theme = extendTheme({ colors })
+
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <FloatingLinks></FloatingLinks>
-        <UpArrow className="uparrow"></UpArrow>
-        <Section
-          title="Projects"
-          subtitle={"Hi there"}
-          dark={true}
-          id="front-page"
-          component={FrontPage}
-        />
-        <Section
-          title="Projects"
-          subtitle={"Hi there"}
-          dark={true}
-          id="Projects"
-          component={Projects}
-        />
-        <Section
-          title="Projects"
-          subtitle={"Hi there"}
-          dark={true}
-          id="About"
-          component={About}
-        />
-        <Section
-          title="Projects"
-          subtitle={"Hi there"}
-          dark={true}
-          id="Contact"
-          component={Contact}
-        />
-        <Footer />
-      </div>
-    </Router>
+    <ChakraProvider theme={theme}>
+      <Router>
+        <div className="App">
+          <Header />
+          <FloatingLinks></FloatingLinks>
+          <UpArrow className="uparrow"></UpArrow>
+          <Section
+            title="Projects"
+            subtitle={"Hi there"}
+            dark={true}
+            id="front-page"
+            component={FrontPage}
+          />
+          <Section
+            title="Projects"
+            subtitle={"Hi there"}
+            dark={true}
+            id="Projects"
+            component={Projects}
+          />
+          <Section
+            title="Projects"
+            subtitle={"Hi there"}
+            dark={true}
+            id="About"
+            component={About}
+          />
+          <Section
+            title="Projects"
+            subtitle={"Hi there"}
+            dark={true}
+            id="Contact"
+            component={Contact}
+          />
+          <Footer />
+        </div>
+      </Router>
+    </ChakraProvider>
   );
 }
 

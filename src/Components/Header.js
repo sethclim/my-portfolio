@@ -1,10 +1,12 @@
 import React from "react";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 import Logo from "./SVG/logo";
 import MenuButton from "./Menu/MenuButton";
 import MenuItem from "./Menu/MenuItem";
 import Menu from "./Menu/Menu";
-import Resume from "../imgs/Resume.pdf";
+
+import { Flex, Spacer, Link, Container } from '@chakra-ui/react'
+
 
 class Header extends React.Component {
   constructor(props) {
@@ -36,16 +38,18 @@ class Header extends React.Component {
       );
     });
     return (
-      <div className="main-header">
-        <div className="nav-wrapper container">
-          <div className="logocontainer">
-            <Logo
-              fill={"#6c82fb"}
-              width={"2em"}
-              hieght={"auto"}
-              className="logo"
-            />
-          </div>
+     
+        <Container maxW='container.lg'>
+         <Flex alignItems="center">
+    
+          <Logo
+            fill={"#6c82fb"}
+            width={"2em"}
+            hieght={"auto"}
+            className="logo" />
+
+          <Spacer />
+
           <nav className="main-nav">
             <ul className="main-nav-list">
               <li>
@@ -85,7 +89,7 @@ class Header extends React.Component {
                   Contact
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <a
                   className="resume-button"
                   href={Resume}
@@ -94,21 +98,11 @@ class Header extends React.Component {
                 >
                   <p>Resume</p>
                 </a>
-              </li>
+              </li> */}
             </ul>
           </nav>
-          <div className="showMenu">
-            <div className="menu-containter">
-              <MenuButton
-                open={this.state.menuOpen}
-                onClick={() => this.handleMenuClick()}
-                color="white"
-              />
-            </div>
-            <Menu open={this.state.menuOpen}>{menuItems}</Menu>
-          </div>
-        </div>
-      </div>
+          </Flex>
+        </Container>
     );
   }
 }

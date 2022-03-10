@@ -1,5 +1,5 @@
 import React from "react";
-import Resume from "../../imgs/Resume.pdf";
+// import Resume from "../../../public/Resume.pdf";
 /* Menu.jsx */
 class Menu extends React.Component {
   constructor(props) {
@@ -66,7 +66,7 @@ class Menu extends React.Component {
             {this.props.children}
             <div style={styles.containerB}>
               <div style={styles.menuItem}>
-                <a
+                {/* <a
                   className="resume-link-menu"
                   href={Resume}
                   rel="noopener noreferrer"
@@ -74,7 +74,7 @@ class Menu extends React.Component {
                   trailingIcon="picture_as_pdf"
                 >
                   <p>Resume</p>
-                </a>
+                </a> */}
               </div>
               <div style={styles.line} />
             </div>
