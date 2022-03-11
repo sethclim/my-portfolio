@@ -1,11 +1,11 @@
 import React from "react";
-// import { Link } from "react-scroll";
+import { Link as ScrolLink } from "react-scroll";
 import Logo from "./SVG/logo";
 import MenuButton from "./Menu/MenuButton";
 import MenuItem from "./Menu/MenuItem";
 import Menu from "./Menu/Menu";
 
-import { Flex, Spacer, Link, Container } from '@chakra-ui/react'
+import { Flex, Spacer, Link, Container, HStack } from '@chakra-ui/react'
 
 
 class Header extends React.Component {
@@ -51,44 +51,45 @@ class Header extends React.Component {
           <Spacer />
 
           <nav className="main-nav">
-            <ul className="main-nav-list">
-              <li>
-                <Link
+            <HStack>
+               <Link
+                  as={ScrolLink}
                   activeClass="active"
                   to="Projects"
                   spy={true}
                   smooth={true}
                   offset={-70}
                   duration={500}
+                  color="brand.lightGrey"
                 >
                   Projects
-                </Link>
-              </li>
-              <li>
+                </Link>    
                 <Link
+                  as={ScrolLink}
                   activeClass="active"
                   to="About"
                   spy={true}
                   smooth={true}
                   offset={-70}
                   duration={500}
+                  color="brand.lightGrey"
                 >
                   About
-                </Link>
-              </li>
-
-              <li>
+                </Link>     
                 <Link
+                  as={ScrolLink}
                   activeClass="active"
                   to="Contact"
                   spy={true}
                   smooth={true}
                   offset={-70}
                   duration={500}
+                  color="brand.lightGrey"
                 >
                   Contact
                 </Link>
-              </li>
+            </HStack>
+        
               {/* <li>
                 <a
                   className="resume-button"
@@ -99,7 +100,7 @@ class Header extends React.Component {
                   <p>Resume</p>
                 </a>
               </li> */}
-            </ul>
+            
           </nav>
           </Flex>
         </Container>

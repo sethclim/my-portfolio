@@ -1,65 +1,52 @@
 import React from "react";
-import ProjectR from "./Project-Right";
-import ProjectL from "./Project-Left";
-import chessIMG from "../../imgs/10-a-game-designer.jpg";
-import PhotoFolio from "../../imgs/Photofolio.png";
-import SmartScales from "../../imgs/SmartScales.png";
-import Spotify from "../../imgs/Spotify.png";
-import ScalesApp2 from "../../imgs/IPhone_X_vector_scalesapp.svg";
-import ScalesApp22 from "../../imgs/IPhone_X_vector_scalesapp2.svg";
+import Bitbucket from "../SVG/bitbucket";
+import External from "../SVG/external";
 
+import { Flex, Spacer, Container, HStack, VStack, Text, Image } from '@chakra-ui/react'
 
-class Project extends React.Component {
-  render() {
-    return (
-      <div className="project">
-        <div className="project-container">
-          <div className="proj-title-container">
-            <div className="proj-pg-title">
-              <h2>Projects</h2>
+export const Project = ({title,desc, tech, gitLink, link, img }) => {
+  return (
+    <Container  maxW='container.lg'  >
+      <HStack  w="100%">
+        <VStack align="start">
+
+          <Flex w="100%">
+            <Text fontSize="2xl">{title}</Text>
+            <Spacer />
+            <HStack>
+            {
+              tech.map(item => {
+                return <Text>{item}</Text>
+              })
+            }
+            </HStack>
+          </Flex>
+    
+          <Container padding="0" width={500}>
+            <Text fontSize="sm">{desc}</Text>
+          </Container>
+
+         <HStack>
+            <a
+              className="projectLinks1"
+              href={gitLink}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <Bitbucket className="github" />
+            </a>
+            <div className="projectLinks2">
+              {link && <External className="external" />}
             </div>
-            <hr className="new4"></hr>
-          </div>
+          </HStack>
+          
+          
+        </VStack>
 
-          <ProjectR
-            title="ChessGame"
-            img={chessIMG}
-            desc="ChessGame made in unity for the UWP framework.  I implemented and learned about game logic with an object-oriented design, lighting, saving to a binary file.  As well as, saving player preferences, and UI in unity.  I used Visual Studio for scripting and debugging, and the project was managed with version control."
-            tech={["Unity", "C#", "UWP"]}
-            gitLink="https://bitbucket.org/sethclim/chess_game/src/master/"
-            link={false}
-            projectLink="www.dfgio0erg.com"
-          />
-          <ProjectL
-            title="Scales App"
-            img={ScalesApp22}
-            desc="The goal of the app is to help a musician with their practice routine by providing selected exercises in a randomized order. Created a multi-page app that passes data between activities, saved data in user preferences, and using libraries to hold business logic.  Includes the ability to generate custom practice routines based on user inputs."
-            tech={["Android", "Kotlin"]}
-            gitLink="https://bitbucket.org/sethclim/scales_app_android/src/master/"
-            link={false}
-            projectLink="www.dfgio0erg.com"
-          />
-          <ProjectR
-            title="Spotify Mini-Player"
-            img={Spotify}
-            desc="Built with the React framework and Electron.  This project calls endpoints in the Spotify API and uses the PCKE Authorization flow.  The project also implementes a dynamic dropdown menu and makes use of react context."
-            tech={["React.JS", "Electron", "JavaScript", "Axios"]}
-            gitLink="https://bitbucket.org/sethclim/spotify_mini_player/src/master/"
-            link={false}
-            projectLink="https://bitbucket.org/sethclim/spotify_mini_player/src/master/"
-          />
-          <ProjectL
-            title="Photography Portfolio"
-            img={PhotoFolio}
-            desc="A React Website for a photographer.  Includes a sliding gallery using react and jQuery, as well as interactive controls for viewing."
-            tech={["React.JS", "JQuery", "JavaScript"]}
-            gitLink="https://bitbucket.org/sethclim/photography_portfolio/src/master/"
-            link={false}
-            projectLink="www.dfgio0erg.com"
-          />
-        </div>
-      </div>
-    );
-  }
+        <HStack w="100%" h="100%" justify="center">
+                  <Image boxSize='500px'     objectFit='contain'  src={img} alt="img" />
+        </HStack>
+      </HStack>
+    </Container>
+  );
 }
-export default Project;

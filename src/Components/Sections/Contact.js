@@ -6,7 +6,7 @@ class Contact extends React.Component {
       <div className="contact">
         <div className="contact-container">
           <div className="email-button">
-            <a href="mailto:sethclim@gmail.com">Connect With Me -></a>
+            <a href="mailto:sethclim@gmail.com">Connect With Me arrow</a>
           </div>
         </div>
       </div>
