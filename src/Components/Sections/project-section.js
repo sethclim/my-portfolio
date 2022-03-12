@@ -1,5 +1,4 @@
 import React from "react";
-import ProjectR from "./Project-Right";
 import { Project } from "./project";
 import chessIMG from "../../imgs/10-a-game-designer.jpg";
 import PhotoFolio from "../../imgs/Photofolio.png";

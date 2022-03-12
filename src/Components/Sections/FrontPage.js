@@ -1,7 +1,11 @@
 import React from "react";
 import { Link } from "react-scroll";
 
-import { Text, VStack,Container, Flex, Spacer } from '@chakra-ui/react'
+import Copy from "./Copy";
+
+
+
+import { Text, VStack,Container, Flex, Spacer, Button } from '@chakra-ui/react'
 
 class FrontPage extends React.Component {
   render() {
@@ -16,14 +20,13 @@ class FrontPage extends React.Component {
                 <Text fontSize='3xl' color="brand.lightGrey" >Full Stack Developer</Text>
               </VStack>
 
-            <VStack align="start" w="50em">
+            <VStack align="start" w="50em" paddingBottom={5}>
               <Text fontSize='xl' align="left">
                   I'm a computer science student who specializes in web applications
                   and mobile development on both android and iOS.
                 </Text>
             </VStack>
    
-            <div className="projects-button">
               <Link
                 activeClass="active"
                 to="Projects"
@@ -31,10 +34,15 @@ class FrontPage extends React.Component {
                 smooth={true}
                 offset={-70}
                 duration={500}
-              >
-                Projects
+              >           
+                <Button background="brand.primary" color="white">
+                  Projects 
+                </Button>
               </Link>
-            </div>
+
+              <Copy />
+         
+
           </VStack>
       
 
