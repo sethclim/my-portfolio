@@ -19,10 +19,14 @@ const ProjectPage = () => {
             </div>
 
             <Container  maxW='container.lg' paddingBottom="10">
-              <Text fontSize="2xl">Projects</Text>
-              <hr className="new4"></hr>
+              <Text color="white" fontSize={50}>Projects</Text>
             </Container>
           </div>
+
+
+
+        
+
 
           {/* <ProjectR
             title="ChessGame"
@@ -33,7 +37,7 @@ const ProjectPage = () => {
             link={false}
             projectLink="www.dfgio0erg.com"
           /> */}
-          <Project
+          {/* <Project
             title="Scales App"
             img={ScalesApp22}
             desc="The goal of the app is to help a musician with their practice routine by providing selected exercises in a randomized order. Created a multi-page app that passes data between activities, saved data in user preferences, and using libraries to hold business logic.  Includes the ability to generate custom practice routines based on user inputs."
@@ -50,7 +54,7 @@ const ProjectPage = () => {
             gitLink="https://bitbucket.org/sethclim/spotify_mini_player/src/master/"
             link={false}
             projectLink="https://bitbucket.org/sethclim/spotify_mini_player/src/master/"
-          />
+          /> */}
           {/* <ProjectL
             title="Photography Portfolio"
             img={PhotoFolio}

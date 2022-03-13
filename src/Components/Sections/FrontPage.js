@@ -24,10 +24,12 @@ class FrontPage extends React.Component {
               <Text fontSize='xl' align="left">
                   I'm a computer science student who specializes in web applications
                   and mobile development on both android and iOS.
+
+             
                 </Text>
             </VStack>
    
-              <Link
+             <Link
                 activeClass="active"
                 to="Projects"
                 spy={true}
@@ -40,8 +42,8 @@ class FrontPage extends React.Component {
                 </Button>
               </Link>
 
-              <Copy />
-         
+             
+            
 
           </VStack>
       

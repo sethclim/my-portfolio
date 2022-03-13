@@ -1,58 +1,105 @@
 import React from "react";
+import { Text, VStack,Container, Flex, Spacer, Button, ListItem, HStack, UnorderedList, Box } from '@chakra-ui/react'
+import { IoMailOpen } from "react-icons/io5";
+
+import Copy from "./Copy";
 
 class About extends React.Component {
   render() {
     return (
-      <div className="about">
-        <div className="about-container">
-          <div className="proj-title-container">
-            {/* <h2 className="proj-pg-num">01.</h2> */}
-            <div className="proj-pg-title">
-              <h2>About</h2>
-            </div>
-            <hr className="new4"></hr>
-          </div>
-          <div className="content-container">
-            <div className="about-me">
-              <div className="about-me-para">
-                <p>
-                  I'm a computer science student with a passion for business and
+      
+      <Container maxW='container.lg'>
+        <Text color="white" fontSize={50}>About</Text>
+        {/* <hr className="new4"></hr> */}
+        <Flex align="left" pt={5} >
+          <Text align="left">
+          I'm a computer science student with a passion for business and
                   software development. I'm experienced in object-oriented
                   programming including design with UML. Currently, I've built
                   applications for web, android, iOS, and desktop platform. In
                   addition to my Computer Science degree, I have a Bachelor of
                   Music during which I took electives in accounting and
                   business.
-                </p>
-              </div>
-            </div>
-            <div>
-              <div className="skills">
-                <div className="skills-list">
-                  <ul className="skill-listOne">
-                    <li>Python</li>
-                    <li>C#</li>
-                    <li>.Net</li>
-                    <li>XAML</li>
-                  </ul>
-                  <ul className="skill-listOne">
-                    <li>SQL</li>
-                    <li>React.JS</li>
-                    <li>HTML & CSS</li>
-                    <li>WordPress</li>
-                  </ul>
-                  <ul className="skill-listThree">
-                    <li>Java</li>
-                    <li>Kotlin</li>
-                    <li>Visual Studio</li>
-                    <li>Git & Version Control</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+          </Text>
+        </Flex>
+
+        <HStack align="top" pt="10" alignItems="center">
+
+  
+            <Text mr={50}  fontSize={30}>Connect:</Text>
+
+            <Box pt={1} >
+              <Copy />
+            </Box>
+
+        </HStack>
+
+
+        <Text pt={10} fontSize={30}>Tech Stack</Text>
+        <HStack align="top" pt="5" >
+
+           <Flex  w="20%">
+            <Text fontSize={20}>Frontend</Text>
+          </Flex>
+
+    
+          <UnorderedList pr={8} pt={2}>
+            <ListItem>Python</ListItem>
+            <ListItem>C#</ListItem>
+          </UnorderedList>
+
+        
+    
+          <UnorderedList pr={8} pt={2}>
+            <ListItem>Python</ListItem>
+            <ListItem>C#</ListItem>
+          </UnorderedList>
+
+        </HStack>
+
+        <HStack align="top" pt="5" >
+
+          <Flex  w="20%">
+            <Text fontSize={20}>Backend</Text>
+          </Flex>
+
+      
+          <UnorderedList pr={8} pt={2}>
+            <ListItem>Python</ListItem>
+            <ListItem>C#</ListItem>
+          </UnorderedList>
+
+
+       
+          <UnorderedList pr={8} pt={2}>
+            <ListItem>Python</ListItem>
+            <ListItem>C#</ListItem>
+          </UnorderedList>
+
+        </HStack>
+
+        <HStack align="top" pt="5" >
+
+          <Flex  w="20%">
+            <Text fontSize={20}>Tools</Text>
+          </Flex>
+
+          <UnorderedList pr={8} pt={2}>
+            <ListItem>Python</ListItem>
+            <ListItem>C#</ListItem>
+          </UnorderedList>
+
+
+ 
+          <UnorderedList pr={8} pt={2}>
+            <ListItem>Python</ListItem>
+            <ListItem>C#</ListItem>
+          </UnorderedList>
+
+        </HStack>
+
+    
+      </Container>
     );
   }
 }

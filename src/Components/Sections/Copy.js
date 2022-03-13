@@ -1,19 +1,25 @@
 import React, { useRef, useState } from 'react';
 
-import { Text, VStack,Container, Flex, Spacer, Button } from '@chakra-ui/react'
+import { Text, VStack,Container, Flex, Spacer, Button, HStack } from '@chakra-ui/react'
 import { IoCopy } from 'react-icons/io5';
 
 export default function Copy() {
 
+  var [copyText, setCopyText] = useState("Copy")
+
   function copyToClipboard() {
     navigator.clipboard.writeText("sethclim@gmail.com");
+    setCopyText("Copied")
   };
 
-
   return(
-    <Button bg="white" padding="3" onClick={copyToClipboard}>
-      <Text>sethclim@gmail.com</Text> <IoCopy />
-    </Button>
-  )
+    <HStack>
+      <Text fontSize={20} variant='hover'>sethclim@gmail.com</Text> 
+      <Button bg="#99999944" color="white" fontSize={10} padding={0} h="6" variant="just-outline" onClick={copyToClipboard}>{copyText}</Button>
+          
+    </HStack>
 
-}
+
+ 
+  )
+}   

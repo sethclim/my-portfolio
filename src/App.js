@@ -21,6 +21,8 @@ import UpArrow from "./Components/SVG/uparrow";
 import {extendTheme, ChakraProvider, Box } from '@chakra-ui/react'
 
 import {Link} from "./Components/Chakra/Link.ts"
+import {Button} from "./Components/Chakra/Button.ts"
+import {Text} from "./Components/Chakra/Text.ts"
 
 const colors = {
   brand: {
@@ -39,7 +41,9 @@ const colors = {
 const theme = extendTheme({ 
   colors ,
   components: {
-    Link
+    Link,
+    Button,
+    Text
   },
   styles: {
     global: {
