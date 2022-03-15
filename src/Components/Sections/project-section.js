@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Project } from "./project";
 import chessIMG from "../../imgs/10-a-game-designer.jpg";
 import PhotoFolio from "../../imgs/Photofolio.png";
@@ -7,7 +7,61 @@ import Spotify from "../../imgs/Spotify.png";
 import ScalesApp2 from "../../imgs/IPhone_X_vector_scalesapp.svg";
 import ScalesApp22 from "../../imgs/IPhone_X_vector_scalesapp2.svg";
 
-import { Flex, Spacer, Container, HStack, VStack, Text, Image } from '@chakra-ui/react'
+import { Flex,  Container, Grid, GridItem, Text, Image, useDisclosure, ModalOverlay,ModalCloseButton,ModalContent,ModalBody,ModalFooter,Button, HStack, VStack } from '@chakra-ui/react'
+
+
+import Modal from "../modal/modal";
+
+const ProjectItem = () =>{
+  const [isShown, setIsShown] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  function toggleModal() {
+    setIsOpen(!isOpen);
+
+    if(!isOpen){
+      setIsShown(false)
+    }
+  }
+
+
+  return(
+ 
+    <GridItem w='150' h='150' bg={!isShown? "blue" : "red" } onClick={toggleModal} onMouseEnter={() => setIsShown(true)}
+
+    onMouseLeave={() => setIsShown(false)} >
+
+        <Modal handleClose={toggleModal} isOpen={isOpen}>
+          <Text fontSize={80} color="white">
+            Hello
+          </Text>
+        </Modal>
+       {/* <Modal isOpen={isOpen} onClose={onClose} isCentered size="xl">
+        <ModalOverlay />
+        <ModalContent w="50em">
+          <ModalCloseButton />
+          <ModalBody mt="50px">
+
+          <HStack  h="100%">
+            <VStack alignItems="start" w="50%" h="30em">
+              <Text>Scales App</Text> 
+              <Text>THis is the scales app</Text>
+
+            </VStack>
+
+            <VStack h="30em" w="50%">
+              <Image src={ScalesApp22} />
+            </VStack>
+            
+          </HStack>
+      
+          </ModalBody>
+        </ModalContent>
+      </Modal> */}
+      
+    </GridItem>
+  )
+}
 
 const ProjectPage = () => {
     return (
@@ -20,6 +74,23 @@ const ProjectPage = () => {
 
             <Container  maxW='container.lg' paddingBottom="10">
               <Text color="white" fontSize={50}>Projects</Text>
+
+
+
+              <Grid templateColumns='repeat(2, 1fr)' gap={0}>
+                <ProjectItem />
+                <ProjectItem />
+                <ProjectItem />
+                <ProjectItem />
+                <ProjectItem />
+
+
+              </Grid>
+
+
+
+
+
             </Container>
           </div>
 
