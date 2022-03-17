@@ -1,6 +1,5 @@
 import React from "react";
-import { Text, VStack,Container, Flex, Spacer, Button, ListItem, HStack, UnorderedList, Box } from '@chakra-ui/react'
-import { IoMailOpen } from "react-icons/io5";
+import { Text, VStack,Container, Flex, HStack, Box } from '@chakra-ui/react'
 
 import Copy from "./Copy";
 
@@ -36,67 +35,35 @@ class About extends React.Component {
 
 
         <Text pt={10} fontSize={30}>Tech Stack</Text>
-        <HStack align="top" pt="5" >
+        <VStack align="top" pt="5" justifyContent="flex-bottom" >
+          <HStack>  
+              <Text fontSize={20}>Fontend</Text>
+              <Text fontSize={15}>Python</Text>
+              <Text fontSize={15}>C#</Text>
+              <Text fontSize={15}>Python</Text>
+              <Text fontSize={15}>C#</Text>
+          </HStack>
+        </VStack>
 
-           <Flex  w="20%">
-            <Text fontSize={20}>Frontend</Text>
-          </Flex>
-
-    
-          <UnorderedList pr={8} pt={2}>
-            <ListItem>Python</ListItem>
-            <ListItem>C#</ListItem>
-          </UnorderedList>
-
-        
-    
-          <UnorderedList pr={8} pt={2}>
-            <ListItem>Python</ListItem>
-            <ListItem>C#</ListItem>
-          </UnorderedList>
-
-        </HStack>
-
-        <HStack align="top" pt="5" >
-
-          <Flex  w="20%">
-            <Text fontSize={20}>Backend</Text>
-          </Flex>
-
+        <VStack align="top" pt="5" justifyContent="flex-bottom" >
+          <HStack>
+              <Text fontSize={20}>Backend</Text>
+              <Text fontSize={15}>Python</Text>
+              <Text fontSize={15}>C#</Text>
+              <Text fontSize={15}>Python</Text>
+              <Text fontSize={15}>C#</Text>
+          </HStack>
+        </VStack>
+        <VStack align="top" pt="5" justifyContent="flex-bottom" >
+          <HStack>
+              <Text fontSize={20}>Tools</Text>
+              <Text fontSize={15}>Python</Text>
+              <Text fontSize={15}>C#</Text>
+              <Text fontSize={15}>Python</Text>
+              <Text fontSize={15}>C#</Text>
+          </HStack>
       
-          <UnorderedList pr={8} pt={2}>
-            <ListItem>Python</ListItem>
-            <ListItem>C#</ListItem>
-          </UnorderedList>
-
-
-       
-          <UnorderedList pr={8} pt={2}>
-            <ListItem>Python</ListItem>
-            <ListItem>C#</ListItem>
-          </UnorderedList>
-
-        </HStack>
-
-        <HStack align="top" pt="5" >
-
-          <Flex  w="20%">
-            <Text fontSize={20}>Tools</Text>
-          </Flex>
-
-          <UnorderedList pr={8} pt={2}>
-            <ListItem>Python</ListItem>
-            <ListItem>C#</ListItem>
-          </UnorderedList>
-
-
- 
-          <UnorderedList pr={8} pt={2}>
-            <ListItem>Python</ListItem>
-            <ListItem>C#</ListItem>
-          </UnorderedList>
-
-        </HStack>
+        </VStack>
 
     
       </Container>

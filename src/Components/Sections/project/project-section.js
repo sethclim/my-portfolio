@@ -1,67 +1,14 @@
-import React, {useState} from "react";
+import React from "react";
 
 import chessIMG from "../../../imgs/10-a-game-designer.jpg";
-import PhotoFolio from "../../../imgs/Photofolio.png";
-import SmartScales from "../../../imgs/SmartScales.png";
 import Spotify from "../../../imgs/Spotify.png";
-import ScalesApp2 from "../../../imgs/IPhone_X_vector_scalesapp.svg";
 import ScalesApp22 from "../../../imgs/IPhone_X_vector_scalesapp2.svg";
-import Bitbucket from "../../SVG/bitbucket";
+import fig from "../../../imgs/figma_screenshot.png";
+import Venus_Board from "../../../imgs/venus_board.png";
 
-import Modal from "../../modal/modal";
+import { Container, Grid, Text } from '@chakra-ui/react'
 
-import styles from "./projectsession.module.scss"
-
-import { Flex,  Container, Grid, GridItem, Text, Image, Button, HStack, VStack, Link } from '@chakra-ui/react'
-
-const ProjectItem = ({image, desc, tech, title, gitLink}) =>{
-  const [isShown, setIsShown] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-
-  function toggleModal() {
-    setIsOpen(!isOpen);
-
-    if(!isOpen){
-      setIsShown(false)
-    }
-  }
-
-  return(
- 
-    <GridItem w='150' h='150' bg={!isShown? "#FFFFF522" : "#FFFFF533" } onClick={toggleModal} onMouseEnter={() => setIsShown(true)}
-
-    onMouseLeave={() => setIsShown(false)} >
-        <VStack alignItems="start">
-          <Text padding="2">{title}</Text>
-        </VStack>
-
-        <Modal handleClose={toggleModal} isOpen={isOpen}>
-          <HStack>
-            <VStack alignItems="start" justifyContent="start" w="50%" h="500px" pt={5} padding={20}>
-              <Text fontSize={30}>{title}</Text> 
-              <Text>{desc}</Text>
-              <HStack pt={4}>
-                <Text bg="black" color="white" padding={1} borderRadius={5}>Tech Stack</Text>
-                {
-                  tech.map(item => {
-                    return <Text>{item}</Text>
-                  })
-                }
-              </HStack>
-
-              <Link href={gitLink} isExternal pt={4}>
-                 <Bitbucket className={styles.github} />
-              </Link>
-             
-            </VStack>
-            <VStack h="100%" w="50%">
-              <Image boxSize='500px' objectFit='contain' src={image} />
-            </VStack>
-          </HStack>
-        </Modal>      
-    </GridItem>
-  )
-}
+import {ProjectItem} from "./project-item"
 
 const ProjectPage = () => {
     return (
@@ -79,6 +26,8 @@ const ProjectPage = () => {
                 <ProjectItem 
                   title="Scales App" 
                   image={ScalesApp22}
+                  bkImage={fig}
+                  bkColor="#FFFFFF"
                   tech={["Android", "Kotlin"]}
                   desc="The goal of the app is to help a musician with their practice routine by providing selected exercises in a randomized order. 
                   Created a multi-page app that passes data between activities, saved data in user preferences, and using libraries to hold business logic.  
@@ -88,6 +37,9 @@ const ProjectPage = () => {
                 <ProjectItem 
                   title="Illu"
                   image={chessIMG}
+                  // bkImage={chessIMG}
+                  TitleColor="#FFFFFF"
+                  bkColor="#000000"
                   tech={["Unity", "C#", "UWP"]}
                   desc="ChessGame made in unity for the UWP framework.  I implemented and learned about game logic with an object-oriented design, lighting, saving to a binary file.  
                   As well as, saving player preferences, and UI in unity.  I used Visual Studio for scripting and debugging, and the project was managed with version control."
@@ -95,7 +47,12 @@ const ProjectPage = () => {
 
                 <ProjectItem 
                   title="Venus Bug Tracker"
-                  image={chessIMG}
+                  image={Venus_Board}
+                  bkImage={Venus_Board}
+                  TitleColor="#000000"
+                  bkPostion="right"
+                  bgSize={300}
+                  bkColor="#ecf0f1"
                   tech={["Unity", "C#", "UWP"]}
                   desc="ChessGame made in unity for the UWP framework.  I implemented and learned about game logic with an object-oriented design, lighting, saving to a binary file.  
                   As well as, saving player preferences, and UI in unity.  I used Visual Studio for scripting and debugging, and the project was managed with version control."
@@ -104,6 +61,9 @@ const ProjectPage = () => {
                 <ProjectItem 
                   title="ChessGame"
                   image={chessIMG}
+                  bkImage={chessIMG}
+                  bgSize={200}
+                  bkColor="#000000"
                   tech={["Unity", "C#", "UWP"]}
                   desc="ChessGame made in unity for the UWP framework.  I implemented and learned about game logic with an object-oriented design, lighting, saving to a binary file.  
                   As well as, saving player preferences, and UI in unity.  I used Visual Studio for scripting and debugging, and the project was managed with version control."
@@ -112,6 +72,11 @@ const ProjectPage = () => {
                 <ProjectItem
                   title="Spotify Mini-Player"
                   image={Spotify}
+                  bkImage={Spotify}
+                  bkPostion="right"
+                  TitleColor="#FFFFFF"
+                  bgSize={250}
+                  bkColor="#000000"
                   desc="Built with the React framework and Electron.  This project calls endpoints in the Spotify API and uses the PCKE Authorization flow.  
                   The project also implementes a dynamic dropdown menu and makes use of react context."
                   tech={["React.JS", "Electron", "JavaScript", "Axios"]}
