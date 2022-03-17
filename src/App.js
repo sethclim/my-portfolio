@@ -92,13 +92,13 @@ function App() {
             id="About"
             component={About}
           />
-          <Section
+          {/* <Section
             title="Projects"
             subtitle={"Hi there"}
             dark={true}
             id="Contact"
             component={Contact}
-          />
+          /> */}
           <Footer />
         </Box>
       </Router>

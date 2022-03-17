@@ -1,32 +1,15 @@
 import React from "react";
 
+import { Flex,  Container, Grid, GridItem, Text, Image, Button, HStack, VStack, Link } from '@chakra-ui/react'
+
 function Footer() {
   return (
-    <div className="main-footer">
-      <div className="footer_container">
-        <h5>@Seth Climenhaga 2020</h5>
-        <nav className="main-links">
-          <ul className="main-links-list">
-            <li>
-              <a href="#">
-                {/* <i className="icon" className="fa fa-facebook-square"></i> */}
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                {/* <i className="icon" className="fa fa-instagram"></i> */}
-              </a>
-            </li>
-
-            <li>
-              <a href="#">
-                {/* <i className="icon" className="fa fa-envelope"></i> */}
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+    <Container maxW='container.lg' height="3em">
+      <Flex alignItems="center" justifyContent="center" h="100%">
+        <Text fontSize={12}>@Seth Climenhaga 2022</Text>
+     
+      </Flex>
+    </Container>
   );
 }
 
