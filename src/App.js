@@ -13,7 +13,7 @@ import { Section } from "./Components/Section";
 import Footer from "./Components/Footer";
 import FrontPage from "./Components/Sections/FrontPage";
 import About from "./Components/Sections/About";
-import Projects from "./Components/Sections/project-section";
+import Projects from "./Components/Sections/project/project-section";
 import Contact from "./Components/Sections/Contact";
 import FloatingLinks from "./Components/FloatingLinks";
 import UpArrow from "./Components/SVG/uparrow";
