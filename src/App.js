@@ -15,7 +15,7 @@ import FrontPage from "./Components/Sections/FrontPage";
 import About from "./Components/Sections/About";
 import Projects from "./Components/Sections/project/project-section";
 import Contact from "./Components/Sections/Contact";
-import FloatingLinks from "./Components/FloatingLinks";
+import FloatingLinks from "./Components/floating-links/FloatingLinks";
 import UpArrow from "./Components/SVG/uparrow";
 
 import {extendTheme, ChakraProvider, Box } from '@chakra-ui/react'
@@ -70,7 +70,6 @@ function App() {
         <Box className="App">
           <Header />
           <FloatingLinks></FloatingLinks>
-          <UpArrow className="uparrow"></UpArrow>
           <Section
             title="Projects"
             subtitle={"Hi there"}

@@ -1,6 +1,9 @@
 import React from "react";
-import Linkedin from "./SVG/linkedin";
-import GitHub from "./SVG/github";
+import Linkedin from "../SVG/linkedin";
+import GitHub from "../SVG/github";
+
+import styles from "./floating-links.module.scss"
+
 class FloatingLinks extends React.Component {
   constructor(props) {
     super(props);
@@ -9,14 +12,14 @@ class FloatingLinks extends React.Component {
 
   render() {
     return (
-      <div className="link-wrapper">
+      <div className={styles.linkWrapper}>
         <a
-          className="floating-links"
+          className={styles.floatingLinks}
           href="https://www.linkedin.com/in/seth-climenhaga-932802157/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          <Linkedin className="floating-item"></Linkedin>
+          <Linkedin className={styles.floatingItem}></Linkedin>
         </a>
 
         <a
@@ -25,7 +28,7 @@ class FloatingLinks extends React.Component {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <GitHub className="floating-item"></GitHub>
+          <GitHub className={styles.floatingItem}></GitHub>
         </a>
       </div>
     );

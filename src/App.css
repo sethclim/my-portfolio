@@ -576,26 +576,6 @@ hr.new4 {
   animation-delay: 1.5s;
 }
 
-/* Floating Links */
-.link-wrapper {
-  position: fixed;
-  top: 80vh;
-  display: flex;
-  flex-direction: column;
-  margin: 2vw;
-}
-.floating-links {
-  color: #8893af;
-}
-
-.floating-item {
-  margin: 0.4em;
-}
-
-.floating-item:hover {
-  color: #6c82fb;
-}
-
 .uparrow {
   position: fixed;
   top: 85vh;

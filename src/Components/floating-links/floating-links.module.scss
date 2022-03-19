@@ -1,0 +1,19 @@
+/* Floating Links */
+.linkWrapper {
+  position: fixed;
+  top: 80vh;
+  display: flex;
+  flex-direction: column;
+  margin: 2vw;
+}
+.floatingLinks {
+  color: #8893af;
+}
+
+.floatingItem {
+  margin: 0.4em;
+}
+
+.floatingItem:hover {
+  color: #6c82fb;
+}
