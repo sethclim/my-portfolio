@@ -14,15 +14,17 @@ import Footer from "./Components/Footer";
 import FrontPage from "./Components/Sections/FrontPage";
 import About from "./Components/Sections/About";
 import Projects from "./Components/Sections/project/project-section";
-import Contact from "./Components/Sections/Contact";
 import FloatingLinks from "./Components/floating-links/FloatingLinks";
-import UpArrow from "./Components/SVG/uparrow";
+
 
 import {extendTheme, ChakraProvider, Box } from '@chakra-ui/react'
+import CursorProvider from "./Providers/cursorProvider";
 
 import {Link} from "./Components/Chakra/Link.ts"
 import {Button} from "./Components/Chakra/Button.ts"
 import {Text} from "./Components/Chakra/Text.ts"
+
+import  "./App.css"
 
 const colors = {
   brand: {
@@ -36,9 +38,7 @@ const colors = {
   },
 }
 
-
-
-const theme = extendTheme({ 
+export const theme = extendTheme({ 
   colors ,
   components: {
     Link,
@@ -66,41 +66,43 @@ const theme = extendTheme({
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Router>
-        <Box className="App">
-          <Header />
-          <FloatingLinks></FloatingLinks>
-          <Section
-            title="Projects"
-            subtitle={"Hi there"}
-            dark={true}
-            id="front-page"
-            component={FrontPage}
-          />
-          <Section
-            title="Projects"
-            subtitle={"Hi there"}
-            dark={true}
-            id="Projects"
-            component={Projects}
-          />
-          <Section
-            title="Projects"
-            subtitle={"Hi there"}
-            dark={true}
-            id="About"
-            component={About}
-          />
-          {/* <Section
-            title="Projects"
-            subtitle={"Hi there"}
-            dark={true}
-            id="Contact"
-            component={Contact}
-          /> */}
-          <Footer />
-        </Box>
-      </Router>
+       <CursorProvider>
+        <Router>
+          <Box className="App">
+            <Header />
+            <FloatingLinks></FloatingLinks>
+            <Section
+              title="Projects"
+              subtitle={"Hi there"}
+              dark={true}
+              id="front-page"
+              component={FrontPage}
+            />
+            <Section
+              title="Projects"
+              subtitle={"Hi there"}
+              dark={true}
+              id="Projects"
+              component={Projects}
+            />
+            <Section
+              title="Projects"
+              subtitle={"Hi there"}
+              dark={true}
+              id="About"
+              component={About}
+            />
+            {/* <Section
+              title="Projects"
+              subtitle={"Hi there"}
+              dark={true}
+              id="Contact"
+              component={Contact}
+            /> */}
+            <Footer />
+          </Box>
+        </Router>
+      </CursorProvider>
     </ChakraProvider>
   );
 }

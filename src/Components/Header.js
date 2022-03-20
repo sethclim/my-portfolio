@@ -1,45 +1,20 @@
 import React from "react";
 import { Link as ScrolLink } from "react-scroll";
 import Logo from "./SVG/logo";
-import MenuButton from "./Menu/MenuButton";
-import MenuItem from "./Menu/MenuItem";
-import Menu from "./Menu/Menu";
-
-import { Flex, Spacer, Link, Container, HStack } from '@chakra-ui/react'
 
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      menuOpen: false,
-    };
-  }
-  handleMenuClick() {
-    this.setState({ menuOpen: !this.state.menuOpen });
-  }
+import { useColorMode } from '@chakra-ui/react'
 
-  handleLinkClick() {
-    this.setState({ menuOpen: false });
-  }
-  render() {
-    const menu = ["Projects", "About", "Contact"];
-    const menuItems = menu.map((val, index) => {
-      return (
-        <MenuItem
-          key={index}
-          delay={`${index * 0.1}s`}
-          onClick={() => {
-            this.handleLinkClick();
-          }}
-        >
-          {val}
-        </MenuItem>
-      );
-    });
+import { Flex, Spacer, Link, Container, HStack,Switch } from '@chakra-ui/react'
+
+
+const Header = () => {
+
+  const { colorMode, toggleColorMode } = useColorMode()
+
     return (
      
-        <Container maxW='container.lg'>
+        <Container maxW='container.lg' mt="3"  pr={7}>
          <Flex alignItems="center">
     
           <Logo
@@ -48,10 +23,8 @@ class Header extends React.Component {
             hieght={"auto"}
             className="logo" />
 
-          <Spacer />
-
           <nav className="main-nav">
-            <HStack>
+            <HStack pl="6">
                <Link
                   as={ScrolLink}
                   activeClass="active"
@@ -76,18 +49,6 @@ class Header extends React.Component {
                 >
                   About
                 </Link>     
-                <Link
-                  as={ScrolLink}
-                  activeClass="active"
-                  to="Contact"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                  color="brand.lightGrey"
-                >
-                  Contact
-                </Link>
             </HStack>
         
               {/* <li>
@@ -102,10 +63,12 @@ class Header extends React.Component {
               </li> */}
             
           </nav>
+          <Spacer />
+
+          <Switch id='email-alerts' onChange={toggleColorMode} />
           </Flex>
         </Container>
     );
-  }
 }
 
 export default Header;

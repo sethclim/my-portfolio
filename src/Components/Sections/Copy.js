@@ -1,7 +1,6 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 
-import { Text, VStack,Container, Flex, Spacer, Button, HStack } from '@chakra-ui/react'
-import { IoCopy } from 'react-icons/io5';
+import { Text, Button, HStack } from '@chakra-ui/react'
 
 export default function Copy() {
 
@@ -18,8 +17,5 @@ export default function Copy() {
       <Button bg="#99999944" color="white" fontSize={10} padding={0} h="6" variant="just-outline" onClick={copyToClipboard}>{copyText}</Button>
           
     </HStack>
-
-
- 
   )
 }   
