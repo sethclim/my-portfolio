@@ -9,20 +9,21 @@ import Venus_Board from "../../../imgs/venus_board.png";
 
 import { Container, Grid, Text } from '@chakra-ui/react'
 
-import {ProjectItem} from "./project-item"
+import ProjectItem from "./project-item"
 
 import styles from "./projectsession.module.scss"
 
 const ProjectPage = ({context}) => {
 
   const { onCursor } = context;
+  
 
   return (
-    <Container  maxW='container.lg' paddingBottom="10" >
+    <Container  maxW='container.lg' paddingBottom="10">
         {/* {
           isShown? <div id={styles.invertedcursor}><p>Open</p></div> : null
         } */}
-      <div           onMouseEnter={() => onCursor("pointer")}
+      <div     onMouseEnter={() => onCursor("pointer")}
           onMouseLeave={onCursor} >
    
       <Text color="white" fontSize={50}>Projects</Text>

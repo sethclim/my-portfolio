@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-
+import withCursor from "../../HOCs/withCursor";
 import Bitbucket from "../../SVG/bitbucket";
 import Modal from "../../modal/modal";
 import styles from "./projectsession.module.scss"
@@ -7,11 +7,14 @@ import styles from "./projectsession.module.scss"
 import { GridItem, Text, Image, HStack, VStack, Link, Box } from '@chakra-ui/react'
 
 
-export const ProjectItem = ({image, desc, tech, title, gitLink, bkImage, bkColor, bgSize=400, TitleColor, bkPostion="center"}) =>{
+ const ProjectItem = ({context, image, desc, tech, title, gitLink, bkImage, bkColor, bgSize=400, TitleColor, bkPostion="center"}) =>{
     const [isOpen, setIsOpen] = useState(false);
+
+    const { onCursor } = context;
   
     function toggleModal() {
       setIsOpen(!isOpen);
+      onCursor(false)
     }
   
     return(
@@ -54,3 +57,5 @@ export const ProjectItem = ({image, desc, tech, title, gitLink, bkImage, bkColor
       </GridItem>
     )
   }
+
+  export default withCursor(ProjectItem)
