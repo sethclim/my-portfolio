@@ -4,6 +4,7 @@ import GitHub from "../SVG/github";
 
 import styles from "./floating-links.module.scss"
 
+
 class FloatingLinks extends React.Component {
   constructor(props) {
     super(props);
@@ -23,7 +24,7 @@ class FloatingLinks extends React.Component {
         </a>
 
         <a
-          className="floating-links"
+          className={styles.floatingLinks}
           href="https://github.com/sethclim?tab=repositories"
           rel="noopener noreferrer"
           target="_blank"

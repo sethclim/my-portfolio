@@ -8,10 +8,10 @@ class About extends React.Component {
     return (
       
       <Container maxW='container.lg'>
-        <Text color="white" fontSize={50}>About</Text>
+        <Text color="brand.dark" fontSize={50}>About</Text>
         {/* <hr className="new4"></hr> */}
         <Flex align="left" pt={5} >
-          <Text align="left">
+          <Text color='brand.2' align="left">
           I'm a computer science student with a passion for business and
                   software development. I'm experienced in object-oriented
                   programming including design with UML. Currently, I've built
@@ -39,14 +39,14 @@ class About extends React.Component {
         <Grid templateColumns='120px 1fr' gap={6}>
           <GridItem w='100%' h='10' alignItems='center' ><Text  fontSize={20} fontWeight='bold'>Languages</Text></GridItem>
           <GridItem w='100%' h='10' >
-            <Text  fontSize={20}>Kotlin, Swift, JavaScript/Typescript, C#, Java, C++</Text>
+            <Text color='brand.2'  fontSize={20}>Kotlin, Swift, JavaScript/Typescript, C#, Java, C++</Text>
           </GridItem>
-          <GridItem w='100%' h='10'><Text fontSize={20} fontWeight='bold'>Databases</Text></GridItem>
-          <GridItem w='100%' h='10'  ><Text fontSize={20}>SQL, MongoDB, Room, CoreData</Text></GridItem>
+          <GridItem w='100%' h='10'><Text  fontSize={20} fontWeight='bold'>Databases</Text></GridItem>
+          <GridItem w='100%' h='10'  ><Text color='brand.2' fontSize={20}>SQL, MongoDB, Room, CoreData</Text></GridItem>
           <GridItem w='100%' h='10'  ><Text fontSize={20} fontWeight='bold'>Technology</Text></GridItem>
-          <GridItem w='100%' h='10' ><Text fontSize={20}>React, AWS, Apache, Docker</Text></GridItem>
+          <GridItem w='100%' h='10' ><Text color='brand.2' fontSize={20}>React, AWS, Apache, Docker</Text></GridItem>
           <GridItem w='100%' h='10' ><Text fontSize={20} fontWeight='bold'>Tools</Text></GridItem>
-          <GridItem w='100%' h='10'  ><Text fontSize={20}>Git, Jira, VSCode, IntelliJ IDEA</Text></GridItem>
+          <GridItem w='100%' h='10'  ><Text color='brand.2' fontSize={20}>Git, Jira, VSCode, IntelliJ IDEA</Text></GridItem>
         </Grid>
       
         </VStack>

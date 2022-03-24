@@ -1,5 +1,4 @@
 import React from "react";
-import withCursor from "../../HOCs/withCursor";
 
 import chessIMG from "../../../imgs/10-a-game-designer.jpg";
 import Spotify from "../../../imgs/Spotify.png";
@@ -25,9 +24,9 @@ const ProjectPage = ({context}) => {
         } */}
       <div>
    
-      <Text color="white" fontSize={50}>Projects</Text>
+      <Text color="brand.dark" fontSize={50}>Projects</Text>
 
-      <Grid templateColumns='repeat(2, 1fr)' gap={0} id={styles.projectContainer} >
+      <Grid templateColumns='repeat(2, 1fr)' gap={5} id={styles.projectContainer} >
         <ProjectItem 
           id="pi"
           title="Scales App" 
@@ -45,10 +44,10 @@ const ProjectPage = ({context}) => {
         <ProjectItem 
                id="pi"
           title="Illu"
-          image={chessIMG}
+          //image={chessIMG}
           // bkImage={chessIMG}
           TitleColor="#FFFFFF"
-          bkColor="#000000"
+          bkColor="#76ABD2"
           hoverColor="white"
           textHover='black'
           tech={["Unity", "C#", "UWP"]}
@@ -76,6 +75,7 @@ const ProjectPage = ({context}) => {
                id="pi"
           title="ChessGame"
           image={chessIMG}
+          TitleColor="#FFFFFF"
           bkImage={chessIMG}
           bgSize={200}
           bkColor="#000000"

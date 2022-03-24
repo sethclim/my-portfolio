@@ -25,6 +25,8 @@ import { GridItem, Text, Image, HStack, VStack, Link, Box } from '@chakra-ui/rea
         onClick={toggleModal}
         onMouseOver={()=>onCursor('pointer', hoverColor, textHover)}
         onMouseLeave={onCursor}
+        boxShadow='2xl'
+        borderRadius={5}
         >  
           
         <Box w="100%" h="100%" backgroundImage={bkImage}  bgSize={bgSize}   backgroundRepeat="no-repeat"  bgPosition={bkPostion}>

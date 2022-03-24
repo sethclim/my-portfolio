@@ -26,19 +26,25 @@ import {Text} from "./Components/Chakra/Text.ts"
 
 import  "./App.css"
 
+const config = {
+  initialColorMode: 'light',
+  useSystemColorMode: false,
+}
+
+
+
 const colors = {
   brand: {
-    "primary": "#6c82fb",
-    "background":'#0b1a2e',
-    "red":'red',
-    'lightGrey':'#ccd7f5',
-    900: '#1a365d',
-    800: '#153e75',
-    700: '#2a69ac',
+    "primary": "#9450F2",
+    'dark':'#262626',
+    'white': '#F2F2F2',
+    '2':'#A6A6A6'
+
   },
 }
 
 export const theme = extendTheme({ 
+  config,
   colors ,
   components: {
     Link,
@@ -49,8 +55,8 @@ export const theme = extendTheme({
     global: {
       // styles for the `body`
       body: {
-        bg: '#0b1a2e',
-        color: '#8893af',
+        bg: 'brand.white',
+        color: 'brand.dark',
       },
       // styles for the `a`
       // a: {
@@ -68,7 +74,7 @@ function App() {
     <ChakraProvider theme={theme}>
        <CursorProvider>
         <Router>
-          <Box className="App">
+          <Box bg='brand.background'>
             <Header />
             <FloatingLinks></FloatingLinks>
             <Section

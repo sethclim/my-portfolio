@@ -10,7 +10,7 @@ import { Flex, Spacer, Link, Container, HStack,Switch } from '@chakra-ui/react'
 
 const Header = () => {
 
-  const { colorMode, toggleColorMode } = useColorMode()
+  const { toggleColorMode } = useColorMode()
 
     return (
      
@@ -18,7 +18,7 @@ const Header = () => {
          <Flex alignItems="center">
     
           <Logo
-            fill={"#6c82fb"}
+            fill={'brand.dark'}
             width={"2em"}
             hieght={"auto"}
             className="logo" />

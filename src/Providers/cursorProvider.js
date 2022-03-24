@@ -39,7 +39,6 @@ const CursorProvider = ({ children }) => {
     setActive(onOff)
   }
 
-
   const setCursorColor = color =>{
 
     setColor(color)
