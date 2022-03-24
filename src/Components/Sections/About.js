@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, VStack,Container, Flex, HStack, Box } from '@chakra-ui/react'
+import { Text, VStack,Container, Flex, HStack, Box, Grid, GridItem } from '@chakra-ui/react'
 
 import Copy from "./Copy";
 
@@ -34,34 +34,20 @@ class About extends React.Component {
         </HStack>
 
 
-        <Text pt={10} fontSize={30}>Tech Stack</Text>
+        <Text pt={10} fontSize={30}>Skills</Text>
         <VStack align="top" pt="5" justifyContent="flex-bottom" >
-          <HStack>  
-              <Text fontSize={20}>Fontend</Text>
-              <Text fontSize={15}>Python</Text>
-              <Text fontSize={15}>C#</Text>
-              <Text fontSize={15}>Python</Text>
-              <Text fontSize={15}>C#</Text>
-          </HStack>
-        </VStack>
-
-        <VStack align="top" pt="5" justifyContent="flex-bottom" >
-          <HStack>
-              <Text fontSize={20}>Backend</Text>
-              <Text fontSize={15}>Python</Text>
-              <Text fontSize={15}>C#</Text>
-              <Text fontSize={15}>Python</Text>
-              <Text fontSize={15}>C#</Text>
-          </HStack>
-        </VStack>
-        <VStack align="top" pt="5" justifyContent="flex-bottom" >
-          <HStack>
-              <Text fontSize={20}>Tools</Text>
-              <Text fontSize={15}>Python</Text>
-              <Text fontSize={15}>C#</Text>
-              <Text fontSize={15}>Python</Text>
-              <Text fontSize={15}>C#</Text>
-          </HStack>
+        <Grid templateColumns='120px 1fr' gap={6}>
+          <GridItem w='100%' h='10' alignItems='center' ><Text  fontSize={20} fontWeight='bold'>Languages</Text></GridItem>
+          <GridItem w='100%' h='10' >
+            <Text  fontSize={20}>Kotlin, Swift, JavaScript/Typescript, C#, Java, C++</Text>
+          </GridItem>
+          <GridItem w='100%' h='10'><Text fontSize={20} fontWeight='bold'>Databases</Text></GridItem>
+          <GridItem w='100%' h='10'  ><Text fontSize={20}>SQL, MongoDB, Room, CoreData</Text></GridItem>
+          <GridItem w='100%' h='10'  ><Text fontSize={20} fontWeight='bold'>Technology</Text></GridItem>
+          <GridItem w='100%' h='10' ><Text fontSize={20}>React, AWS, Apache, Docker</Text></GridItem>
+          <GridItem w='100%' h='10' ><Text fontSize={20} fontWeight='bold'>Tools</Text></GridItem>
+          <GridItem w='100%' h='10'  ><Text fontSize={20}>Git, Jira, VSCode, IntelliJ IDEA</Text></GridItem>
+        </Grid>
       
         </VStack>
 

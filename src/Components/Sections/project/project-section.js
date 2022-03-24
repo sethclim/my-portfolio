@@ -15,24 +15,26 @@ import styles from "./projectsession.module.scss"
 
 const ProjectPage = ({context}) => {
 
-  const { onCursor } = context;
-  
+
+
 
   return (
     <Container  maxW='container.lg' paddingBottom="10">
         {/* {
           isShown? <div id={styles.invertedcursor}><p>Open</p></div> : null
         } */}
-      <div     onMouseEnter={() => onCursor("pointer")}
-          onMouseLeave={onCursor} >
+      <div>
    
       <Text color="white" fontSize={50}>Projects</Text>
 
       <Grid templateColumns='repeat(2, 1fr)' gap={0} id={styles.projectContainer} >
         <ProjectItem 
+          id="pi"
           title="Scales App" 
           image={ScalesApp22}
           bkImage={fig}
+          hoverColor="black"
+          textHover='white'
           bkColor="#FFFFFF"
           tech={["Android", "Kotlin", "KotlinMultiPlatform", "Koin", "SQLLite"]}
           desc="The goal of the app is to help a musician with their practice routine by providing selected exercises in a randomized order. 
@@ -41,22 +43,28 @@ const ProjectPage = ({context}) => {
           gitLink="https://bitbucket.org/sethclim/scales_app_android/src/master/"  />
 
         <ProjectItem 
+               id="pi"
           title="Illu"
           image={chessIMG}
           // bkImage={chessIMG}
           TitleColor="#FFFFFF"
           bkColor="#000000"
+          hoverColor="white"
+          textHover='black'
           tech={["Unity", "C#", "UWP"]}
           desc="ChessGame made in unity for the UWP framework.  I implemented and learned about game logic with an object-oriented design, lighting, saving to a binary file.  
           As well as, saving player preferences, and UI in unity.  I used Visual Studio for scripting and debugging, and the project was managed with version control."
           gitLink="https://bitbucket.org/sethclim/chess_game/src/master/" />
 
         <ProjectItem 
+               id="pi"
           title="Venus Bug Tracker"
           image={Venus_Board}
           bkImage={Venus_Board}
           TitleColor="#000000"
           bkPostion="right"
+          hoverColor="black"
+          textHover='white'
           bgSize={300}
           bkColor="#ecf0f1"
           tech={["Unity", "C#", "UWP"]}
@@ -65,17 +73,21 @@ const ProjectPage = ({context}) => {
           gitLink="https://bitbucket.org/sethclim/chess_game/src/master/" />  
 
         <ProjectItem 
+               id="pi"
           title="ChessGame"
           image={chessIMG}
           bkImage={chessIMG}
           bgSize={200}
           bkColor="#000000"
+          hoverColor="white"
+          textHover='black'
           tech={["Unity", "C#", "UWP"]}
           desc="ChessGame made in unity for the UWP framework.  I implemented and learned about game logic with an object-oriented design, lighting, saving to a binary file.  
           As well as, saving player preferences, and UI in unity.  I used Visual Studio for scripting and debugging, and the project was managed with version control."
           gitLink="https://bitbucket.org/sethclim/chess_game/src/master/" />
 
         <ProjectItem
+               id="pi"
           title="Spotify Mini-Player"
           image={Spotify}
           bkImage={Spotify}
@@ -83,6 +95,8 @@ const ProjectPage = ({context}) => {
           TitleColor="#FFFFFF"
           bgSize={250}
           bkColor="#000000"
+          hoverColor="white"
+          textHover='black'
           desc="Built with the React framework and Electron.  This project calls endpoints in the Spotify API and uses the PCKE Authorization flow.  
           The project also implementes a dynamic dropdown menu and makes use of react context."
           tech={["React.JS", "Electron", "JavaScript", "Axios"]}
@@ -93,4 +107,4 @@ const ProjectPage = ({context}) => {
     </Container>
   );
 }
-export default withCursor(ProjectPage);
+export default ProjectPage;

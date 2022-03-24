@@ -14,8 +14,8 @@
 .movable.active {
   width: 60px;
   height: 60px;
-  background: #fff;
-  mix-blend-mode: difference;
+  /* background: #fff; */
+  /* mix-blend-mode: difference; */
   color: #000;
   cursor: none;
 }
@@ -39,6 +39,10 @@
 
 .movable.cursor-left:after {
   content: "<";
+}
+
+.movable-gone {
+  display: none;
 }
 
 /* #invertedcursor {

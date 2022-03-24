@@ -7,22 +7,25 @@ import styles from "./projectsession.module.scss"
 import { GridItem, Text, Image, HStack, VStack, Link, Box } from '@chakra-ui/react'
 
 
- const ProjectItem = ({context, image, desc, tech, title, gitLink, bkImage, bkColor, bgSize=400, TitleColor, bkPostion="center"}) =>{
+ const ProjectItem = ({context, image, desc, tech, title, gitLink, bkImage, bkColor, bgSize=400, TitleColor, bkPostion="center", hoverColor,textHover}) =>{
     const [isOpen, setIsOpen] = useState(false);
 
-    const { onCursor } = context;
+    const { controlCursor, onCursor  } = context;
   
     function toggleModal() {
-      setIsOpen(!isOpen);
-      onCursor(false)
+        controlCursor(!isOpen)
+        setIsOpen(!isOpen);
     }
   
-    return(
-      <GridItem 
+    return(       
+      <GridItem   
         w='150' 
         h='150' 
         bg={bkColor}  
-        onClick={toggleModal}>  
+        onClick={toggleModal}
+        onMouseOver={()=>onCursor('pointer', hoverColor, textHover)}
+        onMouseLeave={onCursor}
+        >  
           
         <Box w="100%" h="100%" backgroundImage={bkImage}  bgSize={bgSize}   backgroundRepeat="no-repeat"  bgPosition={bkPostion}>
           <VStack alignItems="start"   >
