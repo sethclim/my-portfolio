@@ -18,7 +18,7 @@ const ProjectPage = ({context}) => {
 
 
   return (
-    <Container  maxW='container.lg' paddingBottom="10">
+    <Container  maxW='container.lg' paddingBottom="10" className="red">
         {/* {
           isShown? <div id={styles.invertedcursor}><p>Open</p></div> : null
         } */}

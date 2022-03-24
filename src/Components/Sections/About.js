@@ -7,7 +7,7 @@ class About extends React.Component {
   render() {
     return (
       
-      <Container maxW='container.lg'>
+      <Container maxW='container.lg' className="red">
         <Text color="brand.dark" fontSize={50}>About</Text>
         {/* <hr className="new4"></hr> */}
         <Flex align="left" pt={5} >

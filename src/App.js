@@ -17,7 +17,7 @@ import Projects from "./Components/Sections/project/project-section";
 import FloatingLinks from "./Components/floating-links/FloatingLinks";
 
 
-import {extendTheme, ChakraProvider, Box } from '@chakra-ui/react'
+import {extendTheme, ChakraProvider } from '@chakra-ui/react'
 import CursorProvider from "./Providers/cursorProvider";
 
 import {Link} from "./Components/Chakra/Link.ts"
@@ -25,13 +25,6 @@ import {Button} from "./Components/Chakra/Button.ts"
 import {Text} from "./Components/Chakra/Text.ts"
 
 import  "./App.css"
-
-const config = {
-  initialColorMode: 'light',
-  useSystemColorMode: false,
-}
-
-
 
 const colors = {
   brand: {
@@ -44,7 +37,6 @@ const colors = {
 }
 
 export const theme = extendTheme({ 
-  config,
   colors ,
   components: {
     Link,
@@ -74,7 +66,6 @@ function App() {
     <ChakraProvider theme={theme}>
        <CursorProvider>
         <Router>
-          <Box bg='brand.background'>
             <Header />
             <FloatingLinks></FloatingLinks>
             <Section
@@ -98,15 +89,7 @@ function App() {
               id="About"
               component={About}
             />
-            {/* <Section
-              title="Projects"
-              subtitle={"Hi there"}
-              dark={true}
-              id="Contact"
-              component={Contact}
-            /> */}
-            <Footer />
-          </Box>
+            <Footer />  
         </Router>
       </CursorProvider>
     </ChakraProvider>

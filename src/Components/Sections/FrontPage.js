@@ -6,7 +6,7 @@ import { Text, VStack,Container, Flex, Spacer, Button } from '@chakra-ui/react'
 class FrontPage extends React.Component {
   render() {
     return (
-      <Container maxW='container.lg'  >
+      <Container maxW='container.lg'    className="red">
         <Flex direction="column"  h={700}>
       
           <VStack align="start" h={350}>

@@ -9,12 +9,9 @@ import { Flex, Spacer, Link, Container, HStack,Switch } from '@chakra-ui/react'
 
 
 const Header = () => {
-
-  const { toggleColorMode } = useColorMode()
-
     return (
      
-        <Container maxW='container.lg' mt="3"  pr={7}>
+        <Container maxW='container.lg' mt="3"  pr={7}  className="red">
          <Flex alignItems="center">
     
           <Logo
@@ -65,7 +62,7 @@ const Header = () => {
           </nav>
           <Spacer />
 
-          <Switch id='email-alerts' onChange={toggleColorMode} />
+          {/* <Switch id='email-alerts' onChange={toggleColorMode} /> */}
           </Flex>
         </Container>
     );

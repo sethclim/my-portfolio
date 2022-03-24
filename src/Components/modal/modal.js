@@ -21,12 +21,12 @@ function Modal({ children, isOpen, handleClose }) {
 	else{
 		return (
 			<ReactPortal wrapperId="my-modal">
-					<div className={styles.modal} ref={nodeRef}>
-						<button onClick={handleClose} className="close-btn">
-							Close
-						</button>
-						<div className={styles.modalContent}>{children}</div>
-					</div>
+				<div className={styles.modal} ref={nodeRef}>
+					<button onClick={handleClose} className="close-btn">
+						Close
+					</button>
+					<div className={styles.modalContent}>{children}</div>
+				</div>
 			</ReactPortal>
 		);	
 	}
