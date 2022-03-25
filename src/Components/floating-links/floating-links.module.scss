@@ -17,3 +17,10 @@
 .floatingItem:hover {
   color: #9450f2;
 }
+
+@media (max-width: 1138px) {
+  .linkWrapper {
+    width: 100%;
+    display: none;
+  }
+}

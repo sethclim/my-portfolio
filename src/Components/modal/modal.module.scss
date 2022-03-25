@@ -26,3 +26,9 @@
   font-size: 1rem;
   border-radius: 1rem;
 }
+
+@media (max-width: 767.98px) {
+  .modalContent {
+    width: 100%;
+  }
+}

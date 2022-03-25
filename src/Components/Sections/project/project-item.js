@@ -4,7 +4,7 @@ import Bitbucket from "../../SVG/bitbucket";
 import Modal from "../../modal/modal";
 import styles from "./projectsession.module.scss"
 
-import { GridItem, Text, Image, HStack, VStack, Link, Box } from '@chakra-ui/react'
+import { GridItem, Text, Image, HStack, VStack, Link, Box ,Wrap, WrapItem} from '@chakra-ui/react'
 
 
  const ProjectItem = ({context, image, desc, tech, title, gitLink, bkImage, bkColor, bgSize=400, TitleColor, bkPostion="center", hoverColor,textHover}) =>{
@@ -13,7 +13,13 @@ import { GridItem, Text, Image, HStack, VStack, Link, Box } from '@chakra-ui/rea
     const { controlCursor, onCursor  } = context;
   
     function toggleModal() {
+        
         controlCursor(!isOpen)
+
+        if(isOpen){
+          onCursor('false')
+        }
+
         setIsOpen(!isOpen);
     }
   
@@ -37,25 +43,25 @@ import { GridItem, Text, Image, HStack, VStack, Link, Box } from '@chakra-ui/rea
 
         <Modal handleClose={toggleModal} isOpen={isOpen}>
           <HStack>
-            <VStack alignItems="start" justifyContent="start" w="50%" h="500px" pt={5} padding={20}>
+            <VStack alignItems="start" justifyContent="center" w="50%" h="500px" pt={5} pl={10}  overflow='hidden'>
               <Text fontSize={30}>{title}</Text> 
-              <Text>{desc}</Text>
-              <HStack pt={4}>
-                <Text bg="black" color="white" padding={1} borderRadius={5}>Tech Stack</Text>
+              <Text fontSize={[15,15,15, 16, 20]} maxHeight='25vh'  overflow='hidden' >{desc}</Text>
+              <Wrap pt={4}>
+                <Text  w='5.5rem' bg="black" color="white" padding={1} borderRadius={5}>Tech Stack</Text>
                 {
                   tech.map(item => {
-                    return <Text>{item}</Text>
+                    return <WrapItem><Text>{item}</Text></WrapItem>
                   })
                 }
-              </HStack>
+              </Wrap>
 
               <Link href={gitLink} isExternal pt={4}>
                   <Bitbucket className={styles.github} />
               </Link>
               
             </VStack>
-            <VStack h="100%" w="50%">
-              <Image boxSize='500px' objectFit='contain' src={image} />
+            <VStack h="100%" w="50%" >
+              <Image boxSize={['100px', '20rem', '500px']} objectFit='contain' src={image} pr='2' />
             </VStack>
           </HStack>
         </Modal>      

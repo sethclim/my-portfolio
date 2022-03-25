@@ -23,14 +23,13 @@ class About extends React.Component {
         </Flex>
 
         <HStack align="top" pt="10" alignItems="center">
-
-  
-            <Text mr={50}  fontSize={30}>Connect:</Text>
-
-            <Box pt={1} >
+          <Grid templateColumns='120px 1fr' gap={6}>
+            <GridItem w='100%' h='10' alignItems='center' >
+              <Text   fontSize={30}>Connect:</Text></GridItem>
+            <GridItem w='100%' h='10'>
               <Copy />
-            </Box>
-
+            </GridItem>
+          </Grid>
         </HStack>
 
 
