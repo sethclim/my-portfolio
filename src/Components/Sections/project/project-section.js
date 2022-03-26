@@ -5,6 +5,7 @@ import Spotify from "../../../imgs/Spotify.png";
 import ScalesApp22 from "../../../imgs/IPhone_X_vector_scalesapp2.svg";
 import fig from "../../../imgs/figma_screenshot.png";
 import Venus_Board from "../../../imgs/venus_board.png";
+import ILLU from '../../../imgs/IlluHome.png'
 
 import { Container, Grid, Text } from '@chakra-ui/react'
 
@@ -39,21 +40,22 @@ const ProjectPage = ({context}) => {
           desc="The goal of the app is to help a musician with their practice routine by providing selected exercises in a randomized order. 
           Created a multi-page app that passes data between activities, saved data in user preferences, and using libraries to hold business logic.  
           Includes the ability to generate custom practice routines based on user inputs." 
-          gitLink="https://bitbucket.org/sethclim/scales_app_android/src/master/"  />
+          gitLink="https://rebrand.ly/scalesapp"  />
 
         <ProjectItem 
                id="pi"
           title="Illu"
-          //image={chessIMG}
-          // bkImage={chessIMG}
+          image={ILLU}
+          bkImage={ILLU}
           TitleColor="#FFFFFF"
-          bkColor="#76ABD2"
+          bkPostion="right"
+          bkColor="#01011a"
           hoverColor="white"
           textHover='black'
           tech={["Unity", "C#", "UWP"]}
           desc="ChessGame made in unity for the UWP framework.  I implemented and learned about game logic with an object-oriented design, lighting, saving to a binary file.  
           As well as, saving player preferences, and UI in unity.  I used Visual Studio for scripting and debugging, and the project was managed with version control."
-          gitLink="https://bitbucket.org/sethclim/chess_game/src/master/" />
+          gitLink="https://rebrand.ly/illu_game" />
 
         <ProjectItem 
                id="pi"
@@ -69,10 +71,10 @@ const ProjectPage = ({context}) => {
           tech={["Unity", "C#", "UWP"]}
           desc="ChessGame made in unity for the UWP framework.  I implemented and learned about game logic with an object-oriented design, lighting, saving to a binary file.  
           As well as, saving player preferences, and UI in unity.  I used Visual Studio for scripting and debugging, and the project was managed with version control."
-          gitLink="https://bitbucket.org/sethclim/chess_game/src/master/" />  
+          gitLink="https://github.com/simeonis/Venus" />  
 
         <ProjectItem 
-               id="pi"
+          id="pi"
           title="ChessGame"
           image={chessIMG}
           TitleColor="#FFFFFF"

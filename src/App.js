@@ -28,7 +28,7 @@ import  "./App.css"
 
 const colors = {
   brand: {
-    "primary": "#9450F2",
+    "primary": "#A6A6A6",
     'dark':'#262626',
     'white': '#F2F2F2',
     '2':'#A6A6A6'
