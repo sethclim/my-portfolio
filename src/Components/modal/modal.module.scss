@@ -8,7 +8,7 @@
   justify-content: center;
   //   transition: all 0.3s ease-in-out;
   overflow: hidden;
-  z-index: 999;
+  z-index: 945;
   padding: 40px 20px 20px;
   background-color: rgba(0, 0, 0, 0.2);
   // pointer-events: none;
@@ -16,8 +16,8 @@
 }
 
 .modalContent {
-  width: 70%;
-  height: 30%;
+  width: 80%;
+
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   display: flex;
