@@ -5,6 +5,7 @@ import styles from "./projectsession.module.scss"
 import CursorProvider from "../HOCs/cursorProvider";
 import { Grid } from "../LayoutComponents";
 
+
 //Styles
 import Text from "../../styles/text.module.scss"
 
@@ -12,7 +13,7 @@ import Text from "../../styles/text.module.scss"
 const ProjectPage = () => {
   return (
     <CursorProvider>
-      <div>
+      <div id="projects">
         <p className={Text.Title}>Projects</p>
         <Grid templateColumns='repeat(2, 1fr)' gap={5} id={styles.projectContainer} >
           <ProjectItem 

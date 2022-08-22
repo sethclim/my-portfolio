@@ -1,69 +1,48 @@
-import React from "react";
-//import { Link as ScrolLink } from "react-scroll";
+//Components
 import Logo from "../SVG/logo";
-
-
-import Text from "../../styles/text.module.scss"
-
 import { HStack } from "../LayoutComponents";
 
+//Styles
+import Text from "../../styles/text.module.scss"
+import Button from "../../styles/button.module.scss"
 import styles from "./Header.module.scss"
 
+import {scroll} from "../scroll.js"
+
 const Header = () => {
-    return (
-    
-         <HStack alignItems="center" h='5em'>
-    
-          <Logo
-            fill={'brand.dark'}
-            width={"2em"}
-            hieght={"auto"}
-            className="logo" />
 
-          <nav className={styles.nav}>
-            <HStack justifyContent="space-between">
-               <a
-                  //as={ScrolLink}
-                  // activeClass="active"
-                  // to="Projects" 
-                  // spy={true}
-                  // smooth={true}
-                  // offset={-70}
-                  // duration={500}
-                  className={`${Text.headerLink}`}
-                >
-                  Projects
-                </a>    
-                <a
-                  //as={ScrolLink}
-                  // activeClass="active"
-                  // to="About"
-                  // spy={true}
-                  // smooth={true}
-                  // offset={-70}
-                  // duration={500}
-                  className={`${Text.headerLink}`}
-                >
-                  About
-                </a>     
-            </HStack>
-        
-              {/* <li>
-                <a
-                  className="resume-button"
-                  href={Resume}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <p>Resume</p>
-                </a>
-              </li> */}
-            
-          </nav>
+  return (
+    <HStack alignItems="center" h='5em'>
+      <Logo
+        fill={'brand.dark'}
+        width={"2em"}
+        hieght={"auto"}
+        className="logo" />
 
-          {/* <Switch id='email-alerts' onChange={toggleColorMode} /> */}
-          </HStack>
-    );
+      <nav className={styles.nav}>
+        <HStack justifyContent="space-between" alignItems="center">
+          <a className={`${Text.headerLink}`} onClick={()=>scroll('#projects')}>
+            Projects
+          </a>    
+          <a onClick={()=>scroll('#about')} className={`${Text.headerLink}`}>
+            About
+          </a>  
+          
+
+          <a
+            className={Button.resume}
+            href="/Resume.pdf"
+            rel="noopener noreferrer"
+            target="_blank">
+              Resume
+          </a> 
+
+     
+        </HStack>
+      </nav>
+    {/* <Switch id='email-alerts' onChange={toggleColorMode} /> */}
+    </HStack>
+  );
 }
 
 export default Header;

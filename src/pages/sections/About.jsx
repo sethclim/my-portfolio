@@ -10,7 +10,7 @@ class About extends React.Component {
   render() {
     return (
       
-      <VStack>
+      <VStack id="about">
         <p className={Text.Title}>About</p>
         {/* <hr className="new4"></hr> */}
 
