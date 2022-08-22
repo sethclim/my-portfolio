@@ -1,0 +1,46 @@
+@import './brand.module.scss';
+
+.small{
+    color: $dark;
+    font-size: $sf;
+}
+
+.subTitle{
+    color: $dark;
+    font-size: $mf;
+}
+
+.Title{
+    color: $dark;
+    font-size: $lf;
+    margin: 0.2em 0;
+}
+
+.heroTitle{
+    color: $dark;
+    font-size: $lf;
+    margin: 0.1em 0;
+}
+.heroSubTitle{
+    color: $lightGrey;
+    font-size: $mf + 0.2;
+    margin: 0;
+}
+
+.headerLink{
+    color: $dark;
+    font-size: $mf;
+}
+
+.headerLink:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.highLight{
+    width: 5.5rem; 
+    background-color: black;
+    color: white; 
+    padding: 1em; 
+    border-radius: 5px;
+}
