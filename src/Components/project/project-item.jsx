@@ -1,18 +1,17 @@
-import React, {useContext, useState} from "react";
+import { useState} from "react";
+
+
+//Components
 import withCursor from "../HOCs/withCursor";
 import Modal from "../modal/modal";
-import styles from "./projectsession.module.scss"
-
-
 import GitHub from "../SVG/github";
-
 import { GridItem } from "../LayoutComponents";
-
 import { VStack, HStack } from "../LayoutComponents";
 
+//Styles
 import Text from "../../styles/text.module.scss"
+import styles from "./projectsession.module.scss"
 
-import { CursorContext } from "../HOCs/cursorProvider";
 
 
  const ProjectItem = ({context, image, desc, tech, title, gitLink, bkImage, bkColor, bgSize=400, TitleColor, bkPostion="center", hoverColor,textHover}) =>{
@@ -31,11 +30,6 @@ import { CursorContext } from "../HOCs/cursorProvider";
         setIsOpen(!isOpen);
     }
 
-    function mouse()
-    {
-      onCursor('pointer', hoverColor, textHover);
-    }
-  
     return(   
       
       <GridItem   
@@ -43,7 +37,7 @@ import { CursorContext } from "../HOCs/cursorProvider";
         h='8em'   
         bg={bkColor}  
         onClick={toggleModal}
-        onMouseOver={mouse}
+        onMouseOver={() => onCursor('pointer', hoverColor, textHover)}
         onMouseLeave={onCursor}
         className={styles.gridItem}
         >  

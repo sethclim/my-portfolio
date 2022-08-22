@@ -6,4 +6,24 @@
     font-size: $mf;
     padding: 0;
     height: 3em;
+    border-radius: 5%;
+}
+
+.resume{
+    background-color: $dark;
+    font-size: $sf;
+    height: 30px;
+    width: 30%;
+    color: $offWhite;
+    padding: 0 4px;
+    border-radius: 5px; 
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+}
+
+.resume:hover{
+    background-color: $lightGrey;
+    color: $dark;
+    cursor: pointer;
 }

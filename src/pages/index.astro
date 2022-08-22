@@ -1,12 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-// import "./fonts/woff2/JetBrainsMono-Italic.woff2";
-// import "./fonts/woff2/JetBrainsMono-Regular.woff2";
-// import "./fonts/Bebas_Neue/BebasNeue-Regular.ttf";
-// import "./fonts/IBM_Plex_Sans/IBMPlexSans-Bold.ttf";
-// import "./fonts/IBM_Plex_Sans/IBMPlexSans-ExtraLightItalic.ttf";
-// import "./fonts/IBM_Plex_Sans/IBMPlexSans-Light.ttf";
 
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer";
@@ -23,7 +17,7 @@ import FloatingLinks from "../components/floating-links/FloatingLinks";
 <Layout title="Seth Climenhaga">
 		<FloatingLinks slot="body" client:load />
 		<Header slot="content" client:load />
-		<Hero slot="content" />
+		<Hero slot="content"  />
 		  <ProjectPage slot="content" client:load />
 		<About slot="content" />
 		<Footer slot="content" />  

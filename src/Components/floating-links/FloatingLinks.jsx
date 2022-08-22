@@ -25,7 +25,7 @@ export default class FloatingLinks extends React.Component {
 
         <a
           className={styles.floatingLinks}
-          href="https://github.com/sethclim?tab=repositories"
+          href="https://github.com/sethclim"
           rel="noopener noreferrer"
           target="_blank"
         >
