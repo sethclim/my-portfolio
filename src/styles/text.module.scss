@@ -1,46 +1,98 @@
 @import './brand.module.scss';
+@import "./breakpoints.scss";
+
+
+
+@mixin smallFont {
+    font-size: $sf;
+
+    @include sm{
+        font-size: $sf + 0.2;
+    }
+    @include md{
+        font-size: $sf + 0.3;
+    }
+    @include lg{
+        font-size: $sf + 0.4;
+    }
+}
+
+@mixin medFont($boost) {
+    font-size: $mf + $boost;
+
+    @include sm{
+        font-size: $mf + $boost + 0.2;
+    }
+    @include md{
+        font-size: $mf + $boost+ 0.3;
+    }
+    @include lg{
+        font-size: $mf + $boost + 0.4;
+    }
+}
+
+
+@mixin largeFont {
+    font-size: $lf;
+
+    @include sm{
+        font-size: $lf + 0.4;
+    }
+    @include md{
+        font-size: $lf + 0.5;
+    }
+    @include lg{
+        font-size: $lf + 1.0;
+    }
+}
+
 
 .small{
     color: $dark;
-    font-size: $sf;
+    
+    @include smallFont;
+    margin: 0;
 }
 
 .subTitle{
     color: $dark;
-    font-size: $mf;
+    @include medFont(0);
+    margin: 0;
 }
 
 .Title{
     color: $dark;
-    font-size: $lf;
+    @include largeFont;
     margin: 0.2em 0;
 }
 
 .heroTitle{
     color: $dark;
-    font-size: $lf;
+    @include largeFont;
     margin: 0.1em 0;
 }
 .heroSubTitle{
     color: $lightGrey;
-    font-size: $mf + 0.2;
+    @include medFont(0.2);
     margin: 0;
 }
 
 .headerLink{
     color: $dark;
-    font-size: $mf;
+    @include medFont(0);
 }
 
 .headerLink:hover{
-    color: red;
+    color: $lightGrey;
     cursor: pointer;
 }
 
 .highLight{
-    width: 5.5rem; 
+    @include smallFont;
+    width: 6em; 
     background-color: black;
     color: white; 
     padding: 1em; 
     border-radius: 5px;
+    margin-right: 5px;
 }

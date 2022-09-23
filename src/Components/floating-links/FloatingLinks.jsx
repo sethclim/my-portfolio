@@ -1,6 +1,5 @@
 import React from "react";
-import Linkedin from "../SVG/linkedin";
-import GitHub from "../SVG/github";
+import {Linkedin, GitHub} from "../SVG/SVGs";
 
 import styles from "./floating-links.module.scss"
 

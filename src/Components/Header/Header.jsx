@@ -1,5 +1,5 @@
 //Components
-import Logo from "../SVG/logo";
+import {Logo} from "../SVG/SVGs";
 import { HStack } from "../LayoutComponents";
 
 //Styles
@@ -34,7 +34,10 @@ const Header = () => {
             href="/Resume.pdf"
             rel="noopener noreferrer"
             target="_blank">
-              Resume
+              <p>
+                Resume
+              </p>
+             
           </a> 
 
      

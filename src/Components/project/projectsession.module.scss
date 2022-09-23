@@ -1,7 +1,14 @@
+@import "../../styles/brand.module.scss";
+
 .github {
   height: 25px;
   width: auto;
   cursor: pointer;
+  color: $dark;
+}
+
+.github:hover{
+  color: $lightGrey;
 }
 
 #invertedcursor {

@@ -1,29 +1,39 @@
 @import './brand.module.scss';
+@import './layout.module.scss';
 
 .copy{
     background-color: #99999944;
     color: $dark;
     font-size: $mf;
-    padding: 0;
-    height: 3em;
-    border-radius: 5%;
+    padding: 4px;
+    height: auto;
+    width: 6em;
+    border-radius: 5em;
+    margin: 5px;
+}
+
+.copy:hover{
+    background-color: $dark;
+    color: $offWhite; 
+    cursor: pointer;
 }
 
 .resume{
-    background-color: $dark;
+    @include Flex('vertical');
+    background-color: $offWhite;
     font-size: $sf;
     height: 30px;
     width: 30%;
-    color: $offWhite;
+    color: $dark;
     padding: 0 4px;
     border-radius: 5px; 
-    outline: none;
+    outline: $dark 1px solid;
     text-decoration: none;
     text-align: center;
 }
 
 .resume:hover{
-    background-color: $lightGrey;
-    color: $dark;
+    background-color: $dark;
+    color: $offWhite;
     cursor: pointer;
 }
