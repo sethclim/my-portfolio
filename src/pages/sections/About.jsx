@@ -26,36 +26,36 @@ class About extends React.Component {
 
 
         <HStack align="top" pt="10" alignItems="center">
-          <p   className={Text.Title}>Connect:</p>
+          <p className={Text.Title}>Connect:</p>
           <Copy />     
         </HStack>
 
       
         <p className={Text.Title}>Skills</p>
         <VStack align="top" pt="5" justifyContent="flex-bottom" >
-          <Grid templateColumns='120px 1fr' gap={6}>
-            <GridItem w='100%' h='3vh' justifyContent="start" >
+          <Grid templateColumns='200px 1fr' gap={6}>
+            <GridItem w='100%' h='100%' justifyContent="center" >
               <p className={Text.subTitle}>Languages</p>
             </GridItem>
-            <GridItem w='100%' h='3vh' justifyContent="start"  >
+            <GridItem w='100%' h='100%' justifyContent="center"   >
               <p className={Text.small}>Kotlin, Swift, JavaScript/Typescript, C#, Java, C++</p>
             </GridItem>
-            <GridItem w='100%' h='3vh'>
+            <GridItem w='100%' h='100%'  justifyContent="center" >
               <p  className={Text.subTitle}>Databases</p>
             </GridItem>
-            <GridItem w='100%' h='3vh'  >
+            <GridItem w='100%' h='100%'  justifyContent="center"  >
               <p className={Text.small}>SQL, MongoDB, Room, CoreData</p>
             </GridItem>
-            <GridItem w='100%' h='3vh'  >
+            <GridItem w='100%' h='100%'  justifyContent="center"  >
               <p className={Text.subTitle}>Technology</p>
             </GridItem>
-            <GridItem w='100%' h='3vh'>
+            <GridItem w='100%' h='100%'  justifyContent="center" >
               <p className={Text.small}>React, AWS, Apache, Docker</p>
             </GridItem>
-            <GridItem w='100%' h='3vh' >
+            <GridItem w='100%' h='100%' justifyContent="center" >
               <p className={Text.subTitle}>Tools</p>
             </GridItem>
-            <GridItem w='100%' h='3vh'  >
+            <GridItem w='100%' h='100%'  justifyContent="center"  >
               <p className={Text.small}>Git, Jira, VSCode, IntelliJ IDEA</p>
             </GridItem>
           </Grid>

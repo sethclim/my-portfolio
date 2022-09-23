@@ -4,7 +4,7 @@ import { useState} from "react";
 //Components
 import withCursor from "../HOCs/withCursor";
 import Modal from "../modal/modal";
-import GitHub from "../SVG/github";
+import {GitHub} from "../SVG/SVGs";
 import { GridItem } from "../LayoutComponents";
 import { VStack, HStack } from "../LayoutComponents";
 
@@ -49,27 +49,26 @@ import styles from "./projectsession.module.scss"
         </div>
 
         <Modal handleClose={toggleModal} isOpen={isOpen}>
-          <HStack>
-            <VStack alignItems="start" justifyContent="center" w="50%" h="20em" p="0 2em">
-              <p  className={Text.subTitle}>{title}</p> 
+          <HStack p="2em">
+            <VStack alignItems="start" justifyContent="center" w="50%" h="20em" >
+              <p  className={Text.Title}>{title}</p>   
+                <HStack alignItems="center" w="2em">
+                  {
+                    tech.map(item => {
+                      return <p key={item} className={Text.small} style={{margin: "0 10px 0 0"}}>{item}</p>
+                    })
+                    
+                  }
+                </HStack>
               <p  className={Text.small} >{desc}</p>
-              <HStack>
-                <p  className={Text.highLight}>Tech Stack</p>
-                {
-                  tech.map(item => {
-                    return <HStack alignItems="center" w="2em"><p style={{margin: 0}}>{item}</p></HStack>
-                  })
-                }
-               </HStack>
 
-              <a href={gitLink} isExternal >
+              <a href={gitLink}>
                   <GitHub className={styles.github} />
               </a>
-              
             </VStack>
-            <VStack h="20em" w="50%" justifyContent="center" alignItems="center" >
-              <img style={{height:"100%", width:"100%", objectFit:"contain"}}  src={image} />
-            </VStack>
+            <div style={{width: '50%'}} >
+              <img style={{height:"20em", width:"100%", objectFit:"contain"}}  src={image} />
+            </div>
           </HStack>
         </Modal>      
       </GridItem>
