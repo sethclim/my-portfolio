@@ -24,7 +24,7 @@ const Header = () => {
           <a className={`${Text.headerLink}`} onClick={()=>scroll('#projects')}>
             Projects
           </a>    
-          <a onClick={()=>scroll('#about')} className={`${Text.headerLink}`}>
+          <a  onClick={()=>scroll('#about')} className={`${Text.headerLink}`}>
             About
           </a>  
           
