@@ -49,14 +49,19 @@
 
 .small{
     color: $dark;
-    
     @include smallFont;
+    margin: 0;
+}
+
+.med{
+    color: $dark;
+    @include medFont(0);
     margin: 0;
 }
 
 .subTitle{
     color: $dark;
-    @include medFont(0);
+    @include medFont(0.3);
     margin: 0;
 }
 
@@ -79,7 +84,7 @@
 
 .headerLink{
     color: $dark;
-    @include medFont(0);
+    @include medFont(-0.3);
 }
 
 .headerLink:hover{

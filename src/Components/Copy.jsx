@@ -17,7 +17,7 @@ export default function Copy() {
 
   return(
     <HStack h='100%' m="0 20px" alignItems='center' justifyContent='start'>
-      <p className={Text.subTitle} >sethclim@gmail.com</p> 
+      <p className={Text.small} >sethclim@gmail.com</p> 
       <button className={Button.copy} onClick={copyToClipboard}>{copyText}</button>   
     </HStack>
   )
