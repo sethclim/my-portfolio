@@ -1,5 +1,6 @@
 @import './brand.module.scss';
 @import './layout.module.scss';
+@import './text.module.scss';
 
 .copy{
     background-color: #99999944;
@@ -22,7 +23,7 @@
 .resume{
     @include Flex('vertical');
     background-color: #99999944;
-    font-size: $sf;
+    @include medFont(-0.5);
     height: 30px;
     width: 30%;
     color: $dark;

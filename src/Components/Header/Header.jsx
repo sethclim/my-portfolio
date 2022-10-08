@@ -34,7 +34,7 @@ const Header = () => {
             href="/Resume.pdf"
             rel="noopener noreferrer"
             target="_blank">
-              <p>
+              <p >
                 Resume
               </p>
              
