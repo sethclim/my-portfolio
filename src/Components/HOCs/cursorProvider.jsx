@@ -46,20 +46,20 @@ const CursorProvider = ({ children }) => {
   return (
     <CursorContext.Provider value={{ onCursor, controlCursor, setCursorColor }}>
     {
-    !active ?(
- <ins
-      id="custcursor"
-        className={cx('movable', {
-          'active': !!cursor,
-          [`cursor-${cursor}`]: !!cursor
-        })}
-        style={{
-          left: `${x}px`,
-          top: `${y}px`,
-          backgroundColor: color,
-          color: textColor
-        }}
-      />
+      !active ?(
+        <ins
+          id="custcursor"
+            className={cx('movable', {
+              'active': !!cursor,
+              [`cursor-${cursor}`]: !!cursor
+            })}
+            style={{
+              left: `${x}px`,
+              top: `${y}px`,
+              backgroundColor: color,
+              color: textColor
+            }}
+        />
     ):null
     }
       {children}

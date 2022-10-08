@@ -33,8 +33,8 @@ import styles from "./projectsession.module.scss"
     return(   
       
       <GridItem   
-        w='150' 
-        h='8em'   
+        w='100%' 
+        h='6em'   
         bg={bkColor}  
         onClick={toggleModal}
         onMouseOver={() => onCursor('pointer', hoverColor, textHover)}
@@ -43,8 +43,8 @@ import styles from "./projectsession.module.scss"
         >  
           
         <div style={{width: '100%', height: '100%', backgroundImage: `url(${bkImage})`, backgroundSize: bgSize, backgroundRepeat:"no-repeat", backgroundPosition:bkPostion }}>
-          <VStack alignItems="start"   >
-            <p className={Text.subTitle} style={{color : TitleColor}}>{title}</p>
+          <VStack alignItems="start" p="0 0 0 10px"  >
+            <p className={Text.medium} style={{color : TitleColor}}>{title}</p>
           </VStack>
         </div>
 

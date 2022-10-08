@@ -9,7 +9,6 @@ import Text from "../../styles/text.module.scss"
 class About extends React.Component {
   render() {
     return (
-      
       <VStack id="about">
         <VStack p="1em 0">
           <p className={Text.Title}>About</p>
@@ -25,7 +24,6 @@ class About extends React.Component {
                     business.
             </p>
         </VStack>
-
 
         <HStack align="top" p="1em 0" alignItems="center">
           <p className={Text.subTitle}>Connect:</p>
@@ -63,8 +61,7 @@ class About extends React.Component {
             </Grid>
           </VStack>
         </VStack>
-        
-
+      
       </VStack>
     );
   }
