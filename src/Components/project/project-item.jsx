@@ -1,11 +1,10 @@
 import { useEffect, useState} from "react";
 
-
 //Components
 import withCursor from "../HOCs/withCursor";
 import Modal from "../modal/modal";
 import {GitHub} from "../SVG/SVGs";
-import { GridItem } from "../LayoutComponents";
+import { Grid, GridItem } from "../LayoutComponents";
 import { VStack, HStack } from "../LayoutComponents";
 
 //Styles
@@ -25,7 +24,6 @@ const getColor = (numElements) => {
   {
     var idx = Math.floor(Math.random() * colors.length);
     var color = colors[idx]
-    console.log(color)
     colors.splice(idx,1)
     custOrder.push(color)
   }
@@ -58,7 +56,6 @@ const getColor = (numElements) => {
 
 
     return(   
-      
       <GridItem   
         w='100%' 
         h='6em'   
@@ -76,27 +73,28 @@ const getColor = (numElements) => {
         </div>
 
         <Modal handleClose={toggleModal} isOpen={isOpen}>
-          <HStack p="2em">
-            <VStack alignItems="start" justifyContent="center" w="50%" h="20em" >
+          <HStack className={styles.content} p="2em" w="100%">
+            <img className={styles.vertImg} style={{height:"20em", width:"100%", objectFit:"contain"}}  src={image} />
+            <VStack className={styles.infoWrapper} alignItems="start" justifyContent="center" w="50%" h="20em" >
               <p  className={Text.Title}>{title}</p>   
-                <HStack alignItems="center" w="2em" p="0 10px 10px 0">
+                <div className={styles.techWrap} >
                   {
                     tech.map((item, i) => {
                       return (
-                        <VStack bg={uniColors[i]} p="0px 15px" m="5px">
+                        <GridItem key={i} bg={uniColors[i]}  justifyContent="center" alignItems="center" p="0px 20px !important" m="5px">
                           <p key={item} className={styles.techLabel} >{item}</p>
-                        </VStack>
+                        </GridItem>
                       ) 
                     })
                   }
-                </HStack>
+                </div>
               <p  className={Text.small} >{desc}</p>
               
               <a href={gitLink}>
                   <GitHub className={styles.github} />
               </a>
             </VStack>
-            <div style={{width: '50%'}} >
+            <div className={styles.horImg} style={{width: '50%'}} >
               <img style={{height:"20em", width:"100%", objectFit:"contain"}}  src={image} />
             </div>
           </HStack>

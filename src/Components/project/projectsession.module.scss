@@ -1,5 +1,6 @@
 @import "../../styles/brand.module.scss";
 @import "../../styles/text.module.scss";
+@import "../../styles/breakpoints.scss";
 
 .github {
   height: 30px;
@@ -44,6 +45,64 @@
 }
 
 .techLabel{
-  @include smallFont();
+  font-size: 0.6em;
+  font-weight: 700;
   color: #fff;
+  text-align: center;
+
+  min-width: 50px;
 }
+
+.vertImg{
+  display: block;
+
+  @include md {
+    display: none;
+  }
+
+}
+
+.horImg{
+  display: none;
+
+  @include md {
+    display: block;
+  }
+}
+
+
+.content{
+  flex-direction: column !important;
+
+  @include md {
+    flex-direction: row !important;
+  }
+}
+
+.infoWrapper{
+  overflow: hidden;
+  width: 100% !important;
+
+  @include md {
+    width: 50% !important;
+  }
+}
+
+.techWrap{
+  display: grid;
+  overflow-wrap: break-word;
+
+  gap:5px;
+  padding:0 10px 10px 0;
+  grid-template-columns : 1fr 1fr 1fr !important;
+  grid-template-rows: 1fr 1fr  !important;
+
+  @include lg {
+
+    grid-template-columns : 1fr 1fr 1fr 1fr 1fr 1fr !important;
+    grid-template-rows: 1fr  !important;
+  }
+
+}
+
+//templateColumns={"1fr 1fr 1fr"} templateRows={"1fr 1fr"} gap="5px" alignItems="center" w="100%" p="0 10px 10px 0"
