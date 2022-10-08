@@ -1,6 +1,6 @@
-export const VStack = ({children, alignItems, justifyContent, h, bg, p, id, w}) =>{
+export const VStack = ({children, alignItems, justifyContent, h, bg, p, id, w, m, className}) =>{
     return (
-        <div id={id} style={{ display: "flex", flexDirection: "column", alignItems:alignItems, justifyContent:justifyContent, height:h, width: w, backgroundColor:bg, padding: p }}>
+        <div id={id} className={className} style={{ display: "flex", flexDirection: "column", alignItems:alignItems, justifyContent:justifyContent, height:h, width: w, backgroundColor:bg, padding: p, margin: m }}>
             {children}
         </div>
     )
