@@ -1,10 +1,12 @@
 @import "../../styles/brand.module.scss";
+@import "../../styles/text.module.scss";
 
 .github {
-  height: 25px;
+  height: 30px;
   width: auto;
   cursor: pointer;
   color: $dark;
+  margin-top: 20px;
 }
 
 .github:hover{
@@ -39,4 +41,9 @@
 .gridItem{
   border-radius: 5px;
   box-shadow: #000;
+}
+
+.techLabel{
+  @include smallFont();
+  color: #fff;
 }
