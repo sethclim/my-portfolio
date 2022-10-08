@@ -6,9 +6,9 @@ export const VStack = ({children, alignItems, justifyContent, h, bg, p, id, w, m
     )
 }
 
-export const HStack = ({children, alignItems, justifyContent, h, p, m, w}) =>{
+export const HStack = ({children, alignItems, justifyContent, h, p, m, w, className}) =>{
     return (
-        <div style={{ display: "flex", flexDirection: "row", alignItems:alignItems, justifyContent:justifyContent, height:h, width:w , padding: p, margin: m }}>
+        <div className={className} style={{ display: "flex", flexDirection: "row", alignItems:alignItems, justifyContent:justifyContent, height:h, width:w , padding: p, margin: m }}>
             {children}
         </div>
     )
@@ -23,10 +23,11 @@ export const Grid = ({children, templateColumns, templateRows, gap, id}) =>{
     )
 }
 
-export const GridItem = ({children, w, h, bg, onClick, onMouseLeave, onMouseOver, justifyContent, alignItems}) =>{
+export const GridItem = ({children, w, h, bg, onClick, onMouseLeave, onMouseOver, justifyContent, alignItems, className, p}) =>{
     return (
         <div 
-            style={{ display: "flex", flexDirection: "column", alignItems:alignItems, justifyContent:justifyContent, height:h, width:w, backgroundColor: bg}} 
+            className={className}
+            style={{ display: "flex", flexDirection: "column", alignItems:alignItems, justifyContent:justifyContent, height:h, width:w, backgroundColor: bg, p:p}} 
             onMouseLeave={onMouseLeave}
             onMouseOver={onMouseOver}
             onClick={onClick}
