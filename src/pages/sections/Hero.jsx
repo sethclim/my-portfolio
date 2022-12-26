@@ -16,7 +16,7 @@ export default class Hero extends React.Component {
             <p className={Text.heroTitle}>Seth Climenhaga</p>
             <p className={Text.heroSubTitle} >Full Stack Developer</p>
           </VStack>
-          <VStack align="start" w="50em" paddingBottom={5}>
+          <VStack align="start" w="80%" paddingBottom={5}>
             <p className={Text.small}>
               I'm a computer science student who specializes in web applications
               and mobile development on both android and iOS.

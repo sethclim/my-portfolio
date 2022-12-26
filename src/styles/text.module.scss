@@ -4,16 +4,18 @@
 
 
 @mixin smallFont {
-    font-size: $sf;
-
+    font-size: $sf + 0.35;
+    //color: blue;
     @include sm{
-        font-size: $sf + 0.2;
+        font-size: $sf + 0.25;
+       //color: red;
     }
     @include md{
-        font-size: $sf + 0.3;
+        font-size: $sf + 0.2;
+        //color: pink;
     }
     @include lg{
-        font-size: $sf + 0.4;
+        font-size: $sf + 0.3;
     }
 }
 

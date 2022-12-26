@@ -73,7 +73,7 @@ const getColor = (numElements) => {
 
         <Modal handleClose={toggleModal} isOpen={isOpen}>
           <HStack className={styles.content} p="2em" w="100%">
-            <img className={styles.vertImg} style={{height:"20em", width:"100%", objectFit:"contain"}}  src={image} />
+            <img className={styles.vertImg}  src={image} />
             <VStack className={styles.infoWrapper} alignItems="start" justifyContent="center" w="50%" h="20em" >
               <p  className={Text.Title}>{title}</p>   
                 <div className={styles.techWrap} >
@@ -94,7 +94,7 @@ const getColor = (numElements) => {
               </a>
             </VStack>
             <div className={styles.horImg} style={{width: '50%'}} >
-              <img style={{height:"20em", width:"100%", objectFit:"contain"}}  src={image} />
+              <img  src={image} />
             </div>
           </HStack>
         </Modal>      
