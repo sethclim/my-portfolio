@@ -42,6 +42,14 @@ class About extends React.Component {
            point1="Implemented data collection solutions"
            point2="Interfaced Between Data and Unity Team"
            />
+          <Work
+           company="Sample House" 
+           role="Full Stack Developer" 
+           date="May 2020 - Present" 
+           point3="Designed custom solutions for data collection from Unity"
+           point1="Implemented data collection solutions"
+           point2="Interfaced Between Data and Unity Team"
+           />
         </VStack>
 
 

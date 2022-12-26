@@ -101,8 +101,8 @@ const ProjectPage = () => {
             TitleColor="#000000"
             bgSize={700}
             bkColor="#000000"
-            hoverColor="white"
-            textHover='black'
+            hoverColor="black"
+            textHover='white'
             desc="Site to quick hand draw a graph online.  Provides a grid surface that can be drawn on by wrapping canvas.  Users can sign in and save graphs.  
             Project runs on a microservice architecture running on docker containers"
             tech={["React.JS", "Docker", "C#", "Postgres", "Canvas"]}
@@ -117,8 +117,8 @@ const ProjectPage = () => {
             TitleColor="#000000"
             bgSize={400}
             bkColor="#ffffff"
-            hoverColor="white"
-            textHover='black'
+            hoverColor="black"
+            textHover='white'
             desc="Custom Static Site written in Astro with React."
             tech={["React.JS", "Astro", "SCSS",]}
             gitLink="https://github.com/sethclim/my-portfolio" />
