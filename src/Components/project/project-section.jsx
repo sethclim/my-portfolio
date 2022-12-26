@@ -21,7 +21,7 @@ const ProjectPage = () => {
             title="Scales App" 
             image="/imgs/IPhone_X_vector_scalesapp2.svg"
             bkImage="/imgs/figma_screenshot.png"
-            hoverColor="black"
+            hoverColor="#975bfa"
             textHover='white'
             bkColor="#FFFFFF"
             tech={["Android", "Kotlin", "KotlinMultiPlatform", "Koin", "SQLLite"]}
@@ -38,8 +38,8 @@ const ProjectPage = () => {
             TitleColor="#FFFFFF"
             bkPostion="right"
             bkColor="#01011a"
-            hoverColor="white"
-            textHover='black'
+            hoverColor="#105467"
+            textHover='white'
             tech={["Unity", "C#", "UWP"]}
             desc="ChessGame made in unity for the UWP framework.  I implemented and learned about game logic with an object-oriented design, lighting, saving to a binary file.  
             As well as, saving player preferences, and UI in unity.  I used Visual Studio for scripting and debugging, and the project was managed with version control."
@@ -52,7 +52,7 @@ const ProjectPage = () => {
             bkImage="/imgs/venus_board.png"
             TitleColor="#000000"
             bkPostion="right"
-            hoverColor="black"
+            hoverColor="#30b35a"
             textHover='white'
             bgSize={300}
             bkColor="#ecf0f1"
@@ -131,7 +131,7 @@ const ProjectPage = () => {
             bkPostion="center"
             TitleColor="#FFFFFF"
             bgSize={55}
-            bkColor="#000000"
+            bkColor="#da6a52"
             hoverColor="white"
             textHover='black'
             desc="iOS photo social media.  Geo decoding, custom in app Camera Implementation"

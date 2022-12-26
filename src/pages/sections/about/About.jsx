@@ -46,9 +46,9 @@ class About extends React.Component {
            company="Sample House" 
            role="Full Stack Developer" 
            date="May 2020 - Present" 
-           point3="Designed custom solutions for data collection from Unity"
-           point1="Implemented data collection solutions"
-           point2="Interfaced Between Data and Unity Team"
+           point3="Redesigned frontend written in React to a modern clean design to present to investors."
+           point1="Implemented waveform player to preview audio samples and tooling to generate the waveform data."
+           point2="Worked on payment system and analytics integrations."
            />
         </VStack>
 
