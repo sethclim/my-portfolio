@@ -11,7 +11,6 @@ import { VStack, HStack } from "../LayoutComponents";
 import Text from "../../styles/text.module.scss"
 import styles from "./projectsession.module.scss"
 
-
 const Colors = ["#08003D", "#1A7FA1", "#189994", "#F2B135", "#EB1C59", "#3E8A66", "#8B1CBD", "#F07924"]
 
 const getColor = (numElements) => {
