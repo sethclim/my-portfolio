@@ -46,7 +46,7 @@ const ProjectPage = () => {
             gitLink="https://rebrand.ly/illu_game" />
 
           <ProjectItem 
-                id="pi"
+            id="pi"
             title="Venus Bug Tracker"
             image="/imgs/venus_board.png"
             bkImage="/imgs/venus_board.png"
@@ -77,7 +77,7 @@ const ProjectPage = () => {
             gitLink="https://bitbucket.org/sethclim/chess_game/src/master/" />
 
           <ProjectItem
-                id="pi"
+            id="pi"
             title="Spotify Mini-Player"
             image="/imgs/Spotify.png"
             bkImage="/imgs/Spotify.png"
@@ -91,6 +91,52 @@ const ProjectPage = () => {
             The project also implementes a dynamic dropdown menu and makes use of react context."
             tech={["React.JS", "Electron", "JavaScript", "Axios"]}
             gitLink="https://bitbucket.org/sethclim/spotify_mini_player/src/master/" />
+
+            <ProjectItem
+            id="pi"
+            title="Graph App"
+            image="/imgs/graphapp.png"
+            bkImage="/imgs/graphapp.png"
+            //bkPostion="right"
+            TitleColor="#000000"
+            bgSize={700}
+            bkColor="#000000"
+            hoverColor="white"
+            textHover='black'
+            desc="Site to quick hand draw a graph online.  Provides a grid surface that can be drawn on by wrapping canvas.  Users can sign in and save graphs.  
+            Project runs on a microservice architecture running on docker containers"
+            tech={["React.JS", "Docker", "C#", "Postgres", "Canvas"]}
+            gitLink="https://github.com/sethclim/graph-app" />
+
+            <ProjectItem
+            id="pi"
+            title="My Portfolio"
+            image="/imgs/portfolio.png"
+            bkImage="/imgs/portfolio.png"
+            bkPostion="center"
+            TitleColor="#000000"
+            bgSize={400}
+            bkColor="#ffffff"
+            hoverColor="white"
+            textHover='black'
+            desc="Custom Static Site written in Astro with React."
+            tech={["React.JS", "Astro", "SCSS",]}
+            gitLink="https://bitbucket.org/sethclim/spotify_mini_player/src/master/" />
+
+          <ProjectItem
+            id="pi"
+            title="Pictafy"
+            image="/imgs/pictafy_post.png"
+            bkImage="/imgs/pictafy_login.png"
+            bkPostion="center"
+            TitleColor="#FFFFFF"
+            bgSize={55}
+            bkColor="#000000"
+            hoverColor="white"
+            textHover='black'
+            desc="iOS photo social media.  Geo decoding, custom in app Camera Implementation"
+            tech={["iOS", "Swift", "objC", "Custom Camera"]}
+            gitLink="https://github.com/simeonis/Pictafy" />
 
         </Grid>   
       </div>

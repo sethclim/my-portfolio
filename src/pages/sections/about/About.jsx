@@ -1,11 +1,8 @@
 import React from "react";
 
 import { HStack, VStack, Grid, GridItem } from "../../../components/LayoutComponents";
-
 import Copy from "../../../components/Copy";
-
 import Text from "../../../styles/text.module.scss"
-
 import Styles from "./About.module.scss"
 
 class About extends React.Component {
@@ -30,20 +27,20 @@ class About extends React.Component {
         <VStack p="1em 0">
           <p className={Text.subTitle}>Work Experience</p>
           <Work
-           company="Center For Mobile Innovation" 
+           company="Sheridan Center For Mobile Innovation" 
            role="VR Developer" 
-           date="May - Present" 
-           point1="asdf"
-           point2="asdfasdf"
-           point3="asdfasdfasdf"
+           date="June 2020 - Present" 
+           point1="Developed VR interaction to simulate pharmaceutical factory"
+           point2="3D modeled pharmaceutical factory equipment"
+           point3="Designed simulation software architecture"
            />
           <Work
            company="The Commons XR" 
            role="Unity Developer" 
-           date="May - Present" 
-           point1="asdf"
-           point2="asdfasdf"
-           point3="asdfasdfasdf"
+           date="May 2020 - Present" 
+           point3="Designed custom solutions for data collection from Unity"
+           point1="Implemented data collection solutions"
+           point2="Interfaced Between Data and Unity Team"
            />
         </VStack>
 
@@ -68,7 +65,7 @@ class About extends React.Component {
                 <p className={Text.med}>Technology</p>
               </GridItem>
               <GridItem w='100%' h='100%'  justifyContent="center" >
-                <p className={Text.small}>React, AWS, Apache, Docker</p>
+                <p className={Text.small}>React, AWS, Apache, Docker, Unity</p>
               </GridItem>
               <GridItem w='100%' h='100%' justifyContent="center" >
                 <p className={Text.med}>Tools</p>
@@ -95,18 +92,17 @@ export default About;
 
 
 const Work = ({company, role, date, point1, point2, point3 }) => {
-
   return(
-    <VStack w="80%" p="20px 0 0 0">
-      <HStack p="0" h="1em">
-        <HStack w="70%" h="1em" p="0" m="0">
+    <VStack w="100%" p="20px 0 0 0">
+      <VStack className={Styles.workTitleWrap} p="0" h="100%">
+        <VStack className={Styles.workTitleWrap}  w="100%" h="2em" p="0" m="0" justifyContent="flex-start">
             <p className={Styles.name}>{role}</p>
             <p className={Styles.cn}>{company}</p> 
-        </HStack>
-        <HStack w="30%" justifyContent="flex-end">
+        </VStack>
+        <HStack className={Styles.dateWrap} w="100%" justifyContent="flex-start">
           <p className={Styles.cn}>{date}</p>
         </HStack>
-      </HStack>
+      </VStack>
       <ul className={Styles.desc}>
         <li>{point1}</li>
         <li>{point2}</li>
