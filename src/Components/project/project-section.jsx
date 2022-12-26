@@ -121,7 +121,7 @@ const ProjectPage = () => {
             textHover='black'
             desc="Custom Static Site written in Astro with React."
             tech={["React.JS", "Astro", "SCSS",]}
-            gitLink="https://bitbucket.org/sethclim/spotify_mini_player/src/master/" />
+            gitLink="https://github.com/sethclim/my-portfolio" />
 
           <ProjectItem
             id="pi"
