@@ -58,5 +58,7 @@ jobs:
       with:
         server-dir: public_html/
         server: ftp://45.84.204.55
+        protocol: ftps
         username: u148256284
         password: ${{ secrets.FTP_PASSWORD }}
+        
