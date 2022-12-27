@@ -15,7 +15,8 @@ const ProjectPage = () => {
     <CursorProvider>
       <div id="projects">
         <p className={Text.Title}>Projects</p>
-        <Grid templateColumns='repeat(2, 1fr)' gap={5} id={styles.projectContainer} >
+        <Grid templateColumns='repeat(2, 1fr)' gap={5} id={styles.projectContainer}>
+          
           <ProjectItem 
             id="pi"
             title="Scales App" 
@@ -85,8 +86,8 @@ const ProjectPage = () => {
             TitleColor="#FFFFFF"
             bgSize={250}
             bkColor="#000000"
-            hoverColor="white"
-            textHover='black'
+            hoverColor="#dc143c"
+            textHover='white'
             desc="Built with the React framework and Electron.  This project calls endpoints in the Spotify API and uses the PCKE Authorization flow.  
             The project also implementes a dynamic dropdown menu and makes use of react context."
             tech={["React.JS", "Electron", "JavaScript", "Axios"]}
@@ -101,7 +102,7 @@ const ProjectPage = () => {
             TitleColor="#000000"
             bgSize={700}
             bkColor="#000000"
-            hoverColor="black"
+            hoverColor="#4e4eff"
             textHover='white'
             desc="Site to quick hand draw a graph online.  Provides a grid surface that can be drawn on by wrapping canvas.  Users can sign in and save graphs.  
             Project runs on a microservice architecture running on docker containers"
