@@ -56,7 +56,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server-dir: public_html/
+        local-dir: dist/
         server: sethclimenhaga.com
         protocol: ftps
         username: u148256284
