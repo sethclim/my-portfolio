@@ -56,6 +56,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
         server-dir: public_html/
-        server: ftp.samkirkland.com
+        server: ftp://sethclimenhaga.com
         username: u148256284
-        password: `${{ secrets.FTP_PASSWORD }}`
+        password: ${{ secrets.FTP_PASSWORD }}
