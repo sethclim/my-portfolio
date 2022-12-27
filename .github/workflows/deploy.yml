@@ -54,8 +54,8 @@ jobs:
         path: dist 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
-      server-dir: public_html/
       with:
+        server-dir: public_html/
         server: ftp.samkirkland.com
         username: u148256284
         password: ${{ secrets.ftp_password }}
