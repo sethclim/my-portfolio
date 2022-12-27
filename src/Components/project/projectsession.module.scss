@@ -55,12 +55,11 @@
 
 .vertImg{
   display: block;
-
-  img{
-    height: max(100%, 20em);
-    width: 100%;
-    object-fit:"contain";
-  }
+  height: 100%;
+  max-height: 20em;
+  width: auto;
+  object-fit:contain;
+  
 
   @include md {
     display: none;
@@ -71,14 +70,16 @@
 .horImg{
   display: none;
 
+  overflow: hidden;
   img{
      height: 20em;
-     width: 100%;
-     object-fit:"contain";
+     width: auto;
+     object-fit: contain;
   }
 
   @include md {
-    display: block;
+    display: flex;
+    justify-content: center;
     
   }
 }
@@ -104,7 +105,7 @@
 .techWrap{
   display: grid;
   overflow-wrap: break-word;
-
+  width: 100%;
   gap:5px;
   padding:0 10px 10px 0;
   grid-template-columns : 1fr 1fr 1fr !important;

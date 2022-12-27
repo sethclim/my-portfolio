@@ -37,7 +37,7 @@ class About extends React.Component {
           <Work
            company="The Commons XR" 
            role="Unity Developer" 
-           date="May 2020 - Present" 
+           date="April 2022 - Nov. 2022" 
            point3="Designed custom solutions for data collection from Unity"
            point1="Implemented data collection solutions"
            point2="Interfaced Between Data and Unity Team"
@@ -45,7 +45,7 @@ class About extends React.Component {
           <Work
            company="Sample House" 
            role="Full Stack Developer" 
-           date="May 2020 - Present" 
+           date="Aug 2021 - Dec. 2021" 
            point3="Redesigned frontend written in React to a modern clean design to present to investors."
            point1="Implemented waveform player to preview audio samples and tooling to generate the waveform data."
            point2="Worked on payment system and analytics integrations."
@@ -97,13 +97,11 @@ class About extends React.Component {
 export default About;
 
 
-
-
 const Work = ({company, role, date, point1, point2, point3 }) => {
   return(
     <VStack w="100%" p="20px 0 0 0">
       <VStack className={Styles.workTitleWrap} p="0" h="100%">
-        <VStack className={Styles.workTitleWrap}  w="100%" h="2em" p="0" m="0" justifyContent="flex-start">
+        <VStack className={Styles.workWrap}  w="100%" p="0" m="0" justifyContent="flex-start">
             <p className={Styles.name}>{role}</p>
             <p className={Styles.cn}>{company}</p> 
         </VStack>

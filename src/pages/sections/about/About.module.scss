@@ -34,6 +34,16 @@
     }
 }
 
+.workWrap{
+
+    height: 2em;
+
+    @include md {
+        height: 1.5em;
+        flex-direction: row !important;
+    }
+}
+
 .dateWrap{
     @include md {
         justify-content: flex-end !important;
