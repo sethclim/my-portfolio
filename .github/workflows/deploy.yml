@@ -54,6 +54,7 @@ jobs:
         path: dist 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      ser-dir: public_html/
       with:
         server: ftp.samkirkland.com
         username: u148256284
