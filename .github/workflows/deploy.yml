@@ -50,7 +50,7 @@ jobs:
     - name: Download Artifact 
       uses: actions/download-artifact@main
       with: 
-        name: dist
+        name: myportfolio
         path: dist 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
