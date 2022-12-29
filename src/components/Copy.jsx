@@ -10,9 +10,17 @@ export default function Copy() {
 
   var [copyText, setCopyText] = useState("Copy")
 
+
+  function resetcopy()
+  {
+    setCopyText("Copy")
+  }
+
   function copyToClipboard() {
     navigator.clipboard.writeText("sethclim@gmail.com");
     setCopyText("Copied!")
+
+    setTimeout(resetcopy, 2000)
   };
 
   return(

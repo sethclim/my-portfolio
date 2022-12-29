@@ -14,13 +14,10 @@ class About extends React.Component {
           {/* <hr className="new4"></hr> */}
 
             <p className={Text.small}>
-            I'm a computer science student with a passion for business and
-                    software development. I'm experienced in object-oriented
-                    programming including design with UML. Currently, I've built
-                    applications for web, android, iOS, and desktop platform. In
-                    addition to my Computer Science degree, I have a Bachelor of
-                    Music during which I took electives in accounting and
-                    business.
+            As a 4th year honours student in computer science at Sheridan College, I have honed my software development skills across many platforms including web, mobile, and desktop applications.  In addition, I have experience with data science and AI/machine learning applications     </p><br></br>
+            <p className={Text.small}>Recently, I  completed an internship as a VR developer where I led development on a simulated training module for LSTA. I worked with external advisers on the project and developed a complete solution based on the derived requirements.  I also worked as an Intern at TCXR, where I developed and improved a data pipe for a Unity project.  I was responsible for designing and implementing new components of the system, and interfacing with the data team to communicate changes and gather new requirements. </p><br></br>
+            <p className={Text.small}>I am passionate about building user-driven interfaces, robust backends, and creative branding that brings value to whatever system I’m developing. I possess a self-driven entrepreneurial mindset with a relentless determination to solve problems. </p><br></br>
+            <p className={Text.small}>I believe that my strong work ethic developed through my extensive work experiences and dedication to enhancing my skills through my studies make me an ideal employee. I’m currently looking for internships and work opportunities in software development.
             </p>
         </VStack>
 
