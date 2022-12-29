@@ -17,12 +17,12 @@ export default class Hero extends React.Component {
         <VStack align="start" h="50vh" p="5em 0 0 0">
           <VStack align="start" >
             <p className={Text.heroTitle}>Seth Climenhaga</p>
-            <p className={Text.heroSubTitle} >Full Stack Developer</p>
+            <p className={Text.heroSubTitle} >Software Developer</p>
           </VStack>
-          <VStack align="start" w="80%" paddingBottom={5}>
+          <VStack align="start" w="80%" m="10px 0 0 0 " paddingBottom={5}>
             <p className={Text.small}>
-              I'm a computer science student who specializes in web applications
-              and mobile development on both android and iOS.
+              I'm a computer science student who specializes in application development targeting web, mobile, and desktop platforms.
+              My work experience includes the lastest web/mobile technologies, game development (Unity, OpenGL), and distributed cloud solutions.
             </p>
             <HStack>      
               <a
