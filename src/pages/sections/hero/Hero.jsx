@@ -6,7 +6,7 @@ import Text from '../../../styles/text.module.scss'
 
 import { HStack, VStack } from "../../../components/LayoutComponents";
 
-import {Linkedin, GitHub} from "../../../Components/SVG/SVGs";
+import {Linkedin, GitHub} from "../../../components/SVG/SVGs";
 
 import HeroStyles from "./hero.module.scss"
 
