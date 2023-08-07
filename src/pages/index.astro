@@ -1,6 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
-
+import Layout from "../layouts/Layout.astro";
 
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer";
@@ -8,18 +7,20 @@ import ProjectPage from "../components/project/project-section";
 import Hero from "./sections/hero/Hero";
 import About from "./sections/about/About";
 
-import "../styles/App.css"
+import "../styles/App.css";
 
 import FloatingLinks from "../components/floating-links/FloatingLinks.jsx";
+
+const allPosts = await Astro.glob("../Components/project/project_data.json");
+
 // import  "./App.css"
 ---
 
 <Layout title="Seth Climenhaga">
-	<FloatingLinks slot="body" client:load />
-	<Header slot="content" client:load />
-	<Hero slot="content"  />
-		<ProjectPage slot="content" client:load />
-	<About slot="content" client:load />
-	<Footer slot="content" />  
+  <FloatingLinks slot="body" client:load />
+  <Header slot="content" client:load />
+  <Hero slot="content" />
+  <ProjectPage slot="content" client:load data={allPosts} />
+  <About slot="content" client:load />
+  <Footer slot="content" />
 </Layout>
-

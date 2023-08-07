@@ -31,12 +31,16 @@ const getColor = (numElements) => {
 
 }
 
- const ProjectItem = ({context, image, desc, tech, title, gitLink, bkImage, bkColor, bgSize=400, TitleColor, bkPostion="center", hoverColor,textHover}) =>{
+ const ProjectItem = ({image, desc, tech, title, gitLink, bkImage, TitleColor}) =>{
     const [isOpen, setIsOpen] = useState(false);
 
     const[uniColors, setUniColors] = useState([]);
 
-    const { controlCursor, onCursor  } = context;
+    // const { controlCursor, onCursor  } = context;
+
+    const bkColor="#ff0000"
+    const bgSize=400
+    const bkPostion="center"
   
     function toggleModal() {
         
@@ -55,50 +59,44 @@ const getColor = (numElements) => {
 
 
     return(   
-      <GridItem   
-        w='100%' 
-        h='6em'   
-        bg={bkColor}  
-        onClick={toggleModal}
-        onMouseOver={() => onCursor('pointer', hoverColor, textHover)}
-        onMouseLeave={onCursor}
-        className={styles.gridItem}
-        >  
+      <div div={{width:'100%', height:'6em', backgroundColor:"#ff0000"}} className={styles.gridItem}>  
           
         <div style={{width: '100%', height: '100%', backgroundImage: `url(${bkImage})`, backgroundSize: bgSize, backgroundRepeat:"no-repeat", backgroundPosition:bkPostion }}>
           <VStack alignItems="start" p="0 0 0 10px"  >
             <p className={Text.medium} style={{color : TitleColor}}>{title}</p>
-          </VStack>
-        </div>
-
-        <Modal handleClose={toggleModal} isOpen={isOpen}>
-          <HStack className={styles.content} p="2em" w="100%">
-            <img className={styles.vertImg}  src={image} />
-            <VStack className={styles.infoWrapper} alignItems="start" justifyContent="center" w="50%" h="20em" >
-              <p  className={Text.Title}>{title}</p>   
-                <div className={styles.techWrap} >
-                  {
-                    tech.map((item, i) => {
-                      return (
-                        <GridItem key={i} bg={uniColors[i]}  justifyContent="center" alignItems="center" p="0px 20px !important" m="5px">
-                          <p key={item} className={styles.techLabel} >{item}</p>
-                        </GridItem>
-                      ) 
-                    })
-                  }
-                </div>
+            <div className={styles.techWrap} >
+              {
+                tech.map((item, i) => {
+                  return (
+                    <GridItem key={i} bg={uniColors[i]}  justifyContent="center" alignItems="center" p="0px 20px !important" m="5px">
+                      <p key={item} className={styles.techLabel} >{item}</p>
+                    </GridItem>
+                  ) 
+                })
+              }
               <p  className={Text.small} >{desc}</p>
               
               <a href={gitLink}>
                   <GitHub className={styles.github} />
               </a>
+            </div>
+          </VStack>
+        </div>
+
+        {/* <Modal handleClose={toggleModal} isOpen={isOpen}>
+          <HStack className={styles.content} p="2em" w="100%">
+            <img className={styles.vertImg}  src={image} />
+            <VStack className={styles.infoWrapper} alignItems="start" justifyContent="center" w="50%" h="20em" >
+              <p  className={Text.Title}>{title}</p>   
+               
+ 
             </VStack>
             <div className={styles.horImg} style={{width: '50%'}} >
               <img  src={image} />
             </div>
           </HStack>
-        </Modal>      
-      </GridItem>
+        </Modal>       */}
+      </div>
     )
   }
 

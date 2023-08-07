@@ -1,0 +1,57 @@
+[
+    {
+        "title":"Scales App", 
+        "image" : "/imgs/IPhone_X_vector_scalesapp2.svg",
+        "bkImage" : "/imgs/figma_screenshot.png",
+        "tech": ["Android", "Kotlin", "KotlinMultiPlatform", "Koin", "SQLLite"],
+        "desc": "The goal of the app is to help a musician with their practice routine by providing selected exercises in a randomized order. Created a multi-page app that passes data between activities, saved data in user preferences, and using libraries to hold business logic. Includes the ability to generate custom practice routines based on user inputs.", 
+        "gitLink" :"https://rebrand.ly/scalesapp" 
+    },
+    {
+        "title":"Illu", 
+        "image" : "/imgs/IlluHome.png",
+        "bkImage" : "/imgs/IlluHome.png",
+        "tech": ["Unity", "C#", "UWP"],
+        "desc": "ChessGame made in unity for the UWP framework.  I implemented and learned about game logic with an object-oriented design, lighting, saving to a binary file. As well as, saving player preferences, and UI in unity.  I used Visual Studio for scripting and debugging, and the project was managed with version control.",
+        "gitLink" :"https://rebrand.ly/illu_game"
+    },
+    {
+        "title":"Venus Bug Tracker", 
+        "image" : "/imgs/venus_board.png",
+        "bkImage" : "/imgs/venus_board.png",
+        "tech": ["React", ".Net", "SQL", "Entity Framework"],
+        "desc": "",
+        "gitLink" :""
+    },    {
+        "title":"ChessGame", 
+        "image" : "/imgs/10-a-game-designer.jpg",
+        "bkImage" : "/imgs/10-a-game-designer.jpg",
+        "tech": ["Unity", "C#", "UWP"],
+        "desc": "ChessGame made in unity for the UWP framework.  I implemented and learned about game logic with an object-oriented design, lighting, saving to a binary file. As well as, saving player preferences, and UI in unity.  I used Visual Studio for scripting and debugging, and the project was managed with version control.",
+        "gitLink" :"https://bitbucket.org/sethclim/chess_game/src/master/"
+    },
+    {
+        "title":"Spotify Mini-Player", 
+        "image" : "/imgs/Spotify.png",
+        "bkImage" : "/imgs/Spotify.png",
+        "tech": ["React.JS", "Electron", "JavaScript", "Axios"],
+        "desc": "Built with the React framework and Electron.  This project calls endpoints in the Spotify API and uses the PCKE Authorization flow. The project also implementes a dynamic dropdown menu and makes use of react context.",
+        "gitLink" :"https://bitbucket.org/sethclim/spotify_mini_player/src/master/"
+    },
+    {
+        "title":"Graph App", 
+        "image" : "/imgs/graphapp.png",
+        "bkImage" : "/imgs/graphapp.png",
+        "tech": ["React.JS", "Docker", "C#", "Postgres", "Canvas"],
+        "desc": "Site to quick hand draw a graph online.  Provides a grid surface that can be drawn on by wrapping canvas.  Users can sign in and save graphs. Project runs on a microservice architecture running on docker containers",
+        "gitLink" :""
+    },
+    {
+        "title":"Pictafy", 
+        "image" : "/imgs/pictafy_post.png",
+        "bkImage" : "/imgs/pictafy_login.png",
+        "tech": ["iOS", "Swift", "objC", "Custom Camera"],
+        "desc": "iOS photo social media.  Geo decoding, custom in app Camera Implementation",
+        "gitLink" :"https://github.com/simeonis/Pictafy"
+    }
+]
