@@ -59,45 +59,33 @@ const getColor = (numElements) => {
 
 
     return(   
-      <div div={{width:'100%', height:'6em', backgroundColor:"#ff0000"}} className={styles.gridItem}>  
-          
-        <div style={{width: '100%', height: '100%', backgroundImage: `url(${bkImage})`, backgroundSize: bgSize, backgroundRepeat:"no-repeat", backgroundPosition:bkPostion }}>
-          <VStack alignItems="start" p="0 0 0 10px"  >
-            <p className={Text.medium} style={{color : TitleColor}}>{title}</p>
-            <div className={styles.techWrap} >
-              {
-                tech.map((item, i) => {
-                  return (
-                    <GridItem key={i} bg={uniColors[i]}  justifyContent="center" alignItems="center" p="0px 20px !important" m="5px">
-                      <p key={item} className={styles.techLabel} >{item}</p>
-                    </GridItem>
-                  ) 
-                })
-              }
-              <p  className={Text.small} >{desc}</p>
-              
-              <a href={gitLink}>
-                  <GitHub className={styles.github} />
-              </a>
-            </div>
-          </VStack>
-        </div>
-
-        {/* <Modal handleClose={toggleModal} isOpen={isOpen}>
-          <HStack className={styles.content} p="2em" w="100%">
-            <img className={styles.vertImg}  src={image} />
-            <VStack className={styles.infoWrapper} alignItems="start" justifyContent="center" w="50%" h="20em" >
-              <p  className={Text.Title}>{title}</p>   
-               
- 
+      <div style={{width:'100%', height:'15em', backgroundColor:"#A6A6A633", margin:"8px"}} className={styles.gridItem}>  
+          <HStack h="100%">
+            <VStack w="50%" alignItems="start" p="0 0 0 10px">
+              <p className={Text.medium} style={{color : TitleColor}}>{title}</p>
+              <div className={styles.techWrap} >
+                {
+                  tech.map((item, i) => {
+                    return (
+                      <GridItem key={i} bg={uniColors[i]}  justifyContent="center" alignItems="center" p="0px 20px !important" m="5px">
+                        <p key={item} className={styles.techLabel} >{item}</p>
+                      </GridItem>
+                    ) 
+                  })
+                }
+              </div>
+                <p  className={Text.small} >{desc}</p>
+                
+                <a href={gitLink}>
+                    <GitHub className={styles.github} />
+                </a>
             </VStack>
-            <div className={styles.horImg} style={{width: '50%'}} >
-              <img  src={image} />
-            </div>
+            <VStack h="100%" w="50%" justifyContent="center" alignItems="center">
+              <img src={bkImage} style={{"height" : "15vh", width:"auto"}} />
+            </VStack>
           </HStack>
-        </Modal>       */}
-      </div>
+        </div>
     )
   }
 
-  export default withCursor(ProjectItem);
+  export default ProjectItem;
