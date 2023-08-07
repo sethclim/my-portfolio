@@ -4,9 +4,9 @@ import React from "react";
 import Text from '../../../styles/text.module.scss'
 
 
-import { HStack, VStack } from "../../../components/LayoutComponents";
+import { HStack, VStack } from "../../LayoutComponents";
 
-import {Linkedin, GitHub} from "../../../components/SVG/SVGs";
+import {Linkedin, GitHub} from "../../SVG/SVGs";
 
 import HeroStyles from "./hero.module.scss"
 

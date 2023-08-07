@@ -1,7 +1,7 @@
 import React from "react";
 
-import { HStack, VStack, Grid, GridItem } from "../../../components/LayoutComponents";
-import Copy from "../../../components/Copy";
+import { HStack, VStack, Grid, GridItem } from "../../LayoutComponents";
+import Copy from "../../Copy";
 import Text from "../../../styles/text.module.scss"
 import Styles from "./About.module.scss"
 
