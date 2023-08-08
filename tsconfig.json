@@ -7,7 +7,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "strict": true,
-    "importsNotUsedAsValues": "error",
+    "verbatimModuleSyntax": true,
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   }
