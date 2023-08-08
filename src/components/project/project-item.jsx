@@ -31,6 +31,28 @@ const getColor = (numElements) => {
 
 }
 
+const logos = {
+  "React" : "react.svg",
+  "React Native" : "react.svg",
+  "Docker" : "docker.svg",
+  "C#" : "c_sharp.svg",
+  "Unity" : "unity.svg",
+  "Android" : "android.svg",
+  "iOS" : "ios.svg",
+  ".Net" : ".net.svg",
+  "Swift" : "swift.svg",
+  "Electron" : "electron.svg",
+  "ObjC" : "objc.svg",
+  "JavaScript" : "js.svg",
+  "Axios" : "axios.svg",
+  "Watermelon DB" : "watermelondb.svg",
+  "NativeBase" : "nativebase.svg",
+  "SQL" : "sql.svg",
+  "Postgres" : "postgresql.svg",
+  "Canvas" : "html5_canvas.svg",
+  "Custom Camera" : null
+}
+
  const ProjectItem = ({image, desc, tech, title, gitLink, bkImage, TitleColor}) =>{
     const [isOpen, setIsOpen] = useState(false);
 
@@ -66,9 +88,19 @@ const getColor = (numElements) => {
               <div className={styles.techWrap} >
                 {
                   tech.map((item, i) => {
+                    console.log(item)
+                    console.log("svg/" + logos[item])
                     return (
-                      <GridItem key={i} bg={uniColors[i]}  justifyContent="center" alignItems="center" p="0px 20px !important" m="5px">
-                        <p key={item} className={styles.techLabel} >{item}</p>
+                      <GridItem key={i} justifyContent="center" alignItems="center" p="0px 20px !important" m="5px">
+                        <VStack>
+                          {
+                            logos[item] != null ?   
+                            (<img src={"svg/" + logos[item]} height="25px" width="25px" /> ) 
+                            :
+                            (<p key={item} className={styles.techLabel} >{item}</p>)
+                          }
+                          
+                        </VStack>
                       </GridItem>
                     ) 
                   })
