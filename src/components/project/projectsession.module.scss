@@ -34,14 +34,11 @@
   cursor: none;
 }
 
-#projectContainer {
-  cursor: none;
-}
-
 
 .gridItem{
   border-radius: 5px;
-  box-shadow: #000;
+  background-color: red;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .techLabel{
@@ -103,18 +100,21 @@
 }
 
 .techWrap{
-  display: grid;
-  overflow-wrap: break-word;
   width: 100%;
-  gap:5px;
   padding:0 10px 10px 0;
-  grid-template-columns : 1fr 1fr 1fr !important;
+  
+  display: grid;
+  gap:5px;
+  grid-template-columns : auto;
   grid-template-rows: 1fr 1fr  !important;
-
+  
   @include lg {
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-end;
+    overflow-wrap: break-word;
+    justify-content: flex-end;
 
-    grid-template-columns : 1fr 1fr 1fr 1fr 1fr 1fr !important;
-    grid-template-rows: 1fr  !important;
   }
 
 }

@@ -21,7 +21,7 @@
         "bkImage" : "/imgs/venus_board.png",
         "tech": ["React", ".Net", "SQL"],
         "desc": "",
-        "gitLink" :""
+        "gitLink" :"https://github.com/simeonis/Venus"
     },    {
         "title":"ChessGame", 
         "image" : "/imgs/10-a-game-designer.jpg",

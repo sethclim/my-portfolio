@@ -6,9 +6,9 @@ export const VStack = ({children, alignItems, justifyContent, h, bg, p, id, w, m
     )
 }
 
-export const HStack = ({children, alignItems, justifyContent, h, p, m, w, className}) =>{
+export const HStack = ({children, alignItems, justifyContent, h, bg, p, m, w, className}) =>{
     return (
-        <div className={className} style={{ display: "flex", flexDirection: "row", alignItems:alignItems, justifyContent:justifyContent, height:h, width:w , padding: p, margin: m }}>
+        <div className={className} style={{ display: "flex", flexDirection: "row", alignItems:alignItems, justifyContent:justifyContent, height:h, width:w , padding: p, margin: m, backgroundColor:bg }}>
             {children}
         </div>
     )
