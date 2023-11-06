@@ -15,7 +15,7 @@ export default class FloatingLinks extends React.Component {
       <div className={styles.linkWrapper}>
         <a
           className={styles.floatingLinks}
-          href="https://www.linkedin.com/in/seth-climenhaga-932802157/"
+          href="https://www.linkedin.com/in/sethclim/"
           rel="noopener noreferrer"
           target="_blank"
         >

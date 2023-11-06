@@ -27,7 +27,7 @@ export default class Hero extends React.Component {
             <HStack>      
               <a
                 className={HeroStyles.floatingLinks}
-                href="https://www.linkedin.com/in/seth-climenhaga-932802157/"
+                href="https://www.linkedin.com/in/sethclim/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
