@@ -61,4 +61,4 @@ jobs:
           protocol: ftps
           username: u148256284
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /home/u148256284/domains/sethclimenhaga.com/public_html/
+          server-dir: /domains/sethclimenhaga.com/public_html/
