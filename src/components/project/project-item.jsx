@@ -32,11 +32,11 @@ const logos = {
  const ProjectItem = ({image, desc, tech, title, gitLink, bkImage, TitleColor}) =>{
 
     return(   
-      <HStack w="100%" h="15em" m="12px" bg="#A6A6A633" className={styles.gridItem}>  
+      <HStack w="100%" m="20px 0" h="12em"  bg="#A6A6A633" className={styles.gridItem}>  
             <VStack w="50%" alignItems="start" p="15px">
               <HStack w="100%">
                 <p className={Text.medium} style={{color : TitleColor, width: "100%"}}>{title}</p>
-                <div className={styles.techWrap} >
+                <div className={styles.techWrap}>
                   {
                     tech.map((item, i) => {
                       return (
@@ -46,9 +46,8 @@ const logos = {
                               logos[item] != null ?   
                               (<img src={"svg/" + logos[item]} height="30px" width="30px" style={{padding: "5px"}} /> ) 
                               :
-                              (<p key={item} className={styles.techLabel} >{item}</p>)
+                              (<p key={item} className={styles.techLabel}>{item}</p>)
                             }
-                            
                           </VStack>
                         </GridItem>
                       ) 
@@ -62,8 +61,8 @@ const logos = {
                     <GitHub className={styles.github} />
                 </a>
             </VStack>
-            <VStack h="100%" w="50%" justifyContent="center" alignItems="center">
-              <img src={bkImage} style={{"height" : "25vh", width:"auto"}} />
+            <VStack  h="100%" w="50%" justifyContent="center" alignItems="flex-end">
+              <img src={bkImage} style={{"height" : "100%", width:"auto"}} />
             </VStack>
 
         </HStack>

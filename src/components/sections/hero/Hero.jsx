@@ -13,18 +13,18 @@ import HeroStyles from "./hero.module.scss"
 export default class Hero extends React.Component {
   render() {
     return (
-      <VStack h="50vh">
-        <VStack align="start" h="50vh" p="5em 0 0 0">
+      <VStack h="70vh">
+        <VStack align="start" h="50vh" p="8em 0 0 0">
           <VStack align="start" >
             <p className={Text.heroTitle}>Seth Climenhaga</p>
             <p className={Text.heroSubTitle} >Software Developer</p>
           </VStack>
-          <VStack align="start" w="80%" m="10px 0 0 0 " paddingBottom={5}>
+          <VStack align="start" w="80%" m="20px 0 0 0 " paddingBottom={5}>
             <p className={Text.small}>
               I'm a computer science student who specializes in application development targeting web, mobile, and desktop platforms.
               My work experience includes the lastest web/mobile technologies, game development (Unity, OpenGL), and distributed cloud solutions.
             </p>
-            <HStack>      
+            <HStack m="20px 0 0 0 ">      
               <a
                 className={HeroStyles.floatingLinks}
                 href="https://www.linkedin.com/in/seth-climenhaga-932802157/"
