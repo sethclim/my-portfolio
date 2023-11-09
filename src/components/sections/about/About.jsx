@@ -24,9 +24,26 @@ class About extends React.Component {
         <VStack p="1em 0">
           <p className={Text.subTitle}>Work Experience</p>
           <Work
+           company="SpeakSynk Technology" 
+           role="Algorithm Developer" 
+           date="May 2023 - Present" 
+           point1="Built initial product MVP to demonstrate to investor"
+           point2="Deployed scalable version of product to AWS"
+           point3="Improved ML models, and computer vision algorithms"
+           point4="Developed backend infrascture components to serve customers"
+           />
+          <Work
+           company="Artful Enrichment" 
+           role="Mobile Developer" 
+           date="Sept. 2023 - Present" 
+           point1="Developed mobile app in React Native"
+           point2="Implemented intuitive UI for seniors"
+           point3="Interfaced with backend APIs for business logic"
+           />
+          <Work
            company="Sheridan Center For Mobile Innovation" 
            role="VR Developer" 
-           date="June 2020 - Present" 
+           date="May 2022 - May 2023" 
            point1="Developed VR interaction to simulate pharmaceutical factory"
            point2="3D modeled pharmaceutical factory equipment"
            point3="Designed simulation software architecture"
