@@ -1,3 +1,5 @@
+@import "../../styles/brand.module.scss";
+
 /* Floating Links */
 .linkWrapper {
   position: fixed;
@@ -8,7 +10,7 @@
   margin: 2vw;
 }
 .floatingLinks {
-  color: #262626;
+  color: #777777;
 }
 
 .floatingItem {
@@ -16,7 +18,7 @@
 }
 
 .floatingItem:hover {
-  color: #a6a6a6;
+  color: $lightGrey;
 }
 
 @media (max-width: 1138px) {

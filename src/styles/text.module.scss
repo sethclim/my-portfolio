@@ -7,6 +7,7 @@ $lf: $sf + 0.6;
 @mixin smallFont {
     font-size: $sf;
     line-height: $sf + 1.08;
+    color: $dark;
     //color: blue;
     @include sm{
         font-size: $sf + 0.25;
@@ -23,6 +24,7 @@ $lf: $sf + 0.6;
 
 @mixin medFont($boost) {
     font-size: $mf + $boost;
+    color: $dark;
 
     @include sm{
         font-size: $mf + $boost + 0.1;
@@ -38,6 +40,7 @@ $lf: $sf + 0.6;
 
 @mixin largeFont {
     font-size: $lf;
+    color: $dark;
 
     @include sm{
         font-size: $lf + 0.4;
