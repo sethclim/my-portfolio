@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <HStack alignItems="center" h='5em'>
       <Logo
-        fill={'brand.dark'}
+        fill={'#fff'}
         width={"2em"}
         hieght={"auto"}
         className="logo" />

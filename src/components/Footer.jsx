@@ -8,7 +8,7 @@ import { HStack } from "./LayoutComponents";
 function Footer() {
   return (
       <HStack alignItems="center" justifyContent="center" h="5em">
-        <p  className={`${Text.small}`}>@Seth Climenhaga 2022</p>
+        <p  className={`${Text.small}`}>@Seth Climenhaga 2023</p>
       </HStack>
   );
 }

@@ -32,38 +32,29 @@ const logos = {
  const ProjectItem = ({image, desc, tech, title, gitLink, bkImage, TitleColor}) =>{
 
     return(   
-      <HStack w="100%" m="20px 0" h="12em"  bg="#A6A6A633" className={styles.gridItem}>  
-            <VStack w="50%" alignItems="start" p="15px">
-              <HStack w="100%">
-                <p className={Text.medium} style={{color : TitleColor, width: "100%"}}>{title}</p>
+      <HStack w="100%" m="10px 0" h="9em"  bg="#222" className={styles.gridItem}>  
+            <VStack w="100%" alignItems="start" p="15px">
+              <VStack w="100%">
+                <p className={Text.medium} style={{color : TitleColor, width: "100%", "margin": "0 8px 0 0", ",    margin-block-start" : 0}}>{title}</p>
                 <div className={styles.techWrap}>
                   {
                     tech.map((item, i) => {
                       return (
-                        <GridItem key={i} justifyContent="center" alignItems="center" p="0px 20px !important" >
-                          <VStack>
-                            {
-                              logos[item] != null ?   
-                              (<img src={"svg/" + logos[item]} height="30px" width="30px" style={{padding: "5px"}} /> ) 
-                              :
-                              (<p key={item} className={styles.techLabel}>{item}</p>)
-                            }
-                          </VStack>
-                        </GridItem>
+                          <p key={i} className={styles.techLabel}>{item}</p>
                       ) 
                     })
                   }
                 </div>
-              </HStack>
+              </VStack>
                 <p  className={Text.small} >{desc}</p>
                 
                 <a href={gitLink}>
                     <GitHub className={styles.github} />
                 </a>
             </VStack>
-            <VStack  h="100%" w="50%" justifyContent="center" alignItems="flex-end">
+            {/* <VStack  h="100%" w="50%" justifyContent="center" alignItems="flex-end">
               <img src={bkImage} style={{"height" : "100%", width:"auto"}} />
-            </VStack>
+            </VStack> */}
 
         </HStack>
     )

@@ -26,7 +26,8 @@ const ProjectPage = ({data}) => {
                 bkImage={item.bkImage}
                 tech={item.tech}
                 desc={item.desc} 
-                gitLink={item.gitLink}  />
+                gitLink={item.gitLink}
+                TitleColor="white"  />
             ) 
           })
         }

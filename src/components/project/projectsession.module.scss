@@ -43,11 +43,13 @@
 
 .techLabel{
   font-size: 0.6em;
-  font-weight: 700;
-  color: #000;
-  text-align: center;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  text-align: start;
+  margin: 10px 0;
 
-  min-width: 50px;
+
+  // min-width: 50px;
 }
 
 .vertImg{
@@ -101,21 +103,28 @@
 
 .techWrap{
   width: 100%;
-  padding:0 10px 10px 0;
+  // padding:0 10px 10px 0;
   
-  display: grid;
-  gap:5px;
-  grid-template-columns : auto;
-  grid-template-rows: 1fr 1fr  !important;
-  
-  @include lg {
-    display: flex;
-    flex-direction: row;
-    justify-self: flex-end;
-    overflow-wrap: break-word;
-    justify-content: flex-end;
+  // display: grid;
+  // gap:5px;
+  // grid-template-columns : auto;
+  // grid-template-rows: 1fr 1fr  !important;+
 
-  }
+  display: flex;
+  flex-direction: row;
+  justify-self: flex-start;
+  overflow-wrap: break-word;
+  justify-content: flex-start;
+  gap: 10px;
+  
+  
+  // @include lg {
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-self: flex-start;
+  //   overflow-wrap: break-word;
+  //   justify-content: flex-start,
+  // }
 
 }
 

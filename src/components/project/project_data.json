@@ -1,25 +1,25 @@
 [
     {
+        "title":"Souschef", 
+        "image" : "/imgs/IPhone_X_vector_scalesapp2.svg",
+        "bkImage" : "/imgs/figma_screenshot.png",
+        "tech": ["React Native", "Android", "iOS",  ".Net", "Python", "GO", "GRCP", "Chat-gpt4"],
+        "desc": "Cook together app with realtime distrubution of tasks, auto break down of recicies into session tasks", 
+        "gitLink" :"https://github.com/Souschef-App/souschef-mobile-app" 
+    },
+    {
         "title":"Scales App", 
         "image" : "/imgs/IPhone_X_vector_scalesapp2.svg",
         "bkImage" : "/imgs/figma_screenshot.png",
-        "tech": ["React Native", "Android", "iOS",  "NativeBase", "Watermelon DB"],
+        "tech": ["React Native", "Android", "iOS",  "NativeBase", "Watermelon DB", "Skia"],
         "desc": "The goal of the app is to help a musician with their practice routine by providing selected exercises in a randomized order. Created a multi-page app that passes data between activities, saved data in user preferences, and using libraries to hold business logic. Includes the ability to generate custom practice routines based on user inputs.", 
         "gitLink" :"https://rebrand.ly/scalesapp" 
     },
     {
-        "title":"Venus Bug Tracker", 
-        "image" : "/imgs/venus_board.png",
-        "bkImage" : "/imgs/venus_board.png",
-        "tech": ["React", ".Net", "SQL"],
-        "desc": "",
-        "gitLink" :"https://github.com/simeonis/Venus"
-    },    
-    {
-        "title":"Graph App", 
+        "title":"Chemical Factory VR Simulator", 
         "image" : "/imgs/graphapp.png",
         "bkImage" : "/imgs/graphapp.png",
-        "tech": ["React", "Docker", "C#", "Postgres", "Canvas"],
-        "desc": "Site to quick hand draw a graph online.  Provides a grid surface that can be drawn on by wrapping canvas.  Users can sign in and save graphs. Project runs on a microservice architecture running on docker containers" 
+        "tech": ["Unity", "Vive", "Oculus"],
+        "desc": "Experience working in a virtual chemical factory" 
     }
 ]

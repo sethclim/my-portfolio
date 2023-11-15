@@ -22,7 +22,7 @@ class About extends React.Component {
         </VStack>
 
         <VStack p="1em 0">
-          <p className={Text.subTitle}>Work Experience</p>
+          <p className={Text.Title}>Work Experience</p>
           <Work
            company="SpeakSynk Technology" 
            role="Algorithm Developer" 
@@ -68,9 +68,9 @@ class About extends React.Component {
 
 
         <VStack p="1em 0">
-          <p className={Text.subTitle}>Skills</p>
+          <p className={Text.Title}>Skills</p>
           <VStack align="top" pt="5" justifyContent="flex-bottom" >
-            <Grid templateColumns='200px 1fr' gap={6}>
+            <Grid templateColumns='200px 1fr' gap={10}>
               <GridItem w='100%' h='100%' justifyContent="center" >
                 <p className={Text.med}>Languages</p>
               </GridItem>
@@ -100,7 +100,7 @@ class About extends React.Component {
         </VStack>
 
         <HStack align="top" p="1em 0" alignItems="center">
-          <p className={Text.subTitle}>Connect:</p>
+          <p className={Text.Title}>Connect:</p>
           <Copy />     
         </HStack>
       
