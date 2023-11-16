@@ -35,7 +35,7 @@ const logos = {
       <HStack w="100%" m="10px 0" h="9em"  bg="#222" className={styles.gridItem}>  
             <VStack w="100%" alignItems="start" p="15px">
               <VStack w="100%">
-                <p className={Text.medium} style={{color : TitleColor, width: "100%", "margin": "0 8px 0 0", ",    margin-block-start" : 0}}>{title}</p>
+                <p className={Text.medium} style={{color : TitleColor, width: "100%", "margin": "0 8px 0 0"}}>{title}</p>
                 <div className={styles.techWrap}>
                   {
                     tech.map((item, i) => {
