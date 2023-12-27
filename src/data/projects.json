@@ -3,7 +3,7 @@
         "title":"Souschef", 
         "image" : "/imgs/IPhone_X_vector_scalesapp2.svg",
         "bkImage" : "/imgs/figma_screenshot.png",
-        "tech": ["React Native", "Android", "iOS",  ".Net", "Python", "GO", "GRCP", "Chat-gpt4"],
+        "tech": ["React Native", "Android", "iOS",  ".Net", "Python", "GO", "GRCP", "Chat-GPT4"],
         "desc": "Cook together app with realtime distrubution of tasks, auto break down of recicies into session tasks", 
         "gitLink" :"https://github.com/Souschef-App/souschef-mobile-app" 
     },

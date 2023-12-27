@@ -26,7 +26,7 @@ const About = (props : AboutProps) =>  {
             "Built initial product MVP to demonstrate to investor",
             "Deployed scalable version of product to AWS",
             "Improved ML models, and computer vision algorithms",
-            "Developed backend infrascture components to serve customers"
+            "Developed backend infrastructure components to serve customers"
            ]}
            />
           <Work
