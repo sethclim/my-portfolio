@@ -12,7 +12,7 @@ import {scroll} from "../scroll.js"
 const Header = () => {
 
   return (
-    <HStack alignItems="center" h='5em'>
+    <HStack alignItems="center" h='6em' justifyContent="space-between">
       <Logo
         fill={'#fff'}
         width={"2em"}
@@ -34,9 +34,9 @@ const Header = () => {
             href="/Resume.pdf"
             rel="noopener noreferrer"
             target="_blank">
-              <p >
+             
                 Resume
-              </p>
+              
              
           </a> 
 
