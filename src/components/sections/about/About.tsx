@@ -60,7 +60,7 @@ const About = (props : AboutProps) =>  {
            ]}
            />
           <Work
-           company="Sample House" 
+           company="SampleHouse" 
            role="Full Stack Developer" 
            date="Aug 2021 - Dec. 2021" 
            points={[
@@ -80,7 +80,7 @@ const About = (props : AboutProps) =>  {
                 <p className={Text.med}>Languages</p>
               </GridItem>
               <GridItem w='100%' h='100%' justifyContent="center"   >
-                <p className={Text.small}>Kotlin, Swift, JavaScript/Typescript, C#, Java, C++</p>
+                <p className={Text.small}>Python, Kotlin, Swift, JavaScript/Typescript, C#, C++</p>
               </GridItem>
               <GridItem w='100%' h='100%'  justifyContent="center" >
                 <p  className={Text.med}>Databases</p>
@@ -92,7 +92,7 @@ const About = (props : AboutProps) =>  {
                 <p className={Text.med}>Technology</p>
               </GridItem>
               <GridItem w='100%' h='100%'  justifyContent="center" >
-                <p className={Text.small}>React, AWS, Apache, Docker, Unity</p>
+                <p className={Text.small}>React, AWS, Kafka, Node, Docker, Unity, PyTorch, TensorFlow</p>
               </GridItem>
               <GridItem w='100%' h='100%' justifyContent="center" >
                 <p className={Text.med}>Tools</p>
