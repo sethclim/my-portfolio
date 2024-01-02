@@ -1,6 +1,6 @@
 [
     {
-        "title":"Souschef", 
+        "title":"SousChef", 
         "image" : "/imgs/IPhone_X_vector_scalesapp2.svg",
         "bkImage" : "/imgs/figma_screenshot.png",
         "tech": ["React Native", "Android", "iOS",  ".Net", "Python", "GO", "GRCP", "Chat-GPT4"],

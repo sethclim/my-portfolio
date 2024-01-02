@@ -2,6 +2,7 @@ import { HStack, VStack, Grid, GridItem } from "../../LayoutComponents";
 import Copy from "../../Copy";
 import Text from "../../../styles/text.module.scss"
 import Styles from "./About.module.scss"
+import { useEffect } from "react";
 
 export type AboutProps ={
   bio : any
@@ -9,12 +10,21 @@ export type AboutProps ={
 
 const About = (props : AboutProps) =>  {
 
+  useEffect(()=>{
+    console.log("HELLO")
+   console.log(JSON.stringify(props.bio))
+  },[props])
+
   return(
       <VStack id="about">
         <VStack p="1em 0">
           <p className={Text.Title}>About</p>
           {/* <hr className="new4"></hr> */}
             <p className={Text.small}>{props.bio[0].frontmatter.bio}</p>
+            <br></br>
+            <p className={Text.small}>{props.bio[0].frontmatter.point1}</p>
+            <p className={Text.small}>{props.bio[0].frontmatter.point2}</p>
+            <p className={Text.small}>{props.bio[0].frontmatter.point3}</p>
         </VStack>
         <VStack p="1em 0">
           <p className={Text.Title}>Work Experience</p>
