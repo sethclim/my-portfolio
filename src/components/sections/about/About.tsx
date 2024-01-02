@@ -21,7 +21,6 @@ const About = (props : AboutProps) =>  {
           <p className={Text.Title}>About</p>
           {/* <hr className="new4"></hr> */}
             <p className={Text.small}>{props.bio[0].frontmatter.bio}</p>
-            <br></br>
             <p className={Text.small}>{props.bio[0].frontmatter.point1}</p>
             <p className={Text.small}>{props.bio[0].frontmatter.point2}</p>
             <p className={Text.small}>{props.bio[0].frontmatter.point3}</p>

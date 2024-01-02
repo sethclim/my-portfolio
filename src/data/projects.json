@@ -4,7 +4,7 @@
         "image" : "/imgs/IPhone_X_vector_scalesapp2.svg",
         "bkImage" : "/imgs/figma_screenshot.png",
         "tech": ["React Native", "Android", "iOS",  ".Net", "Python", "GO", "GRCP", "Chat-GPT4"],
-        "desc": "Cook together app with realtime distrubution of tasks, auto break down of recicies into session tasks", 
+        "desc": "Cooking app designed to simplify the experience of cooking together in a large group.  This system reduces the load on the meal’s host by automatically distributing tasks to guests and keeping track of the progress everyone is making.  Creating recipes for use in this app is also made easy, when planning a meal, the host can enter an existing meal plan and get it automatically broken down into small micro steps easy for anyone to do.", 
         "gitLink" :"https://github.com/Souschef-App/souschef-mobile-app" 
     },
     {
@@ -12,7 +12,7 @@
         "image" : "/imgs/IPhone_X_vector_scalesapp2.svg",
         "bkImage" : "/imgs/figma_screenshot.png",
         "tech": ["React Native", "Android", "iOS",  "NativeBase", "Watermelon DB", "Skia"],
-        "desc": "The goal of the app is to help a musician with their practice routine by providing selected exercises in a randomized order. Created a multi-page app that passes data between activities, saved data in user preferences, and using libraries to hold business logic. Includes the ability to generate custom practice routines based on user inputs.", 
+        "desc": "Practice application to help musicians with their practice routine by providing selected exercises in a randomized order to prevent selection bias.  Different combinations of exercises and keys can be selected to create unique practice routines.  Generated routines can be saved to be revisited later (of course presented in a new order).", 
         "gitLink" :"https://rebrand.ly/scalesapp" 
     },
     {
@@ -20,6 +20,6 @@
         "image" : "/imgs/graphapp.png",
         "bkImage" : "/imgs/graphapp.png",
         "tech": ["Unity", "Vive", "Oculus"],
-        "desc": "Experience working in a virtual chemical factory" 
+        "desc": "VR simulator developed to expose new graduates/hires to working in a chemical factory.  Participants complete real production tasks in the virtual reality environment guided by instructions in a self-paced fashion. The application was developed in Unity for any OpenXR-compatible headset." 
     }
 ]
