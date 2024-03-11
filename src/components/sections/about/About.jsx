@@ -33,14 +33,6 @@ class About extends React.Component {
            point4="Developed backend infrascture components to serve customers"
            />
           <Work
-           company="Artful Enrichment" 
-           role="Mobile Developer" 
-           date="Sept. 2023 - Present" 
-           point1="Developed mobile app in React Native"
-           point2="Implemented intuitive UI for seniors"
-           point3="Interfaced with backend APIs for business logic"
-           />
-          <Work
            company="Sheridan Center For Mobile Innovation" 
            role="VR Developer" 
            date="May 2022 - May 2023" 
@@ -75,7 +67,7 @@ class About extends React.Component {
                 <p className={Text.med}>Languages</p>
               </GridItem>
               <GridItem w='100%' h='100%' justifyContent="center"   >
-                <p className={Text.small}>Kotlin, Swift, JavaScript/Typescript, C#, Java, C++</p>
+                <p className={Text.small}>Python, Typescript, C++, C#, Swift, Kotlin, Java</p>
               </GridItem>
               <GridItem w='100%' h='100%'  justifyContent="center" >
                 <p  className={Text.med}>Databases</p>
@@ -87,13 +79,13 @@ class About extends React.Component {
                 <p className={Text.med}>Technology</p>
               </GridItem>
               <GridItem w='100%' h='100%'  justifyContent="center" >
-                <p className={Text.small}>React, AWS, Apache, Docker, Unity</p>
+                <p className={Text.small}>React, AWS, Apache, PyTorch, Unity, Kafka</p>
               </GridItem>
               <GridItem w='100%' h='100%' justifyContent="center" >
                 <p className={Text.med}>Tools</p>
               </GridItem>
               <GridItem w='100%' h='100%'  justifyContent="center"  >
-                <p className={Text.small}>Git, Jira, VSCode, IntelliJ IDEA</p>
+                <p className={Text.small}>Git, Jira, VSCode, Docker, Sagemaker</p>
               </GridItem>
             </Grid>
           </VStack>

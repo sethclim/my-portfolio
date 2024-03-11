@@ -27,8 +27,6 @@ const Header = () => {
           <a  onClick={()=>scroll('#about')} className={`${Text.headerLink}`}>
             About
           </a>  
-          
-
           <a
             className={Button.resume}
             href="/Resume.pdf"
@@ -37,13 +35,10 @@ const Header = () => {
               <p >
                 Resume
               </p>
-             
           </a> 
-
-     
         </HStack>
       </nav>
-    {/* <Switch id='email-alerts' onChange={toggleColorMode} /> */}
+      {/* <Switch id='email-alerts' onChange={toggleColorMode} /> */}  
     </HStack>
   );
 }
