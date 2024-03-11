@@ -23,8 +23,8 @@
 .resume{
     @include Flex('vertical');
     background-color: #99999944;
-    @include medFont(-0.5);
-    height: 30px;
+    @include medFont(0);
+    height: 33px;
     width: 30%;
     color: $dark;
     padding: 0 4px;

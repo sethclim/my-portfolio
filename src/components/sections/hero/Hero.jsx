@@ -21,8 +21,8 @@ export default class Hero extends React.Component {
           </VStack>
           <VStack align="start" w="80%" m="20px 0 0 0 " paddingBottom={5}>
             <p className={Text.small}>
-              I'm a computer science student who specializes in application development targeting web, mobile, and desktop platforms.
-              My work experience includes the lastest web/mobile technologies, game development (Unity, OpenGL), and distributed cloud solutions.
+              I'm a software developer who specializes in application development targeting web, mobile, and desktop platforms.
+              My work experience includes the distributed cloud solutions, web/mobile technologies, and game development (Unity, OpenGL).
             </p>
             <HStack m="20px 0 0 0 ">      
               <a

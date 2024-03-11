@@ -5,13 +5,14 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer";
 import ProjectPage from "../components/project/project-section";
 import Hero from "../components/sections/hero/Hero";
-import About from "../components/sections/about/About";
+import About from "../Components/sections/about/About";
 
 import "../styles/App.css";
 
 import FloatingLinks from "../components/floating-links/FloatingLinks.jsx";
 
-const allPosts = await Astro.glob("../Components/project/project_data.json");
+const project_data = await Astro.glob("../data/projects.json");
+const bio = await Astro.glob("../data/bio.md");
 
 // import  "./App.css"
 ---
@@ -20,7 +21,7 @@ const allPosts = await Astro.glob("../Components/project/project_data.json");
   <FloatingLinks slot="body" client:load />
   <Header slot="content" client:load />
   <Hero slot="content" />
-  <ProjectPage slot="content" client:load data={allPosts} />
-  <About slot="content" client:load />
+  <ProjectPage slot="content" client:load data={project_data} />
+  <About slot="content" client:load bio={bio} />
   <Footer slot="content" />
 </Layout>

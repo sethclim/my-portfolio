@@ -91,7 +91,7 @@ $lf: $sf + 0.6;
 
 .headerLink{
     color: $dark;
-    @include medFont(-0.3);
+    @include medFont(0);
 }
 
 .headerLink:hover{

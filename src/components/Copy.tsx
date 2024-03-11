@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 
 import { HStack } from './LayoutComponents';
@@ -6,7 +6,7 @@ import { HStack } from './LayoutComponents';
 import Text from "../styles/text.module.scss"
 import Button from "../styles/button.module.scss"
 
-export default function Copy() {
+const Copy = () => {
 
   var [copyText, setCopyText] = useState("Copy")
 
@@ -30,3 +30,5 @@ export default function Copy() {
     </HStack>
   )
 }   
+
+export default Copy;
