@@ -1,64 +1,64 @@
 name: Deploy to Astro to Hostinger
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch’s name
-  push:
-    branches: [main]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
-  workflow_dispatch:
+    # Trigger the workflow every time you push to the `main` branch
+    # Using a different branch name? Replace `main` with your branch’s name
+    push:
+        branches: [main]
+    # Allows you to run this workflow manually from the Actions tab on GitHub.
+    workflow_dispatch:
 
 # Allow this job to clone the repo and create a page deployment
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+    contents: read
+    pages: write
+    id-token: write
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v3
-      - name: Use Node.js 16
-        uses: actions/setup-node@v2
-        with:
-          node-version: "16"
-          cache: "npm"
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout your repository using git
+              uses: actions/checkout@v3
+            - name: Use Node.js 16
+              uses: actions/setup-node@v2
+              with:
+                  node-version: "16"
+                  cache: "npm"
 
-      # Not using npm? Change `npm ci` to `yarn install` or `pnpm i`
-      - name: Install dependencies
-        run: yarn install
+            # Not using npm? Change `npm ci` to `yarn install` or `pnpm i`
+            - name: Install dependencies
+              run: yarn install
 
-      # Not using npm? Change `npm run build` to `yarn build` or `pnpm run build`
-      - name: Build Astro
-        run: yarn build --if-present
+            # Not using npm? Change `npm run build` to `yarn build` or `pnpm run build`
+            - name: Build Astro
+              run: yarn build --if-present
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2.2.0
-        with:
-          name: myportfolio
-          path: ./dist
+            - name: Upload artifact
+              uses: actions/upload-artifact@main
+              with:
+                  name: myportfolio
+                  path: ./dist
 
-  web-deploy:
-    name: 🎉 Deploy
-    runs-on: ubuntu-latest
-    environment: deploy
-    needs: build
-    steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v3
-      - name: Download Artifact
-        uses: actions/download-artifact@main
-        with:
-          name: myportfolio
-          path: dist
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.3
-        with:
-          local-dir: dist/
-          server: sethclimenhaga.com
-          protocol: ftps
-          username: u148256284
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /domains/sethclimenhaga.com/public_html/
+    web-deploy:
+        name: 🎉 Deploy
+        runs-on: ubuntu-latest
+        environment: deploy
+        needs: build
+        steps:
+            - name: Checkout your repository using git
+              uses: actions/checkout@v3
+            - name: Download Artifact
+              uses: actions/download-artifact@main
+              with:
+                  name: myportfolio
+                  path: dist
+            - name: 📂 Sync files
+              uses: SamKirkland/FTP-Deploy-Action@4.3.3
+              with:
+                  local-dir: dist/
+                  server: sethclimenhaga.com
+                  protocol: ftps
+                  username: u148256284
+                  password: ${{ secrets.FTP_PASSWORD }}
+                  server-dir: /domains/sethclimenhaga.com/public_html/
