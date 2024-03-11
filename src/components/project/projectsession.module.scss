@@ -34,23 +34,22 @@
   cursor: none;
 }
 
-#projectContainer {
-  cursor: none;
-}
-
 
 .gridItem{
   border-radius: 5px;
-  box-shadow: #000;
+  background-color: red;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .techLabel{
   font-size: 0.6em;
-  font-weight: 700;
-  color: #fff;
-  text-align: center;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  text-align: start;
+  margin: 10px 0;
 
-  min-width: 50px;
+
+  // min-width: 50px;
 }
 
 .vertImg{
@@ -103,20 +102,31 @@
 }
 
 .techWrap{
-  display: grid;
-  overflow-wrap: break-word;
   width: 100%;
-  gap:5px;
-  padding:0 10px 10px 0;
-  grid-template-columns : 1fr 1fr 1fr !important;
-  grid-template-rows: 1fr 1fr  !important;
+  // padding:0 10px 10px 0;
+  
+  // display: grid;
+  // gap:5px;
+  // grid-template-columns : auto;
+  // grid-template-rows: 1fr 1fr  !important;+
 
-  @include lg {
-
-    grid-template-columns : 1fr 1fr 1fr 1fr 1fr 1fr !important;
-    grid-template-rows: 1fr  !important;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-self: flex-start;
+  overflow-wrap: break-word;
+  justify-content: flex-start;
+  gap: 10px;
+  
+  
+  // @include lg {
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-self: flex-start;
+  //   overflow-wrap: break-word;
+  //   justify-content: flex-start,
+  // }
 
 }
+
 
 //templateColumns={"1fr 1fr 1fr"} templateRows={"1fr 1fr"} gap="5px" alignItems="center" w="100%" p="0 10px 10px 0"

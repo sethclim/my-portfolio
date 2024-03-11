@@ -1,3 +1,4 @@
+@import "../../../styles/brand.module.scss";
 /* Floating Links */
   .floatingLinks {
     color: #777777;
@@ -13,7 +14,7 @@
 
   
   .floatingItem:hover {
-    color: #262626;
+    color: $lightGrey;
   }
   
 //   @media (max-width: 1138px) {

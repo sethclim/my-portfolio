@@ -12,9 +12,9 @@ import {scroll} from "../scroll.js"
 const Header = () => {
 
   return (
-    <HStack alignItems="center" h='5em'>
+    <HStack alignItems="center" h='6em' justifyContent="space-between">
       <Logo
-        fill={'brand.dark'}
+        fill={'#fff'}
         width={"2em"}
         hieght={"auto"}
         className="logo" />
@@ -27,23 +27,19 @@ const Header = () => {
           <a  onClick={()=>scroll('#about')} className={`${Text.headerLink}`}>
             About
           </a>  
-          
-
           <a
             className={Button.resume}
             href="/Resume.pdf"
             rel="noopener noreferrer"
             target="_blank">
-              <p >
+             
                 Resume
-              </p>
+              
              
           </a> 
-
-     
         </HStack>
       </nav>
-    {/* <Switch id='email-alerts' onChange={toggleColorMode} /> */}
+      {/* <Switch id='email-alerts' onChange={toggleColorMode} /> */}  
     </HStack>
   );
 }

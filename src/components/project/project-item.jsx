@@ -1,8 +1,4 @@
-import { useEffect, useState} from "react";
-
 //Components
-import withCursor from "../HOCs/withCursor";
-import Modal from "../modal/modal";
 import {GitHub} from "../SVG/SVGs";
 import { Grid, GridItem } from "../LayoutComponents";
 import { VStack, HStack } from "../LayoutComponents";
@@ -11,95 +7,57 @@ import { VStack, HStack } from "../LayoutComponents";
 import Text from "../../styles/text.module.scss"
 import styles from "./projectsession.module.scss"
 
-const Colors = ["#08003D", "#1A7FA1", "#189994", "#F2B135", "#EB1C59", "#3E8A66", "#8B1CBD", "#F07924"]
-
-const getColor = (numElements) => {
-
-  var colors = [...Colors];
-
-  var custOrder = [];
-
-  for(var i = 0; i < numElements; i++)
-  {
-    var idx = Math.floor(Math.random() * colors.length);
-    var color = colors[idx]
-    colors.splice(idx,1)
-    custOrder.push(color)
-  }
-  
-  return custOrder;
-
+const logos = {
+  "React" : "react.svg",
+  "React Native" : "react.svg",
+  "Docker" : "docker.svg",
+  "C#" : "c_sharp.svg",
+  "Unity" : "unity.svg",
+  "Android" : "android.svg",
+  "iOS" : "ios.svg",
+  ".Net" : ".net.svg",
+  "Swift" : "swift.svg",
+  "Electron" : "electron.svg",
+  "ObjC" : "objc.svg",
+  "JavaScript" : "js.svg",
+  "Axios" : "axios.svg",
+  "Watermelon DB" : "watermelondb.svg",
+  "NativeBase" : "nativebase.svg",
+  "SQL" : "sql.svg",
+  "Postgres" : "postgresql.svg",
+  "Canvas" : "html5_canvas.svg",
+  "Custom Camera" : null
 }
 
- const ProjectItem = ({context, image, desc, tech, title, gitLink, bkImage, bkColor, bgSize=400, TitleColor, bkPostion="center", hoverColor,textHover}) =>{
-    const [isOpen, setIsOpen] = useState(false);
-
-    const[uniColors, setUniColors] = useState([]);
-
-    const { controlCursor, onCursor  } = context;
-  
-    function toggleModal() {
-        
-        controlCursor(!isOpen)
-
-        if(isOpen){
-          onCursor('false')
-        }
-
-        setIsOpen(!isOpen);
-    }
-
-    useEffect(()=>{
-      setUniColors(getColor(tech.length))
-    },[])
-
+ const ProjectItem = ({image, desc, tech, title, gitLink, bkImage, TitleColor}) =>{
 
     return(   
-      <GridItem   
-        w='100%' 
-        h='6em'   
-        bg={bkColor}  
-        onClick={toggleModal}
-        onMouseOver={() => onCursor('pointer', hoverColor, textHover)}
-        onMouseLeave={onCursor}
-        className={styles.gridItem}
-        >  
-          
-        <div style={{width: '100%', height: '100%', backgroundImage: `url(${bkImage})`, backgroundSize: bgSize, backgroundRepeat:"no-repeat", backgroundPosition:bkPostion }}>
-          <VStack alignItems="start" p="0 0 0 10px"  >
-            <p className={Text.medium} style={{color : TitleColor}}>{title}</p>
-          </VStack>
-        </div>
-
-        <Modal handleClose={toggleModal} isOpen={isOpen}>
-          <HStack className={styles.content} p="2em" w="100%">
-            <img className={styles.vertImg}  src={image} />
-            <VStack className={styles.infoWrapper} alignItems="start" justifyContent="center" w="50%" h="20em" >
-              <p  className={Text.Title}>{title}</p>   
-                <div className={styles.techWrap} >
+      <HStack w="100%" m="10px 0" h="9em"  bg="#222" className={styles.gridItem}>  
+            <VStack w="100%" alignItems="start" p="15px">
+              <VStack w="100%">
+                <p className={Text.medium} style={{color : TitleColor, width: "100%", "margin": "0 8px 0 0"}}>{title}</p>
+                <div className={styles.techWrap}>
                   {
                     tech.map((item, i) => {
                       return (
-                        <GridItem key={i} bg={uniColors[i]}  justifyContent="center" alignItems="center" p="0px 20px !important" m="5px">
-                          <p key={item} className={styles.techLabel} >{item}</p>
-                        </GridItem>
+                          <p key={i} className={styles.techLabel}>{item}</p>
                       ) 
                     })
                   }
                 </div>
-              <p  className={Text.small} >{desc}</p>
-              
-              <a href={gitLink}>
-                  <GitHub className={styles.github} />
-              </a>
+              </VStack>
+                <p  className={Text.small} >{desc}</p>
+                
+                <a href={gitLink}>
+                    <GitHub className={styles.github} />
+                </a>
             </VStack>
-            <div className={styles.horImg} style={{width: '50%'}} >
-              <img  src={image} />
-            </div>
-          </HStack>
-        </Modal>      
-      </GridItem>
+            {/* <VStack  h="100%" w="50%" justifyContent="center" alignItems="flex-end">
+              <img src={bkImage} style={{"height" : "100%", width:"auto"}} />
+            </VStack> */}
+
+        </HStack>
     )
   }
 
-  export default withCursor(ProjectItem);
+  export default ProjectItem;

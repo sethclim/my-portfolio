@@ -1,10 +1,13 @@
 @import './brand.module.scss';
 @import "./breakpoints.scss";
 
-
+$mf: $sf + 0.2;
+$lf: $sf + 0.6; 
 
 @mixin smallFont {
-    font-size: $sf + 0.35;
+    font-size: $sf;
+    line-height: $sf + 1.08;
+    color: $dark;
     //color: blue;
     @include sm{
         font-size: $sf + 0.25;
@@ -21,21 +24,23 @@
 
 @mixin medFont($boost) {
     font-size: $mf + $boost;
+    color: $dark;
 
     @include sm{
-        font-size: $mf + $boost + 0.2;
+        font-size: $mf + $boost + 0.1;
     }
     @include md{
-        font-size: $mf + $boost+ 0.3;
+        font-size: $mf + $boost+ 0.2;
     }
     @include lg{
-        font-size: $mf + $boost + 0.4;
+        font-size: $mf + $boost + 0.3;
     }
 }
 
 
 @mixin largeFont {
     font-size: $lf;
+    color: $dark;
 
     @include sm{
         font-size: $lf + 0.4;
@@ -74,7 +79,7 @@
 }
 
 .heroTitle{
-    color: $dark;
+    color: $lightGrey;
     @include largeFont;
     margin: 0.1em 0;
 }
@@ -86,7 +91,7 @@
 
 .headerLink{
     color: $dark;
-    @include medFont(-0.3);
+    @include medFont(0);
 }
 
 .headerLink:hover{

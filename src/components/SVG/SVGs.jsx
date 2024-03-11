@@ -10,7 +10,7 @@ export class Logo extends PureComponent {
         viewBox="0 0 500 500"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g fill="#000">
+        <g fill="#fff">
           <path d="m30.238 36.286h27.214v402.92h-27.214z" />
           <path d="m460.37 35.743h27.214v402.92h-27.214z" />
           <path
