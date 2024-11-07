@@ -29,13 +29,10 @@ const Header = () => {
           </a>  
           <a
             className={Button.resume}
-            href="/my-prortfolio/Resume.pdf"
+            href="/my-portfolio/Resume.pdf"
             rel="noopener noreferrer"
             target="_blank">
-             
                 Resume
-              
-             
           </a> 
         </HStack>
       </nav>
