@@ -19,26 +19,30 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout your repository using git
-              uses: actions/checkout@v3
-            - name: Use Node.js 16
-              uses: actions/setup-node@v2
-              with:
-                  node-version: "16"
-                  cache: "npm"
+              uses: actions/checkout@v4
+            - name: Install, build, and upload your site
+              uses: withastro/action@v3
+              # - name: Checkout your repository using git
+              #   uses: actions/checkout@v3
+              # - name: Use Node.js 16
+              #   uses: actions/setup-node@v2
+              #   with:
+              #       node-version: "16"
+              #       cache: "npm"
 
-            # Not using npm? Change `npm ci` to `yarn install` or `pnpm i`
-            - name: Install dependencies
-              run: yarn install
+              # # Not using npm? Change `npm ci` to `yarn install` or `pnpm i`
+              # - name: Install dependencies
+              #   run: yarn install
 
-            # Not using npm? Change `npm run build` to `yarn build` or `pnpm run build`
-            - name: Build Astro
-              run: yarn build --if-present
+              # # Not using npm? Change `npm run build` to `yarn build` or `pnpm run build`
+              # - name: Build Astro
+              #   run: yarn build --if-present
 
-            - name: Upload artifact
-              uses: actions/upload-artifact@main
-              with:
-                  name: myportfolio
-                  path: ./dist
+              # - name: Upload artifact
+              #   uses: actions/upload-artifact@main
+              #   with:
+              #       name: myportfolio
+              #       path: ./dist
 
     web-deploy:
         name: 🎉 Deploy
@@ -59,5 +63,5 @@ jobs:
             - name: Deploy to GitHub Pages
               id: deployment
               uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
-              with:
-                  artifact_name: myportfolio
+              # with:
+              #     artifact_name: myportfolio
