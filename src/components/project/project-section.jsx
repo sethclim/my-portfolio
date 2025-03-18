@@ -10,19 +10,22 @@ import Text from "../../styles/text.module.scss"
 import Modal from "../modal/modal";
 import { useState } from "react";
 
+import {GitHub} from "../SVG/SVGs";
+
 
 const ProjectPage = ({data}) => {
 
   const [modelOpen, setModalOpen] = useState(false)
-  const [modalIndex, setModalIndex] = useState(0)
-
+  const [modalData, setModalData] = useState()
 
   const handleClose = () => {
     setModalOpen(false)
   }
 
   const openModal = (i) => {
-    setModalIndex(i)
+    console.log("what")
+    console.log(JSON.stringify(data['../data/projects.json'][i]))
+    setModalData(data['../data/projects.json'][i])
     setModalOpen(true)
   }
 
@@ -49,15 +52,43 @@ const ProjectPage = ({data}) => {
         }
         </div>   
         <Modal isOpen={modelOpen} handleClose={handleClose} >
-          <div>
-            <div>
-              <h3>{data['../data/projects.json'][modalIndex].title}</h3>
-            </div>
-            <div>
 
+
+            <div className="flex flex-row w-full bg-blue p-4">
+              <div className="flex flex-col justify-center  grow w-50 bg-amber h-full overflow-hidden gap-2">
+              <h3 className="text-xl font-bold">{modalData?.title}</h3>
+                <div className="flex flex-row border-t-1 border-b-1 border-gray-500 bg-amber justify-between">
+                {
+                  modalData?.tech.map((item, i) => {
+                    return (
+                      <p key={i} className="text-black text-xs font-bold w-20 text-center mt-2 mb-2 bg-amber">{item}</p>
+                    ) 
+                  })
+                }
+                </div>
+                <p className="text-xs">{modalData?.desc}</p>
+                <div className="flex flex-row">
+                  {
+                    modalData?.gitLink !== undefined ?
+                    (
+                      <a href={modalData?.gitLink}>
+                          <GitHub className={styles.github} />
+                      </a>
+                    ): null
+                    
+                  }
+                </div>
+              </div>
+              {
+                modalData?.image !== "" ? (
+                  <div className="flex justify-center grow w-50 bg-red h-full">
+                    <img src={modalData?.image} className="h-80" />
+                  </div>
+                ): null
+              }
             </div>
-          </div>
-        </Modal>
+
+        </Modal>  
       </div>
   );
 }

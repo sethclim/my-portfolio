@@ -26,9 +26,9 @@ function Modal({ children, isOpen, handleClose }) {
 			<ReactPortal wrapperId="my-modal">
 				<div className={styles.modal} ref={nodeRef}>
 					<div className={styles.modalContent}>
-						<div>
-							<button onClick={handleClose} className={Button.close} justifyContent="center" alignItems="center" >
-								X
+						<div className='flex justify-end bg-red w-full'>
+							<button onClick={handleClose} className="bg-black text-white text-xs p-1 pl-2 pr-2 cursor-pointer m-2" justifyContent="center" alignItems="center" >
+								close
 							</button>
 						</div>
 						{children}
