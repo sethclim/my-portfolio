@@ -1,5 +1,13 @@
 [
     {
+        "title":"Scales App", 
+        "image" : "/imgs/IPhone_X_vector_scalesapp2.svg",
+        "bkImage" : "/imgs/figma_screenshot.png",
+        "tech": ["React Native", "Android", "iOS",  "NativeBase", "Watermelon DB", "Skia"],
+        "desc": "Practice application to help musicians with their practice routine by providing selected exercises in a randomized order to prevent selection bias.  Different combinations of exercises and keys can be selected to create unique practice routines.  Generated routines can be saved to be revisited later (of course presented in a new order).", 
+        "gitLink" :"https://github.com/sethclim/rn-scales-app" 
+    },
+    {
         "title":"SousChef", 
         "image" : "/imgs/IPhone_X_vector_scalesapp2.svg",
         "bkImage" : "/imgs/figma_screenshot.png",
@@ -8,12 +16,12 @@
         "gitLink" :"https://github.com/Souschef-App/souschef-mobile-app" 
     },
     {
-        "title":"Scales App", 
+        "title":"Native Blocks", 
         "image" : "/imgs/IPhone_X_vector_scalesapp2.svg",
         "bkImage" : "/imgs/figma_screenshot.png",
-        "tech": ["React Native", "Android", "iOS",  "NativeBase", "Watermelon DB", "Skia"],
+        "tech": ["React Native", "TypeScript"],
         "desc": "Practice application to help musicians with their practice routine by providing selected exercises in a randomized order to prevent selection bias.  Different combinations of exercises and keys can be selected to create unique practice routines.  Generated routines can be saved to be revisited later (of course presented in a new order).", 
-        "gitLink" :"https://rebrand.ly/scalesapp" 
+        "gitLink" :"https://github.com/Tenwall-Development/native-blocks" 
     },
     {
         "title":"Chemical Factory VR Simulator", 

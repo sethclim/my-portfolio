@@ -7,14 +7,29 @@ import { VStack } from "../LayoutComponents";
 
 //Styles
 import Text from "../../styles/text.module.scss"
+import Modal from "../modal/modal";
+import { useState } from "react";
 
 
 const ProjectPage = ({data}) => {
 
+  const [modelOpen, setModalOpen] = useState(false)
+  const [modalIndex, setModalIndex] = useState(0)
+
+
+  const handleClose = () => {
+    setModalOpen(false)
+  }
+
+  const openModal = (i) => {
+    setModalIndex(i)
+    setModalOpen(true)
+  }
+
   return (
     <div id="projects">
         <p className={Text.Title}>Top Projects</p>
-        <VStack gap={20} id={styles.projectContainer}>
+        <div gap={20} className={styles.projectContainer}>
         {
           data[0].default.map((item, i) => {
             return (
@@ -27,11 +42,22 @@ const ProjectPage = ({data}) => {
                 tech={item.tech}
                 desc={item.desc} 
                 gitLink={item.gitLink}
-                TitleColor="white"  />
+                TitleColor="white"
+                onClick={() => openModal(i)}  />
             ) 
           })
         }
-        </VStack>   
+        </div>   
+        <Modal isOpen={modelOpen} handleClose={handleClose} >
+          <div>
+            <div>
+              <h3>{data[0].default[modalIndex].title}</h3>
+            </div>
+            <div>
+
+            </div>
+          </div>
+        </Modal>
       </div>
   );
 }

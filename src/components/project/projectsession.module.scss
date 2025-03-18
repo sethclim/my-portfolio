@@ -36,9 +36,16 @@
 
 
 .gridItem{
-  border-radius: 5px;
-  background-color: red;
+  border-radius: 8px;
+  background-color: #222;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: #ffffff00 solid 1px;
+}
+
+.gridItem:hover{
+  background-color: rgb(3, 3, 3);
+  cursor: pointer;
+  border: #fff solid 1px;
 }
 
 .techLabel{
@@ -128,5 +135,21 @@
 
 }
 
+.projectContainer{
+  display: grid;
+  gap:10px;
+  grid-template-columns : 1fr 1fr;
+  grid-template-rows: auto;
+}
+
 
 //templateColumns={"1fr 1fr 1fr"} templateRows={"1fr 1fr"} gap="5px" alignItems="center" w="100%" p="0 10px 10px 0"
+
+
+.noButton{
+
+    all: unset;
+    display: inline-block; /* Ensures it behaves like an inline element if needed */
+    // cursor: pointer; /* Adds back pointer cursor if necessary */
+  
+}
