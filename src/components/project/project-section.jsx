@@ -57,11 +57,11 @@ const ProjectPage = ({data}) => {
             <div className="flex flex-row w-full bg-blue p-4">
               <div className="flex flex-col justify-center  grow w-50 bg-amber h-full overflow-hidden gap-2">
               <h3 className="text-xl font-bold">{modalData?.title}</h3>
-                <div className="flex flex-row border-t-1 border-b-1 border-gray-500 bg-amber justify-between">
+                <div className="flex flex-row gap-4 border-t-1 border-b-1 border-gray-500 bg-amber">
                 {
                   modalData?.tech.map((item, i) => {
                     return (
-                      <p key={i} className="text-black text-xs font-bold w-20 text-center mt-2 mb-2 bg-amber">{item}</p>
+                      <p key={i} className="text-black text-xs font-bold  text-center mt-2 mb-2">{item}</p>
                     ) 
                   })
                 }
@@ -71,8 +71,8 @@ const ProjectPage = ({data}) => {
                   {
                     modalData?.gitLink !== undefined ?
                     (
-                      <a href={modalData?.gitLink}>
-                          <GitHub className={styles.github} />
+                      <a  href={modalData?.gitLink}>
+                          <GitHub className="bg-zinc-50 text-black-500 hover:text-zinc-400" />
                       </a>
                     ): null
                     
@@ -81,7 +81,7 @@ const ProjectPage = ({data}) => {
               </div>
               {
                 modalData?.image !== "" ? (
-                  <div className="flex justify-center grow w-50 bg-red h-full">
+                  <div className="flex justify-center grow w-50 bg-red h-full p-4">
                     <img src={modalData?.image} className="h-80" />
                   </div>
                 ): null

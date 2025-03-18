@@ -3,16 +3,16 @@
         "title":"Scales App", 
         "image" : "https://github.com/user-attachments/assets/702643ce-a6dd-4018-8066-29d97138de39",
         "bkImage" : "/imgs/figma_screenshot.png",
-        "tech": ["ReactNative", "Android", "iOS",  "NativeBase", "WatermelonDB", "Skia"],
-        "desc": "Practice application to help musicians with their practice routine by providing selected exercises in a randomized order to prevent selection bias.  Different combinations of exercises and keys can be selected to create unique practice routines.  Generated routines can be saved to be revisited later (of course presented in a new order).", 
+        "tech": ["React Native", "TypeScript", "NativeBlocks UI", "Expo SQLite", "Skia", "Redux"],
+        "desc": "App to practice technique on instruments and force you to practice scales you might skip, plus track your practice statistics.", 
         "gitLink" :"https://github.com/sethclim/rn-scales-app" 
     },
     {
         "title":"SousChef", 
         "image" : "https://github.com/user-attachments/assets/7d7c8b73-2923-47dd-913e-dc7c9c1172a9",
         "bkImage" : "/imgs/figma_screenshot.png",
-        "tech": ["ReactNative", "Android", "iOS",  ".Net", "Python", "GO", "GRCP", "ChatGPT4"],
-        "desc": "Cooking app designed to simplify the experience of cooking together in a large group.  This system reduces the load on the meal’s host by automatically distributing tasks to guests and keeping track of the progress everyone is making.  Creating recipes for use in this app is also made easy, when planning a meal, the host can enter an existing meal plan and get it automatically broken down into small micro steps easy for anyone to do.", 
+        "tech": ["React Native", "Android", "iOS",  ".Net", "Python", "GO", "GRCP", "ChatGPT4"],
+        "desc": "Platform facilitating cooking as a group, automating assigning tasks and planning (RecipeAI).", 
         "gitLink" :"https://github.com/Souschef-App/souschef-mobile-app" 
     },
     {
@@ -20,14 +20,22 @@
         "image" : "https://github.com/user-attachments/assets/702643ce-a6dd-4018-8066-29d97138de39",
         "bkImage" : "/imgs/figma_screenshot.png",
         "tech": ["React Native", "TypeScript"],
-        "desc": "Practice application to help musicians with their practice routine by providing selected exercises in a randomized order to prevent selection bias.  Different combinations of exercises and keys can be selected to create unique practice routines.  Generated routines can be saved to be revisited later (of course presented in a new order).", 
+        "desc": "A headless, theme reactive UI library that gives you complete control.", 
         "gitLink" :"https://github.com/Tenwall-Development/native-blocks" 
+    },
+    {
+        "title":"SideChain", 
+        "image" : "https://github.com/sethclim/SideChain/assets/56656904/6d5b6dcb-6802-4dd8-af7e-51cee0da4802",
+        "bkImage" : "/imgs/figma_screenshot.png",
+        "tech": ["C++", "JUCE", "CMake"],
+        "desc": "Sidechain VST3 plugin for any DAW, featuring a visual graph for precise envelope adjustment. Easily create smooth, rhythmic volume effects for dynamic mixes or special effects.", 
+        "gitLink" :"https://github.com/sethclim/SideChain" 
     },
     {
         "title":"Chemical Factory VR Simulator", 
         "image" : "",
         "bkImage" : "/imgs/graphapp.png",
-        "tech": ["Unity", "Vive", "Oculus"],
-        "desc": "VR simulator developed to expose new graduates/hires to working in a chemical factory.  Participants complete real production tasks in the virtual reality environment guided by instructions in a self-paced fashion. The application was developed in Unity for any OpenXR-compatible headset." 
+        "tech": ["Unity", " Unity XR Toolkit", "Vive", "Quest 2", "Blender"],
+        "desc": "VR simulator developed to expose new graduates/hires to working in a chemical factory.  Participants complete real production tasks in the virtual reality environment guided by instructions." 
     }
 ]

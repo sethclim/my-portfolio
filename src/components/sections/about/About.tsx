@@ -17,55 +17,71 @@ const About = (props : AboutProps) =>  {
 
   return(
       <VStack id="about">
-        <VStack p="1em 0">
+        <VStack p="1em 0" gap="2">
           <p className={Text.Title}>About</p>
           {/* <hr className="new4"></hr> */}
             <p className={Text.small}>{props.bio['../data/bio.md'].frontmatter.bio}</p>
-            <p className={Text.small}>{props.bio['../data/bio.md'].frontmatter.point1}</p>
-            <p className={Text.small}>{props.bio['../data/bio.md'].frontmatter.point2}</p>
-            <p className={Text.small}>{props.bio['../data/bio.md'].frontmatter.point3}</p>
+            <div className="pt-4 flex flex-col gap-1">
+              <p className={Text.small}>{props.bio['../data/bio.md'].frontmatter.point1}</p>
+              <p className={Text.small}>{props.bio['../data/bio.md'].frontmatter.point2}</p>
+              <p className={Text.small}>{props.bio['../data/bio.md'].frontmatter.point3}</p>
+            </div>
         </VStack>
         <VStack p="1em 0">
           <p className={Text.Title}>Work Experience</p>
           <Work
            company="SpeakSynk Technology" 
            role="Algorithm Developer" 
-           date="May 2023 - Present" 
+           date="05/2023 – Present" 
            points={[
-            "Built initial product MVP to demonstrate to investor",
-            "Deployed scalable version of product to AWS",
-            "Improved ML models, and computer vision algorithms",
-            "Developed backend infrastructure components to serve customers"
+            "Designed and deployed an AI-powered distributed video translation and dubbing pipeline",
+            "Built scalable AWS backend supporting concurrent users with Kafka, Step Functions, SageMaker, and Docker",
+            "Developed new algorithms in python leveraging AI (Wav2Lip, Tencent GFPGAN, Meta Segment Anything), computer vision (OpenCV, Adrian Bulat’s FaceAlignment, Google MediaPipe), and audio libraries (Pydub, Rubberband) to enhance the realism and accuracy of the generation pipeline ",
+            "Wrote Node endpoints with Jest tests to ensure robustness and built kafka consumers in Nest with Typescript"
+           ]}
+           />
+          <Work
+           company="Arbelos Interactive" 
+           role="Unity Developer" 
+           date="04/2024 – Present" 
+           points={[
+            "Implemented server-authoritative networking using Unity Netcode, enhancing game sync and stability",
+            "Refactored game architecture for better separation of concerns (SoC), reducing bugs and improving maintainability through state machines",
+            "Led migration of a web game from Photon/PlayFab/Fusion to Hathora with FishNet, cutting operational costs",
+            "Developing a TypeScript SDK with PuerTS for dynamic runtime game scripting and content loading"
            ]}
            />
           <Work
            company="Sheridan Center For Mobile Innovation" 
            role="VR Developer" 
-           date="May 2022 - May 2023" 
+           date="05/2022 – 04/2023" 
            points={[
-            "Developed VR interaction to simulate pharmaceutical factory",
-            "3D modeled pharmaceutical factory equipment",
-            "Designed simulation software architecture"
+            "Conducted research and consulted with a domain expert to create an accurate and realistic simulator",
+            "Developed a VR factory in Unity using XR Interaction Toolkit/OpenXR for system and machinery interaction",
+            "Built reusable systems for gameplay, interaction mechanics, audio/haptics, and tutorials, enhancing scalability",
+            "Engaged stakeholders through presentations, ensuring project alignment with advisory board goals"
            ]}
            />
           <Work
            company="The Commons XR" 
            role="Unity Developer" 
-           date="April 2022 - Nov. 2022" 
+           date="04/2022 – 11/2022" 
            points={[
-            "Implemented data collection solutions",
-            "Interfaced Between Data and Unity Team",
-            "Designed custom solutions for data collection from Unity"
+            "Developed a unified data capture system in Unity, improving efficiency, reliability, and external integrations",
+            "Integrated a NoSQL Azure database alongside SQL infrastructure, enabling scalable blob data storage",
+            "Enhanced system stability by resolving critical bugs and replacing legacy code with maintainable solutions",
+            "Bridged Unity and data teams by attending cross-team meetings, ensuring collaboration and project alignment"
            ]}
            />
           <Work
-           company="SampleHouse" 
+           company="SampleHouse & Playerverse" 
            role="Full Stack Developer" 
-           date="Aug 2021 - Dec. 2021" 
+           date="06/2021 – 01/2022" 
            points={[
-            "Implemented waveform player to preview audio samples and tooling to generate the waveform data.",
-            "Worked on payment system and analytics integrations.",
-            "Redesigned frontend written in React to a modern clean design to present to investors."
+            "Redesigned and updated a React-based e-commerce frontend, modernizing the UI/UX, including implementing new features to improve customer engagement and usability",
+            "Developed a custom waveform playback component with audio streamed from server",
+            "Extended the capabilities of a boilerplate React PWA e-commerce platform",
+            "Integrated a payment system on both the front and back end with a payment processor (checkout page, payment endpoint, webhooks, etc."
            ]}
            />
         </VStack>
@@ -125,6 +141,7 @@ const Work = (props : WorkProps) => {
       <VStack className={Styles.workTitleWrap} p="0" h="100%">
         <VStack className={Styles.workWrap}  w="100%" p="0" m="0" justifyContent="flex-start">
             <p className={Styles.name}>{props.role}</p>
+            <p className={Styles.name}>|</p>
             <p className={Styles.cn}>{props.company}</p> 
         </VStack>
         <HStack className={Styles.dateWrap} w="100%" justifyContent="flex-start">
@@ -135,7 +152,7 @@ const Work = (props : WorkProps) => {
         {
           props.points.map((point, index) =>{
             return (
-              <li key={index}>{point}</li>
+              <li className="pt-0.5" key={index}>{point}</li>
             )
           })
         }

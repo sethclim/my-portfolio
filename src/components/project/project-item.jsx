@@ -33,8 +33,8 @@ const logos = {
 
     return(   
       <button className={styles.noButton} onClick={onClick}>
-        <HStack w="100%" m="10px 0"  className={styles.gridItem}>  
-              <VStack w="100%" alignItems="start" p="15px">
+        <HStack w="100%" h="19vh" m="10px 0"  className={styles.gridItem}>  
+              <VStack w="100%" alignItems="start" p="15px" gap={3}>
                 <VStack w="100%">
                   <p className={Text.medium} style={{color : TitleColor, width: "100%", "margin": "0 8px 0 0"}}>{title}</p>
                   <div className={styles.techWrap}>
@@ -43,20 +43,21 @@ const logos = {
                         return (
                             <p key={i} className={styles.techLabel}>{item}</p>
                         ) 
-                      })
+                      })  
                     }
                   </div>
                 </VStack>
                   <p  className={Text.small} >{desc}</p>
                   
-                  <a href={gitLink}>
-                      <GitHub className={styles.github} />
-                  </a>
-              </VStack>
-              {/* <VStack  h="100%" w="50%" justifyContent="center" alignItems="flex-end">
-                <img src={bkImage} style={{"height" : "100%", width:"auto"}} />
-              </VStack> */}
+                  {
+                    gitLink !== undefined ? (
+                      <a href={gitLink}>
+                        <GitHub className={styles.github} />
+                      </a>
+                    ) : null
+                  }
 
+              </VStack>
           </HStack>
       </button>
     )
