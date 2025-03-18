@@ -31,8 +31,20 @@ const logos = {
 
  const ProjectItem = ({image, desc, tech, title, gitLink, bkImage, TitleColor, onClick}) =>{
 
+    const handleClick = (event) => {
+        event.stopPropagation(); // Stops the event from bubbling up
+        // event.preventDefault(); // Prevents the default link navigation (optional)
+        // console.log("Anchor tag clicked!");
+    }
+
+    const onClickHandler = () => {
+      event.stopPropagation();
+      console.log("Button clicked!");
+      onClick()
+    }
+
     return(   
-      <button className={styles.noButton} onClick={onClick}>
+      <button className={styles.noButton} onClick={onClickHandler}>
         <HStack w="100%" h="19vh" m="10px 0"  className={styles.gridItem}>  
               <VStack w="100%" alignItems="start" p="15px" gap={3}>
                 <VStack w="100%">
@@ -51,7 +63,7 @@ const logos = {
                   
                   {
                     gitLink !== undefined ? (
-                      <a href={gitLink}>
+                      <a href={gitLink}  onClick={handleClick}  target="_blank"  rel="noopener noreferrer" >
                         <GitHub className={styles.github} />
                       </a>
                     ) : null

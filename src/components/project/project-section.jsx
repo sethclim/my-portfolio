@@ -71,7 +71,7 @@ const ProjectPage = ({data}) => {
                   {
                     modalData?.gitLink !== undefined ?
                     (
-                      <a  href={modalData?.gitLink}>
+                      <a  href={modalData?.gitLink} target="_blank"  rel="noopener noreferrer" >
                           <GitHub className="bg-zinc-50 text-black-500 hover:text-zinc-400" />
                       </a>
                     ): null
