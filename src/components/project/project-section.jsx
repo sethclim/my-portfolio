@@ -31,7 +31,7 @@ const ProjectPage = ({data}) => {
         <p className={Text.Title}>Top Projects</p>
         <div gap={20} className={styles.projectContainer}>
         {
-          data[0].default.map((item, i) => {
+          data['../data/projects.json'].map((item, i) => {
             return (
               <ProjectItem 
                 key={i}
@@ -51,7 +51,7 @@ const ProjectPage = ({data}) => {
         <Modal isOpen={modelOpen} handleClose={handleClose} >
           <div>
             <div>
-              <h3>{data[0].default[modalIndex].title}</h3>
+              <h3>{data['../data/projects.json'][modalIndex].title}</h3>
             </div>
             <div>
 

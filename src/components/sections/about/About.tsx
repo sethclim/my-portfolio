@@ -20,10 +20,10 @@ const About = (props : AboutProps) =>  {
         <VStack p="1em 0">
           <p className={Text.Title}>About</p>
           {/* <hr className="new4"></hr> */}
-            <p className={Text.small}>{props.bio[0].frontmatter.bio}</p>
-            <p className={Text.small}>{props.bio[0].frontmatter.point1}</p>
-            <p className={Text.small}>{props.bio[0].frontmatter.point2}</p>
-            <p className={Text.small}>{props.bio[0].frontmatter.point3}</p>
+            <p className={Text.small}>{props.bio['../data/bio.md'].frontmatter.bio}</p>
+            <p className={Text.small}>{props.bio['../data/bio.md'].frontmatter.point1}</p>
+            <p className={Text.small}>{props.bio['../data/bio.md'].frontmatter.point2}</p>
+            <p className={Text.small}>{props.bio['../data/bio.md'].frontmatter.point3}</p>
         </VStack>
         <VStack p="1em 0">
           <p className={Text.Title}>Work Experience</p>
