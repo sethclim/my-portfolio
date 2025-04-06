@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 @font-face {
   font-family: 'FigTree';
   src: url('/fonts/figtree/Figtree-Medium.ttf') format('ttf');

@@ -11,17 +11,20 @@ import "../styles/App.css";
 
 import FloatingLinks from "../components/floating-links/FloatingLinks.jsx";
 
-const project_data = await Astro.glob("../data/projects.json");
-const bio = await Astro.glob("../data/bio.md");
-
-// import  "./App.css"
+const project_data = import.meta.glob("../data/projects.json", {
+    import: "default",
+    eager: true,
+});
+const bio = import.meta.glob("../data/bio.md", {
+    eager: true,
+});
 ---
 
-<Layout title="Seth Climenhaga">
-  <FloatingLinks slot="body" client:load />
-  <Header slot="content" client:load />
-  <Hero slot="content" />
-  <ProjectPage slot="content" client:load data={project_data} />
-  <About slot="content" client:load bio={bio} />
-  <Footer slot="content" />
+<Layout title='Seth Climenhaga'>
+    <FloatingLinks slot='body' client:load />
+    <Header slot='content' client:load />
+    <Hero slot='content' />
+    <ProjectPage slot='content' client:load data={project_data} />
+    <About slot='content' client:load bio={bio} />
+    <Footer slot='content' />
 </Layout>

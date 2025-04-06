@@ -25,12 +25,14 @@ function Modal({ children, isOpen, handleClose }) {
 		return (
 			<ReactPortal wrapperId="my-modal">
 				<div className={styles.modal} ref={nodeRef}>
-
-						<VStack onClick={handleClose} h="40px" w="40px" className={Button.close} justifyContent="center" alignItems="center" >
-							<p>X</p>
-						</VStack>
-
-					<div className={styles.modalContent}>{children}</div>
+					<div className={styles.modalContent}>
+						<div className='flex justify-end bg-red w-full'>
+							<button onClick={handleClose} className="bg-black text-white text-xs p-1 pl-2 pr-2 cursor-pointer m-2" justifyContent="center" alignItems="center" >
+								close
+							</button>
+						</div>
+						{children}
+					</div>
 				</div>
 			</ReactPortal>
 		);	
