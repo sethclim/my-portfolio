@@ -29,7 +29,7 @@ const Header = () => {
           </a>  
           <a
             className={Button.resume}
-            href="/my-portfolio/seth_climenhaga_resume.pdf"
+            href="/seth_climenhaga_resume.pdf"
             rel="noopener noreferrer"
             target="_blank">
                 Resume
