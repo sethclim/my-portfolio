@@ -51,9 +51,7 @@ const ProjectPage = ({data}) => {
           })
         }
         </div>   
-        <Modal isOpen={modelOpen} handleClose={handleClose} >
-
-
+        <Modal isOpen={modelOpen} handleClose={handleClose}>
             <div className="flex flex-row w-full bg-blue p-4">
               <div className="flex flex-col justify-center  grow w-50 bg-amber h-full overflow-hidden gap-2">
               <h3 className="text-xl font-bold">{modalData?.title}</h3>
