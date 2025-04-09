@@ -95,7 +95,7 @@ const Work = (props : WorkProps) => {
       <VStack className={Styles.workTitleWrap} p="0" h="100%">
         <VStack className={Styles.workWrap}  w="100%" p="0" m="0" justifyContent="flex-start">
             <p className={Styles.name}>{props.role}</p>
-            <p className={Styles.name}>|</p>
+            <p className={Styles.bar}>|</p>
             <p className={Styles.cn}>{props.company}</p> 
         </VStack>
         <HStack className={Styles.dateWrap} w="100%" justifyContent="flex-start">
