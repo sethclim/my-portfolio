@@ -4,29 +4,15 @@ import Text from "../../../styles/text.module.scss"
 import Styles from "./About.module.scss"
 import { useEffect } from "react";
 
-export type AboutProps ={
+export type WorkExperienceProps ={
   bio : any
 }
 
-const About = (props : AboutProps) =>  {
-
-  useEffect(()=>{
-    console.log("HELLO")
-   console.log(JSON.stringify(props.bio))
-  },[props])
+const WorkExperience = (props : WorkExperienceProps) =>  {
 
   return(
       <VStack id="about">
-        <VStack p="1em 0" gap="2">
-          <p className={Text.Title}>About</p>
-          {/* <hr className="new4"></hr> */}
-            <p className={Text.small}>{props.bio['../data/bio.md'].frontmatter.bio}</p>
-            <div className="pt-4 flex flex-col gap-1">
-              <p className={Text.small}>{props.bio['../data/bio.md'].frontmatter.point1}</p>
-              <p className={Text.small}>{props.bio['../data/bio.md'].frontmatter.point2}</p>
-              <p className={Text.small}>{props.bio['../data/bio.md'].frontmatter.point3}</p>
-            </div>
-        </VStack>
+
         <VStack p="1em 0">
           <p className={Text.Title}>Work Experience</p>
           <Work
@@ -118,11 +104,11 @@ const About = (props : AboutProps) =>  {
             </Grid>
           </VStack>
         </VStack>
-
+{/* 
         <HStack align="top" p="1em 0" alignItems="center">
           <p className={Text.Title}>Connect:</p>
           <Copy />     
-        </HStack>
+        </HStack> */}
       
       </VStack>
     );
@@ -161,4 +147,4 @@ const Work = (props : WorkProps) => {
   )
 }
 
-export default About;
+export default WorkExperience;

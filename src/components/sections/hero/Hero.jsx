@@ -3,6 +3,8 @@ import React from "react";
 
 import Text from '../../../styles/text.module.scss'
 
+import Copy from "../../Copy";
+
 
 import { HStack, VStack } from "../../LayoutComponents";
 
@@ -21,8 +23,7 @@ export default class Hero extends React.Component {
           </VStack>
           <VStack align="start" w="80%" m="20px 0 0 0 " paddingBottom={5}>
             <p className={Text.small}>
-              I'm a software developer who specializes in application development targeting web, mobile, and desktop platforms.
-              My work experience includes the distributed cloud solutions, web/mobile technologies, and game development (Unity, OpenGL).
+            I’m a software developer specializing in cross-platform applications for web, mobile, and desktop. I’ve worked on distributed cloud systems, graphics engines (Vulkan/OpenGL), and game development with Unity. In my spare time, I build audio plugins and experiment with path tracers.
             </p>
             <HStack m="20px 0 0 0 ">      
               <a
@@ -45,6 +46,7 @@ export default class Hero extends React.Component {
                   className={HeroStyles.floatingItem}
                 ></GitHub>
               </a>
+              <Copy />   
             </HStack>
           </VStack>
         </VStack>
