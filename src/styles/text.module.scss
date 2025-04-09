@@ -81,13 +81,20 @@ $lf: $sf + 0.6;
 .heroTitle{
     color: $lightGrey;
     @include largeFont;
-    margin: 0.1em 0;
+    margin: 0 0.1em 0 0;
 }
 .heroSubTitle{
     color: $lightGrey;
     @include medFont(0.2);
     margin: 0;
 }
+
+.location{
+    color: $dark;
+    @include smallFont();
+    margin: 0;
+}
+
 
 .headerLink{
     color: $dark;

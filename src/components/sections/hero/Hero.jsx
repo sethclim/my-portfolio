@@ -20,6 +20,7 @@ export default class Hero extends React.Component {
           <VStack align="start" >
             <p className={Text.heroTitle}>Seth Climenhaga</p>
             <p className={Text.heroSubTitle} >Software Developer</p>
+            <p className={Text.location} >Waterloo ON, Canada</p>
           </VStack>
           <VStack align="start" w="80%" m="20px 0 0 0 " paddingBottom={5}>
             <p className={Text.small}>
