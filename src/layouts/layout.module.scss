@@ -4,17 +4,13 @@
 .maxPage{
     width: 80%;
      @include sm {
-        width: 70%;
+        width: 80%;
     }
     @include md {
-        width: 70%;
+        width: 60%;
     }
     @include xl {
-        width: 60%;
+        width: 50%;
 
     }
 }
-
-// .body{
-//     background-color: $offWhite;
-// }
