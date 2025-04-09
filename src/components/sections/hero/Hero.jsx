@@ -15,7 +15,7 @@ import HeroStyles from "./hero.module.scss"
 export default class Hero extends React.Component {
   render() {
     return (
-      <VStack h="70vh">
+      <VStack h="50vh">
         <VStack align="start" h="50vh" p="8em 0 0 0">
           <VStack align="start" >
             <p className={Text.heroTitle}>Seth Climenhaga</p>
