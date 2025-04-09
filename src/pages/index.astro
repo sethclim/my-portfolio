@@ -26,7 +26,7 @@ const bio = import.meta.glob("../data/bio.md", {
     <Header slot='content' client:load />
     <Hero slot='content' client:load />
     <Skills slot='content' />
-    <ProjectPage slot='content' client:load data={project_data} />
     <WorkExperience slot='content' client:load bio={bio} />
+    <ProjectPage slot='content' client:load data={project_data} />
     <Footer slot='content' />
 </Layout>
