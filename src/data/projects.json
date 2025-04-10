@@ -1,7 +1,7 @@
 [
     {
         "title":"Scales App", 
-        "image" : "https://github.com/user-attachments/assets/702643ce-a6dd-4018-8066-29d97138de39",
+        "image" : "/imgs/scalesapp_1.webp",
         "bkImage" : "/imgs/figma_screenshot.png",
         "tech": ["React Native", "TypeScript", "NativeBlocks UI", "Expo SQLite", "Skia", "Redux"],
         "desc": "App to practice technique on instruments and force you to practice scales you might skip, plus track your practice statistics.", 
@@ -9,7 +9,7 @@
     },
     {
         "title":"SousChef", 
-        "image" : "https://github.com/user-attachments/assets/7d7c8b73-2923-47dd-913e-dc7c9c1172a9",
+        "image" : "/imgs/souschef_app.webp",
         "bkImage" : "/imgs/figma_screenshot.png",
         "tech": ["React Native", "Android", "iOS",  ".Net", "Python", "GO", "GRCP", "ChatGPT4"],
         "desc": "Platform facilitating cooking as a group, automating assigning tasks and planning (RecipeAI).", 
@@ -17,7 +17,7 @@
     },
     {
         "title":"Native Blocks", 
-        "image" : "https://github.com/user-attachments/assets/702643ce-a6dd-4018-8066-29d97138de39",
+        "image" : "/imgs/scalesapp_1.webp",
         "bkImage" : "/imgs/figma_screenshot.png",
         "tech": ["React Native", "TypeScript"],
         "desc": "A headless, theme reactive UI library that gives you complete control.", 
@@ -25,7 +25,7 @@
     },
     {
         "title":"SideChain", 
-        "image" : "https://github.com/sethclim/SideChain/assets/56656904/6d5b6dcb-6802-4dd8-af7e-51cee0da4802",
+        "image" : "/imgs/sidechain.webp",
         "bkImage" : "/imgs/figma_screenshot.png",
         "tech": ["C++", "JUCE", "CMake"],
         "desc": "Sidechain VST3 plugin for any DAW, featuring a visual graph for precise envelope adjustment. Easily create smooth, rhythmic volume effects for dynamic mixes or special effects.", 

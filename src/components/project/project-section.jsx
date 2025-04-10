@@ -52,25 +52,25 @@ const ProjectPage = ({data}) => {
         }
         </div>   
         <Modal isOpen={modelOpen} handleClose={handleClose}>
-            <div className="flex flex-row w-full bg-blue p-4">
+            <div className={styles.modalContentArea}>
               <div className="flex flex-col justify-center  grow w-50 bg-amber h-full overflow-hidden gap-2">
-              <h3 className="text-xl font-bold">{modalData?.title}</h3>
-                <div className="flex flex-row gap-4 border-t-1 border-b-1 border-gray-500 bg-amber">
+              <h3 className={styles.modalTitle}>{modalData?.title}</h3>
+                <div className="flex flex-row gap-4 border-t-1 border-gray-500 bg-amber">
                 {
                   modalData?.tech.map((item, i) => {
                     return (
-                      <p key={i} className="text-black text-xs font-bold  text-center mt-2 mb-2">{item}</p>
+                      <p key={i} className={styles.modalTextLabels}>{item}</p>
                     ) 
                   })
                 }
                 </div>
-                <p className="text-xs">{modalData?.desc}</p>
+                <p className={styles.modalDesc}>{modalData?.desc}</p>
                 <div className="flex flex-row">
                   {
                     modalData?.gitLink !== undefined ?
                     (
                       <a  href={modalData?.gitLink} target="_blank"  rel="noopener noreferrer" >
-                          <GitHub className="bg-zinc-50 text-black-500 hover:text-zinc-400" />
+                          <GitHub className={styles.github} />
                       </a>
                     ): null
                     
