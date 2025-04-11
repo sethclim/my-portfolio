@@ -6,9 +6,8 @@
   
   .floatingItem {
     margin-right: 0.6em;
-    margin-top: 10px;
-
-    height: 80%;
+    // margin-top: 10px;
+    height: 70%;
   }
 
 
@@ -24,3 +23,9 @@
 //     }
 //   }
   
+//"w-6 h-6 text-gray-800 dark:text-white"
+.locationPin{
+  width: 30px;
+  height: 30px;
+  color: $dark;
+}

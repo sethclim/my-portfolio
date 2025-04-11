@@ -155,3 +155,31 @@
     // cursor: pointer; /* Adds back pointer cursor if necessary */
   
 }
+
+// flex flex-row w-full bg-blue p-4
+.modalContentArea{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 2em;
+  background-color: $primary;
+}
+
+// text-white text-xs font-bold  text-center mt-2 mb-2
+.modalTextLabels{
+  @include smallFont();
+  color: $lightGrey
+}
+
+//text-xl font-bold
+.modalTitle{
+  @include largeFont();
+  color: $lightGrey;
+ font-weight: bold;
+}
+
+.modalDesc{
+  @include smallFont();
+  color: $lightGrey;
+  padding-top: 4px;
+}

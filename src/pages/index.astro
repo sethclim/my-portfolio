@@ -5,11 +5,10 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer";
 import ProjectPage from "../components/project/project-section";
 import Hero from "../components/sections/hero/Hero";
-import About from "../components/sections/about/About";
+import WorkExperience from "../components/sections/work_experience/WorkExperience";
 
 import "../styles/App.css";
-
-import FloatingLinks from "../components/floating-links/FloatingLinks.jsx";
+import { Skills } from "../components/sections/skills/Skills";
 
 const project_data = import.meta.glob("../data/projects.json", {
     import: "default",
@@ -21,10 +20,11 @@ const bio = import.meta.glob("../data/bio.md", {
 ---
 
 <Layout title='Seth Climenhaga'>
-    <FloatingLinks slot='body' client:load />
+    <!-- <FloatingLinks slot='body' client:load /> -->
     <Header slot='content' client:load />
-    <Hero slot='content' />
+    <Hero slot='content' client:load />
+    <Skills slot='content' />
+    <WorkExperience slot='content' client:load bio={bio} />
     <ProjectPage slot='content' client:load data={project_data} />
-    <About slot='content' client:load bio={bio} />
     <Footer slot='content' />
 </Layout>

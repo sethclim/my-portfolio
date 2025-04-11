@@ -23,6 +23,24 @@ import layout from "./layout.module.scss";
             <slot name='content' />
         </div>
     </body>
+
+    <script type='module'>
+        window.addEventListener("DOMContentLoaded", () => {
+            const images = [
+                "/imgs/scalesapp_1.webp",
+                "/imgs/sidechain.webp",
+                "/imgs/souschef_app.webp",
+            ];
+
+            images.forEach((src) => {
+                const link = document.createElement("link");
+                link.rel = "preload";
+                link.as = "image";
+                link.href = src;
+                document.head.appendChild(link);
+            });
+        });
+    </script>
 </html>
 <style>
     *,
