@@ -3,15 +3,17 @@
 @import './text.module.scss';
 
 .copy{
-    background-color: #99999944;
+    // background-color: #99999944;
     color: $dark;
     font-size: $mf;
     padding: 3px;
     height: auto;
-    width: 4em;
+    width: 100%;
     border-radius: 5em;
     margin: 5px;
     border: none;
+    display: flex;
+    flex-direction: row;
 }
 
 .copy:hover{

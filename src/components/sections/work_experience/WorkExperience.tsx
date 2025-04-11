@@ -1,5 +1,5 @@
 import { HStack, VStack, Grid, GridItem } from "../../LayoutComponents";
-import Copy from "../../Copy";
+import Copy from "../../copy/Copy";
 import Text from "../../../styles/text.module.scss"
 import Styles from "./About.module.scss"
 import { useEffect } from "react";

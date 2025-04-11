@@ -1,0 +1,52 @@
+
+@import '../../styles/brand.module.scss';
+@import '../../styles/text.module.scss';
+
+.copyWrap{
+    background-color: #77777777;
+    box-shadow:
+      0 6px 6px hsl(0deg 0% 0% / 0.3);
+      padding: 6px;
+      border-radius: 8px;
+      cursor: pointer;
+}
+
+//w-4 h-4 text-gray-800 dark:text-white
+.copySVG{
+    width: 20px;
+    height: 20px;
+    color: $dark;
+}
+
+.wrapper {
+    position: relative;
+    display: inline-block; // or block depending on context
+  
+    // .target {
+    //   // Your main object styles here
+    // }
+  
+}
+
+.infoBox {
+    position: absolute;
+    top: 115%; // directly below the object
+    left: 50%; // center horizontally
+    transform: translate(-50%, 10px); // center + small visual offset down
+    background: #333;
+    color: white;
+    padding: 4px 4px;
+    border-radius: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 10;
+    font-size: 0.5em;
+} 
+
+.wrapper:hover .infoBox {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
