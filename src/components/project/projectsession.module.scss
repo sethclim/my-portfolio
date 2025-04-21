@@ -140,8 +140,12 @@
 .projectContainer{
   display: grid;
   gap:10px;
-  grid-template-columns : 1fr 1fr;
+  grid-template-columns : 1fr;
   grid-template-rows: auto;
+
+  @include md{
+    grid-template-columns : 1fr 1fr;
+  }
 }
 
 

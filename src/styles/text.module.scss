@@ -8,6 +8,10 @@ $lf: $sf + 0.6;
     font-size: $sf;
     line-height: $sf + 1.08;
     color: $dark;
+
+    @include xs{
+        font-size: $sf + 0.4;
+    }
     //color: blue;
     @include sm{
         font-size: $sf + 0.25;
@@ -26,6 +30,9 @@ $lf: $sf + 0.6;
     font-size: $mf + $boost;
     color: $dark;
 
+    @include xs{
+        font-size:  $mf + $boost + 0.4;
+    }
     @include sm{
         font-size: $mf + $boost + 0.1;
     }
@@ -42,6 +49,9 @@ $lf: $sf + 0.6;
     font-size: $lf;
     color: $dark;
 
+    @include xs{
+        font-size:   $lf + 0.4;
+    }
     @include sm{
         font-size: $lf + 0.4;
     }
