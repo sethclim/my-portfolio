@@ -1,16 +1,15 @@
-@import "../styles/breakpoints.scss";
-@import "../styles/brand.module.scss";
+@use "../styles/breakpoints.scss";
+@use "../styles/brand.module.scss";
 
 .maxPage{
     width: 80%;
-     @include sm {
+     @include breakpoints.sm {
         width: 80%;
     }
-    @include md {
+    @include breakpoints.md {
         width: 70%;
     }
-    @include xl {
+    @include breakpoints.xl {
         width: 50%;
-
     }
 }

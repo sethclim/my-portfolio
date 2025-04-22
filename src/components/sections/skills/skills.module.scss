@@ -1,0 +1,25 @@
+@use "../../../styles/breakpoints.scss";
+
+//p="1em 0" className="overflow-hidden"
+.skills {
+    padding: 1em 0;
+    overflow: hidden;
+}
+
+//templateColumns='200px 1fr' gap={10}
+.grid{
+    @include breakpoints.sm{
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 10px;
+    }
+}
+
+
+.gridItem{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

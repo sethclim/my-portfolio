@@ -1,17 +1,17 @@
-@import "../../styles/brand.module.scss";
-@import "../../styles/text.module.scss";
-@import "../../styles/breakpoints.scss";
+@use "../../styles/brand.module.scss";
+@use "../../styles/text.module.scss";
+@use "../../styles/breakpoints.scss";
 
 .github {
   height: 30px;
   width: auto;
   cursor: pointer;
-  color: $dark;
+  color: brand.$dark;
   margin-top: 20px;
 }
 
 .github:hover{
-  color: $lightGrey;
+  color: brand.$lightGrey;
 }
 
 #invertedcursor {
@@ -67,7 +67,7 @@
   object-fit:contain;
   
 
-  @include md {
+  @include breakpoints.md {
     display: none;
   }
 
@@ -83,7 +83,7 @@
      object-fit: contain;
   }
 
-  @include md {
+  @include breakpoints.md {
     display: flex;
     justify-content: center;
     
@@ -94,7 +94,7 @@
 .content{
   flex-direction: column !important;
 
-  @include md {
+  @include breakpoints.md {
     flex-direction: row !important;
   }
 }
@@ -103,7 +103,7 @@
   overflow: hidden;
   width: 100% !important;
 
-  @include md {
+  @include breakpoints.md {
     width: 50% !important;
   }
 }
@@ -143,7 +143,7 @@
   grid-template-columns : 1fr;
   grid-template-rows: auto;
 
-  @include md{
+  @include breakpoints.md{
     grid-template-columns : 1fr 1fr;
   }
 }
@@ -166,24 +166,24 @@
   flex-direction: row;
   width: 100%;
   padding: 2em;
-  background-color: $primary;
+  background-color: brand.$primary;
 }
 
 // text-white text-xs font-bold  text-center mt-2 mb-2
 .modalTextLabels{
-  @include smallFont();
-  color: $lightGrey
+  color: brand.$lightGrey;
+  @include text.smallFont();
 }
 
 //text-xl font-bold
 .modalTitle{
-  @include largeFont();
-  color: $lightGrey;
- font-weight: bold;
+  color: brand.$lightGrey;
+  font-weight: bold;
+  @include text.largeFont();
 }
 
 .modalDesc{
-  @include smallFont();
-  color: $lightGrey;
+  color: brand.$lightGrey;
   padding-top: 4px;
+  @include text.smallFont();
 }

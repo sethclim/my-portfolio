@@ -1,11 +1,11 @@
-@import './brand.module.scss';
-@import './layout.module.scss';
-@import './text.module.scss';
+@use './brand.module.scss';
+@use './layout.module.scss';
+@use './text.module.scss';
 
 .copy{
     // background-color: #99999944;
-    color: $dark;
-    font-size: $mf;
+    color: brand.$dark;
+    font-size: text.$mf;
     padding: 3px;
     height: auto;
     width: 100%;
@@ -17,35 +17,35 @@
 }
 
 .copy:hover{
-    background-color: $dark;
-    color: $offWhite; 
+    background-color: brand.$dark;
+    color: brand.$offWhite; 
     cursor: pointer;
 }
 
 .resume{
-    @include Flex('vertical');
     background-color: #99999944;
-    @include medFont(0);
     height: 33px;
     width: 30%;
-    color: $dark;
+    color: brand.$dark;
     padding: 0 4px;
     border-radius: 5px; 
     outline: none;
     text-decoration: none;
     text-align: center;
+    @include layout.Flex('vertical');
+    @include text.medFont(0);
 }
 
 .resume:hover{
-    background-color: $dark;
-    color: $offWhite;
+    background-color: brand.$dark;
+    color: brand.$offWhite;
     cursor: pointer;
 }
 
 .close{
     height: 40px;
     width: 40px;
-    color: $lightGrey;
+    color: brand.$lightGrey;
     background-color: #FFFFFFDD;
     border-radius: 50%;
     padding: 2px;

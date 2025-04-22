@@ -1,45 +1,46 @@
-@import './brand.module.scss';
-@import "./breakpoints.scss";
+@use './brand.module.scss';
+@use "./breakpoints.scss";
 
-$mf: $sf + 0.2;
-$lf: $sf + 0.6; 
+$mf: brand.$sf + 0.2;
+$lf: brand.$sf + 0.6; 
 
-@mixin smallFont {
-    font-size: $sf;
-    line-height: $sf + 1.08;
-    color: $dark;
+    @mixin smallFont {
+        font-size: brand.$sf;
+        line-height: brand.$sf + 1.08;
+        // color: brand.$dark;
 
-    @include xs{
-        font-size: $sf + 0.4;
+
+        @include breakpoints.xs{
+            font-size: brand.$sf + 0.6;
+        }
+        //color: blue;
+        @include breakpoints.sm{
+            font-size: brand.$sf + 0.25;
+        //color: red;
+        }
+        @include breakpoints.md{
+            font-size: brand.$sf + 0.2;
+            //color: pink;
+        }
+        @include breakpoints.lg{
+            font-size: brand.$sf + 0.3;
+        }
     }
-    //color: blue;
-    @include sm{
-        font-size: $sf + 0.25;
-       //color: red;
-    }
-    @include md{
-        font-size: $sf + 0.2;
-        //color: pink;
-    }
-    @include lg{
-        font-size: $sf + 0.3;
-    }
-}
 
 @mixin medFont($boost) {
     font-size: $mf + $boost;
-    color: $dark;
+    // color: brand.$dark;
 
-    @include xs{
+    @include breakpoints.xs{
         font-size:  $mf + $boost + 0.4;
     }
-    @include sm{
+    @include breakpoints.sm{
         font-size: $mf + $boost + 0.1;
     }
-    @include md{
+    @include breakpoints.md{
         font-size: $mf + $boost+ 0.2;
     }
-    @include lg{
+    @include breakpoints.lg{
         font-size: $mf + $boost + 0.3;
     }
 }
@@ -47,82 +48,82 @@ $lf: $sf + 0.6;
 
 @mixin largeFont {
     font-size: $lf;
-    color: $dark;
+    // color: brand.$dark;
 
-    @include xs{
+    @include breakpoints.xs{
         font-size:   $lf + 0.4;
     }
-    @include sm{
+    @include breakpoints.sm{
         font-size: $lf + 0.4;
     }
-    @include md{
+    @include breakpoints.md{
         font-size: $lf + 0.5;
     }
-    @include lg{
+    @include breakpoints.lg{
         font-size: $lf + 1.0;
     }
 }
 
 
 .small{
-    @include smallFont;
-    color: $dark;
     margin: 0;
+    color: brand.$dark;
+    @include smallFont;
 }
 
 .med{
-    @include medFont(0);
-    color: $dark;
+    color: brand.$lightGrey;
     margin: 0;
+    @include medFont(0);
 }
 
 .subTitle{
-    @include medFont(0.3);
-    color: $dark;
+    color: brand.$dark;
     margin: 0;
+    @include medFont(0.3);
 }
 
 .Title{
-    @include largeFont;
-    color: $lightGrey;
+    color: brand.$lightGrey;
     margin: 0.2em 0;
+    @include largeFont;
 }
 
 .heroTitle{
-    @include largeFont;
-    color: $lightGrey;
+    color: brand.$lightGrey;
     margin: 00.1em 0 0;
+    @include largeFont;
 }
 .heroSubTitle{
-    @include medFont(0.2);
-    color: $lightGrey;
+    color: brand.$lightGrey;
     margin: 0;
+    @include medFont(0.2);
 }
 
 .location{
-    @include smallFont();
-    color: $dark;
+    color: brand.$dark;
     margin: 0;
     height: 80%;
+    @include smallFont();
 }
 
 
 .headerLink{
-    color: $dark;
+    color: brand.$dark;
     @include medFont(0);
 }
 
 .headerLink:hover{
-    color: $lightGrey;
+    color: brand.$lightGrey;
     cursor: pointer;
 }
 
 .highLight{
-    @include smallFont;
     width: 6em; 
     background-color: black;
     color: white; 
     padding: 1em; 
     border-radius: 5px;
     margin-right: 5px;
+    @include smallFont;
 }
