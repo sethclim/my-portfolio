@@ -62,13 +62,15 @@
 
 //bg-black text-white text-xs p-1 pl-2 pr-2 cursor-pointer m-2 justify-center items-center h-40 w-60
 .modalClose{
-  background-color: white;
+  background-color: brand.$lightGrey;
   // color: white;
   // font-size: large;
+  margin: 4px;
 
 
   color: black;
   font-size: large;
+  font-weight: 700;
   
   // padding: 1em;
   padding-left: 2em;
@@ -81,10 +83,12 @@
   height: 2em;
   width: fit-content;
 
+  border-radius: 0.2rem;
+
   @include breakpoints.sm{
     width: fit-content;
     height: 3em;
-    background-color: aqua;
+
   }
 }
 
@@ -92,4 +96,8 @@
   overflow-x: hidden;
   overflow-y: scroll;
   width: 100%;
+
+  @include breakpoints.sm{
+    overflow-y: hidden;
+  }
 }

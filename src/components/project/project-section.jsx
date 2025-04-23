@@ -55,7 +55,7 @@ const ProjectPage = ({data}) => {
             <div className={styles.modalContentArea}>
               <div className={styles.modalDescWrap}>
                 <h3 className={styles.modalTitle}>{modalData?.title}</h3>
-                <div className="flex flex-row gap-4 border-t-1 border-gray-500 bg-amber w-full">
+                <div className={styles.modalTechWrapper}>
                 {
                   modalData?.tech.map((item, i) => {
                     return (

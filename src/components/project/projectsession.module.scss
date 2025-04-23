@@ -183,6 +183,8 @@
 // text-white text-xs font-bold  text-center mt-2 mb-2
 .modalTextLabels{
   color: brand.$lightGrey;
+  flex: 0 0 auto; /* don't grow/shrink, fit content */
+  white-space: nowrap; /* keep multi-word items on one line */
   @include text.smallFont();
 }
 
@@ -227,4 +229,13 @@
   @include breakpoints.sm{
     width: 50%;
   }
+}
+
+//flex flex-row gap-4 border-t-1 border-gray-500 bg-amber w-full
+.modalTechWrapper{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-top: 1px solid brand.$lightGrey;     // or your preferred gray
+  border-bottom: 1px solid brand.$lightGrey;
 }
