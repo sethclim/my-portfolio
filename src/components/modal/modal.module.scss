@@ -1,3 +1,7 @@
+@use "../../styles/brand.module.scss";
+@use "../../styles/text.module.scss";
+@use "../../styles/breakpoints.scss";
+
 .modal {
   position: absolute;
   inset: 0; /* inset sets all 4 values (top right bottom left) much like how we set padding, margin etc., */
@@ -9,16 +13,20 @@
   //   transition: all 0.3s ease-in-out;
   overflow: hidden;
   z-index: 945;
-  padding: 40px 20px 20px;
   background-color: #00000030;
   backdrop-filter: blur(5px);
   overflow: hidden;
   // pointer-events: none;
   height: 100%;
+  
+  @include breakpoints.sm{
+    padding: 40px 20px 20px;
+
+  }
 }
 
 .modalContent {
-  width: 60%;
+  width: 100%;
 
   background-color: #000000;
   color: rgb(0, 0, 0);
@@ -30,10 +38,66 @@
   border-radius: 1rem;
 
   overflow: hidden;
+
+  padding: 10px;
+
+  @include breakpoints.sm{
+    width: 60%;
+    overflow: hidden;
+    overflow-y: hidden;
+  }
 }
 
 @media (max-width: 767.98px) {
   .modalContent {
     width: 100%;
+  }
+}
+.buttonContainer{
+  //flex justify-end bg-red w-full
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+//bg-black text-white text-xs p-1 pl-2 pr-2 cursor-pointer m-2 justify-center items-center h-40 w-60
+.modalClose{
+  background-color: brand.$lightGrey;
+  // color: white;
+  // font-size: large;
+  margin: 4px;
+
+
+  color: black;
+  font-size: large;
+  font-weight: 700;
+  
+  // padding: 1em;
+  padding-left: 2em;
+   padding-right: 2em;
+  cursor: pointer;
+  // margin: 2em;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  height: 2em;
+  width: fit-content;
+
+  border-radius: 0.2rem;
+
+  @include breakpoints.sm{
+    width: fit-content;
+    height: 3em;
+
+  }
+}
+
+.scrollable{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100%;
+
+  @include breakpoints.sm{
+    overflow-y: hidden;
   }
 }

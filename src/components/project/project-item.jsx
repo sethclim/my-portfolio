@@ -45,7 +45,7 @@ const logos = {
 
     return(   
       <button className={styles.noButton} onClick={onClickHandler}>
-        <HStack w="100%" h="19vh" m="10px 0"  className={styles.gridItem}>  
+        <HStack w="100%" h="100%" m="10px 0"  className={styles.gridItem}>  
               <VStack w="100%" alignItems="start" p="15px" gap={3}>
                 <VStack w="100%">
                   <p className={Text.medium} style={{color : TitleColor, width: "100%", "margin": "0 8px 0 0"}}>{title}</p>
@@ -61,13 +61,13 @@ const logos = {
                 </VStack>
                   <p  className={Text.small} >{desc}</p>
                   
-                  {
+                  {/* {
                     gitLink !== undefined ? (
                       <a href={gitLink}  onClick={handleClick}  target="_blank"  rel="noopener noreferrer" >
                         <GitHub className={styles.github} />
                       </a>
                     ) : null
-                  }
+                  } */}
 
               </VStack>
           </HStack>

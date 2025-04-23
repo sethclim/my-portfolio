@@ -1,6 +1,6 @@
 
-@import '../../styles/brand.module.scss';
-@import '../../styles/text.module.scss';
+@use '../../styles/brand.module.scss';
+@use '../../styles/text.module.scss';
 
 .copyWrap{
     background-color: #77777777;
@@ -15,7 +15,7 @@
 .copySVG{
     width: 20px;
     height: 20px;
-    color: $dark;
+    color: brand.$dark;
 }
 
 .wrapper {

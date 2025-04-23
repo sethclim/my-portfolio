@@ -17,7 +17,7 @@ const WorkExperience = (props : WorkExperienceProps) =>  {
           <p className={Text.Title}>Work Experience</p>
           <Work
            company="SpeakSynk Technology" 
-           role="Algorithm Developer" 
+           role="Senior Algorithm Developer" 
            date="05/2023 – Present" 
            points={[
             "Designed and deployed an AI-powered distributed video translation and dubbing pipeline",

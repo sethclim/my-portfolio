@@ -1,17 +1,17 @@
-@import "../../styles/brand.module.scss";
-@import "../../styles/text.module.scss";
-@import "../../styles/breakpoints.scss";
+@use "../../styles/brand.module.scss";
+@use "../../styles/text.module.scss";
+@use "../../styles/breakpoints.scss";
 
 .github {
   height: 30px;
   width: auto;
   cursor: pointer;
-  color: $dark;
+  color: brand.$dark;
   margin-top: 20px;
 }
 
 .github:hover{
-  color: $lightGrey;
+  color: brand.$lightGrey;
 }
 
 #invertedcursor {
@@ -54,6 +54,7 @@
   color: rgb(255, 255, 255);
   text-align: start;
   margin: 10px 0;
+  white-space: nowrap;
 
 
   // min-width: 50px;
@@ -67,7 +68,7 @@
   object-fit:contain;
   
 
-  @include md {
+  @include breakpoints.md {
     display: none;
   }
 
@@ -83,7 +84,7 @@
      object-fit: contain;
   }
 
-  @include md {
+  @include breakpoints.md {
     display: flex;
     justify-content: center;
     
@@ -94,7 +95,7 @@
 .content{
   flex-direction: column !important;
 
-  @include md {
+  @include breakpoints.md {
     flex-direction: row !important;
   }
 }
@@ -103,7 +104,7 @@
   overflow: hidden;
   width: 100% !important;
 
-  @include md {
+  @include breakpoints.md {
     width: 50% !important;
   }
 }
@@ -140,8 +141,12 @@
 .projectContainer{
   display: grid;
   gap:10px;
-  grid-template-columns : 1fr 1fr;
+  grid-template-columns : 1fr;
   grid-template-rows: auto;
+
+  @include breakpoints.md{
+    grid-template-columns : 1fr 1fr;
+  }
 }
 
 
@@ -159,27 +164,79 @@
 // flex flex-row w-full bg-blue p-4
 .modalContentArea{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   padding: 2em;
-  background-color: $primary;
+  // background-color: brand.$primary;
+  // background-color: red;
+
+  // overflow-y: scroll;
+
+  color: white;
+
+  @include breakpoints.sm{
+    margin-top: 4em;
+    flex-direction: row;
+    background-color: brand.$primary;
+  }
 }
 
 // text-white text-xs font-bold  text-center mt-2 mb-2
 .modalTextLabels{
-  @include smallFont();
-  color: $lightGrey
+  color: brand.$lightGrey;
+  flex: 0 0 auto; /* don't grow/shrink, fit content */
+  white-space: nowrap; /* keep multi-word items on one line */
+  @include text.smallFont();
 }
 
 //text-xl font-bold
 .modalTitle{
-  @include largeFont();
-  color: $lightGrey;
- font-weight: bold;
+  color: brand.$lightGrey;
+  font-weight: bold;
+  @include text.largeFont();
 }
 
 .modalDesc{
-  @include smallFont();
-  color: $lightGrey;
+  color: brand.$lightGrey;
   padding-top: 4px;
+  @include text.smallFont();
+}
+
+//flex flex-col justify-center  grow w-50 bg-amber h-full overflow-hidden gap-2
+.modalDescWrap{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // flex:1;
+  // flex-grow: 1;
+  height: 100%;
+  // overflow: hidden;
+  gap: 2px;
+
+  @include breakpoints.sm{
+    width: 50%;
+  }
+}
+
+//flex justify-center grow w-50 bg-red h-full p-4
+.modalImgWrap{
+  display: flex;
+  justify-content: center;
+  // flex-grow: 1;
+  width: 100%;
+  padding: 4px;
+
+  @include breakpoints.sm{
+    width: 50%;
+  }
+}
+
+//flex flex-row gap-4 border-t-1 border-gray-500 bg-amber w-full
+.modalTechWrapper{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-top: 1px solid brand.$lightGrey;     // or your preferred gray
+  border-bottom: 1px solid brand.$lightGrey;
 }

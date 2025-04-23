@@ -1,4 +1,11 @@
-@import "../../../styles/brand.module.scss";
+@use "../../../styles/brand.module.scss";
+@use "../../../styles/breakpoints.scss";
+
+.hero{
+  @include breakpoints.sm{
+    height: 50vh;
+  }
+}
 /* Floating Links */
   .floatingLinks {
     color: #777777;
@@ -13,7 +20,7 @@
 
   
   .floatingItem:hover {
-    color: $lightGrey;
+    color: brand.$lightGrey;
   }
   
 //   @media (max-width: 1138px) {
@@ -27,5 +34,5 @@
 .locationPin{
   width: 30px;
   height: 30px;
-  color: $dark;
+  color: brand.$dark;
 }

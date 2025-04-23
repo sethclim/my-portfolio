@@ -1,3 +1,5 @@
+$screen-xs-min: 392px; // or 320px if you want to go ultra-safe
+
 // Small tablets and large smartphones (landscape view)
 $screen-sm-min: 576px;
 
@@ -11,6 +13,13 @@ $screen-lg-min: 992px;
 $screen-xl-min: 1200px;
 
 $test: 0;
+
+@mixin xs {
+    @media (min-width: #{$screen-xs-min}) {
+      @content;
+    }
+  }
+
 
 // Small devices
 @mixin sm {
