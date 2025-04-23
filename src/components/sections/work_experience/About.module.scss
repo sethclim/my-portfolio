@@ -18,12 +18,15 @@
 
     @include breakpoints.sm {
      height: 1em;
+     width: fit-content;
+     max-width: none;
     }
 }
 
 .bar{
     display: none;
-    @include breakpoints.md {
+    @include breakpoints.sm {
+        display: block;
         margin: 0;
         padding: 0 2px;
         height: 1em;
