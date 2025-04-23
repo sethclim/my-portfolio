@@ -4,8 +4,6 @@ import { useEffect, useRef } from "react";
 import ReactPortal from "./ReactPortal";
 import styles from "./modal.module.scss"
 
-import Button from "../../styles/button.module.scss"
-import { HStack, VStack } from '../LayoutComponents';
 
 
 function Modal({ children, isOpen, handleClose }) {
@@ -19,17 +17,14 @@ function Modal({ children, isOpen, handleClose }) {
 	}, [handleClose]);
 
 
-
 	if (!isOpen) return null
 	else{
 		return (
 			<ReactPortal wrapperId="my-modal">
 				<div className={styles.modal} ref={nodeRef} onClick={() => handleClose(true)}>
 					<div className={styles.modalContent}  onClick={(e) => e.stopPropagation()} >
-						<div className='flex justify-end bg-red w-full'>
-							<button onClick={handleClose} className="bg-black text-white text-xs p-1 pl-2 pr-2 cursor-pointer m-2 justify-center items-center">
-								close
-							</button>
+						<div className={styles.buttonContainer}>
+							<button onClick={handleClose} className={styles.modalClose}>close</button>
 						</div>
 						{children}
 					</div>
@@ -37,6 +32,5 @@ function Modal({ children, isOpen, handleClose }) {
 			</ReactPortal>
 		);	
 	}
-	
 }
 export default Modal;

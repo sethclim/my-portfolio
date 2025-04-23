@@ -53,9 +53,9 @@ const ProjectPage = ({data}) => {
         </div>   
         <Modal isOpen={modelOpen} handleClose={handleClose}>
             <div className={styles.modalContentArea}>
-              <div className="flex flex-col justify-center  grow w-50 bg-amber h-full overflow-hidden gap-2">
-              <h3 className={styles.modalTitle}>{modalData?.title}</h3>
-                <div className="flex flex-row gap-4 border-t-1 border-gray-500 bg-amber">
+              <div className={styles.modalDescWrap}>
+                <h3 className={styles.modalTitle}>{modalData?.title}</h3>
+                <div className="flex flex-row gap-4 border-t-1 border-gray-500 bg-amber w-full">
                 {
                   modalData?.tech.map((item, i) => {
                     return (
@@ -79,8 +79,8 @@ const ProjectPage = ({data}) => {
               </div>
               {
                 modalData?.image !== "" ? (
-                  <div className="flex justify-center grow w-50 bg-red h-full p-4">
-                    <img src={modalData?.image} className="h-80" />
+                  <div className={styles.modalImgWrap}>
+                    <img src={modalData?.image} className="h-80 object-contain" />
                   </div>
                 ): null
               }
