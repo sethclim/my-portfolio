@@ -61,13 +61,13 @@ const logos = {
                 </VStack>
                   <p  className={Text.small} >{desc}</p>
                   
-                  {
+                  {/* {
                     gitLink !== undefined ? (
                       <a href={gitLink}  onClick={handleClick}  target="_blank"  rel="noopener noreferrer" >
                         <GitHub className={styles.github} />
                       </a>
                     ) : null
-                  }
+                  } */}
 
               </VStack>
           </HStack>
