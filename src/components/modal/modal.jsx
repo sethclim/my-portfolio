@@ -24,9 +24,13 @@ function Modal({ children, isOpen, handleClose }) {
 				<div className={styles.modal} ref={nodeRef} onClick={() => handleClose(true)}>
 					<div className={styles.modalContent}  onClick={(e) => e.stopPropagation()} >
 						<div className={styles.buttonContainer}>
-							<button onClick={handleClose} className={styles.modalClose}>close</button>
+							<button onClick={handleClose} className={styles.modalClose}>
+							   <span>CLOSE</span>
+							</button>
 						</div>
-						{children}
+						<div className={styles.scrollable}>
+							{children}
+						</div>
 					</div>
 				</div>
 			</ReactPortal>

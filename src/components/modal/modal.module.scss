@@ -38,8 +38,7 @@
   border-radius: 1rem;
 
   overflow: hidden;
-  overflow-y: scroll;
-  background-color: purple;
+
   padding: 10px;
 
   @include breakpoints.sm{
@@ -58,35 +57,39 @@
   //flex justify-end bg-red w-full
   display: flex;
   justify-content: flex-end;
-  background-color: red;
   width: 100%;
 }
 
 //bg-black text-white text-xs p-1 pl-2 pr-2 cursor-pointer m-2 justify-center items-center h-40 w-60
 .modalClose{
-  background-color: #000000;
+  background-color: white;
   // color: white;
   // font-size: large;
 
 
-  color: white;
-  font-size: small;
+  color: black;
+  font-size: large;
   
   // padding: 1em;
-  // padding-left: 2em;
-  // padding-right: 2em;
+  padding-left: 2em;
+   padding-right: 2em;
   cursor: pointer;
   // margin: 2em;
   // display: flex;
   // justify-content: center;
   // align-items: center;
-  height: 8em;
-  width: 100%;
-  background-color: orange;
+  height: 2em;
+  width: fit-content;
 
   @include breakpoints.sm{
     width: fit-content;
     height: 3em;
     background-color: aqua;
   }
+}
+
+.scrollable{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100%;
 }
