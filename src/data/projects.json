@@ -1,4 +1,12 @@
 [
+     {
+        "title":"Quanta Raytracing Engine", 
+        "image" : "/imgs/quanta.png",
+        "bkImage" : "/imgs/figma_screenshot.png",
+        "tech": ["C++", "Vulkan", "CMake", "ImGui", "Shaders", "Multithreading", "GLFW", "SIMD"],
+        "desc": "Vulkan raytracer build with C++ and Vulkan.  Implmenting raytracing loop, materials, and vector math library", 
+        "gitLink" :"https://github.com/sethclim/quanta-ray-tracing-engine" 
+    },
     {
         "title":"Scales App", 
         "image" : "/imgs/scalesapp_1.webp",
