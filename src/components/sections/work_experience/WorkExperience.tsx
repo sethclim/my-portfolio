@@ -16,9 +16,15 @@ const WorkExperience = (props : WorkExperienceProps) =>  {
         <VStack p="1em 0">
           <p className={Text.Title}>Work Experience</p>
           <Work
-           company="SpeakSynk Technology" 
-           role="Senior Algorithm Developer" 
-           date="05/2023 – Present" 
+           company="Verily"
+           role="Software Engineer"
+           date="04/2026 – Present"
+           points={[]}
+           />
+          <Work
+           company="SpeakSynk Technology"
+           role="Senior Algorithm Developer"
+           date="05/2023 – 04/2026"
            points={[
             "Designed and deployed an AI-powered distributed video translation and dubbing pipeline",
             "Built scalable AWS backend supporting concurrent users with Kafka, Step Functions, SageMaker, and Docker",
@@ -27,9 +33,9 @@ const WorkExperience = (props : WorkExperienceProps) =>  {
            ]}
            />
           <Work
-           company="Arbelos Interactive" 
-           role="Unity Developer" 
-           date="04/2024 – Present" 
+           company="Arbelos Interactive"
+           role="Unity Developer"
+           date="04/2024 – 04/2026"
            points={[
             "Implemented server-authoritative networking using Unity Netcode, enhancing game sync and stability",
             "Refactored game architecture for better separation of concerns (SoC), reducing bugs and improving maintainability through state machines",
@@ -91,27 +97,34 @@ export type WorkProps =  {
 
 const Work = (props : WorkProps) => {
   return(
-    <VStack w="100%" p="20px 0 0 0">
-      <VStack className={Styles.workTitleWrap} p="0" h="100%">
-        <VStack className={Styles.workWrap}  w="100%" p="0" m="0" justifyContent="flex-start">
-            <p className={Styles.name}>{props.role}</p>
-            <p className={Styles.bar}>|</p>
-            <p className={Styles.cn}>{props.company}</p> 
+    <div className={Styles.timelineRow}>
+      <div className={Styles.titleLine}>
+        <div className={Styles.dotSlot}>
+          <span className={Styles.dot} />
+        </div>
+        <VStack className={Styles.workTitleWrap} p="0" h="100%">
+          <VStack className={Styles.workWrap}  w="100%" p="0" m="0" justifyContent="flex-start">
+              <p className={Styles.name}>{props.role}</p>
+              <p className={Styles.bar}>|</p>
+              <p className={Styles.cn}>{props.company}</p>
+          </VStack>
+          <HStack className={Styles.dateWrap} w="100%" justifyContent="flex-start">
+            <p className={Styles.date}>{props.date}</p>
+          </HStack>
         </VStack>
-        <HStack className={Styles.dateWrap} w="100%" justifyContent="flex-start">
-          <p className={Styles.cn}>{props.date}</p>
-        </HStack>
-      </VStack>
-      <ul className={Styles.desc}>
-        {
-          props.points.map((point, index) =>{
-            return (
-              <li className="pt-0.5" key={index}>{point}</li>
-            )
-          })
-        }
-      </ul>
-    </VStack>
+      </div>
+      {props.points.length > 0 && (
+        <ul className={Styles.desc}>
+          {
+            props.points.map((point, index) =>{
+              return (
+                <li className="pt-0.5" key={index}>{point}</li>
+              )
+            })
+          }
+        </ul>
+      )}
+    </div>
   )
 }
 
