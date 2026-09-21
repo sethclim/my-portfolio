@@ -3,6 +3,9 @@ dist/
 .output/
 build/
 
+# astro dev-server cache/runtime state
+.astro/
+
 # dependencies
 node_modules/
 

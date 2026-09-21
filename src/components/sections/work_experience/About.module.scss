@@ -37,6 +37,8 @@
         font-weight: 700;
         white-space: nowrap;
 
+        color: brand.$dark;
+        opacity: 0.6;
         @include text.medFont(0);
     }
 }
@@ -47,7 +49,22 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    
+
+    color: brand.$dark;
+    @include text.medFont(0);
+    @include breakpoints.sm {
+        height: 1em;
+    }
+}
+
+.date{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    color: brand.$dark;
+    opacity: 0.6;
     @include text.medFont(0);
     @include breakpoints.sm {
         height: 1em;
@@ -57,7 +74,7 @@
 
 .desc{
     margin: 0;
-    // margin-left: 30px;
+    margin-left: 34px;
     margin-top: 5px;
     padding: 0;
 
@@ -81,7 +98,71 @@
     }
 }
 
+.timelineRow{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.titleLine{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 14px;
+    width: 100%;
+}
+
+.dotSlot{
+    width: 20px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.dot{
+    position: relative;
+    top: 2px;
+    z-index: 1;
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: brand.$dark;
+}
+
+.dot::before, .dot::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100vh;
+    transform: translateX(-50%);
+    background: brand.$dark;
+    opacity: 0.35;
+}
+
+.dot::before{
+    bottom: 100%;
+}
+
+.dot::after{
+    top: 100%;
+}
+
+.timelineRow:first-of-type .dot::before{
+    display: none;
+}
+
+.timelineRow:last-of-type .dot::after{
+    display: none;
+}
+
 .workTitleWrap{
+    flex: 1;
+    min-width: 0;
 
     @include breakpoints.md {
         flex-direction: row !important;
@@ -90,8 +171,6 @@
 
 .workWrap{
     min-height: 100%;
-    overflow: hidden;
-    // max-height: 2em;
     width: 100%;
 
     p{
@@ -99,7 +178,7 @@
     }
 
     @include breakpoints.sm {
-        height: 1.5em;
+        height: 2em;
         flex-direction: row !important;
     }
 }
